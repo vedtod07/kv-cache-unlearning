@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Models / data / caches
+*.bin
+*.safetensors
+*.gguf
+*.pt
+*.ckpt
+.cache/
+hf_cache/
+models/
+saves/
+outputs/
+wandb/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Notebooks checkpoints
+.ipynb_checkpoints/

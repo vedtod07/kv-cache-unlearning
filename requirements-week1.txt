@@ -1,0 +1,6 @@
+# Minimal deps for scripts/test_kv_scoring_path.py
+torch
+transformers>=4.45
+accelerate
+optimum-quanto
+# optional alternate backend: hqq
