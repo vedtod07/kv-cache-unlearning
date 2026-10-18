@@ -8,15 +8,14 @@ Week-1 gate: prove QuantizedCache is on the scoring path (`scripts/test_kv_scori
 
 ## Docs
 
-- [Research blueprint (v1, 13 Oct)](KV-Cache-Unlearning-Research-Blueprint.md) — superseded by [v2 (17 Oct)](docs/blueprint-v2.md)
-- [Introduction / problem statement draft](Introduction-Problem-Statement-Draft.md)
-- [Week-1 checklist](Week1-Checklist-KV-Unlearning.md)
+- [Research blueprint (v3, 20 Oct)](docs/BLUEPRINT.md) — design, verified literature, arms, metrics, risks
+- [Introduction / problem statement draft (v2)](docs/INTRODUCTION_DRAFT.md)
 
 ### Team and plan
 
 - [Work split for two people](docs/WORK_SPLIT.md) — roles A/B, shared tasks, week-by-week split
 - [Nine-week plan](docs/NINE_WEEK_PLAN.md) — build / learn / read side by side
-- [Week 1 in detail](docs/WEEK1_DETAILED.md) and [setup cells](docs/week1_setup_cells.md)
+- [Week 1 in detail](docs/WEEK1_DETAILED.md) (includes the week-1 gates) and [setup cells](docs/week1_setup_cells.md)
 - [Pilot criteria (draft, freeze end of week 2)](docs/PILOT_CRITERIA.md)
 - [Results data contract](results/README.md), [CONTRIBUTING](CONTRIBUTING.md)
 - Logs: [LOG](docs/LOG.md), [DECISIONS](docs/DECISIONS.md)

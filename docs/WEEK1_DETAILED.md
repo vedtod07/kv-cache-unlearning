@@ -22,6 +22,19 @@ Setup commands and the liveness script: `docs/week1_setup_cells.md` and `scripts
 4. Which KV interventions change the computation, and which are no-ops?
 5. How long does one run take, and what does that mean for the full matrix?
 
+## Gates (carried over from the former Week-1 checklist)
+
+Do not interpret a "no KV recovery" result until all of these pass.
+
+| Check | Pass criterion |
+|---|---|
+| Library defaults cited | `residual_length` read from the **installed** `transformers` version (print it; do not assert 128 from memory) |
+| Quantized storage exists | With a small `residual_length` (0 or 1), after a long enough generation the cache layers hold quantized K/V |
+| Liveness | `scripts/liveness_test.py`: default quantized cache likely NO-OP at TOFU prompt lengths; small-residual and hook variants LIVE |
+| Scoring path | `python scripts/test_kv_scoring_path.py --model open-unlearning/tofu_Llama-3.2-1B-Instruct_full --backend quanto --nbits 2 --residual_length 0` exits 0 (sequential+quantized differs from single-pass; DynamicCache sequential ≈ single-pass) |
+| References | Matching `retain90` and `full` checkpoints load and are used as references |
+| Claim hygiene | No claim about Alignment Collapse or any paper is made until the partner has opened the PDF; the blog studies are cited as preliminary |
+
 ## If things go wrong
 - Install fails after a day: switch platform, or score a few forget questions with plain Transformers and add OpenUnlearning back in week 2.
 - Evaluation is slow: forget-only run, and note it.

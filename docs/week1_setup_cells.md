@@ -86,3 +86,16 @@ pip install optimum-quanto   # if variant A/B report an ERROR about the backend
 
 Expected if the library default is inert at TOFU prompt lengths: variant A = NO-OP, variants B and C = LIVE.
 If B is also NO-OP, something is wrong with the install or the cache config — fix that before anything else.
+
+## Day 4b — scoring-path gate (second script, from the earlier session)
+
+```bash
+pip install -r requirements-week1.txt
+python scripts/test_kv_scoring_path.py \
+  --model open-unlearning/tofu_Llama-3.2-1B-Instruct_full \
+  --backend quanto --nbits 2 --residual_length 0
+```
+
+Exit code 0 = gate passed (sequential+quantized scoring differs from single-pass). Exit 2 = no measurable
+KV effect: do not trust any "no recovery" result until this is fixed. This script has also not been run
+by the person who wrote this note; run it and record the output in `docs/LOG.md`.
