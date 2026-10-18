@@ -1,22 +1,48 @@
-# Pilot criteria (to be frozen at the end of week 2)
+# Pilot and confirmation criteria — v4
 
-**Status: DRAFT. Edit together, then tag `pilot-criteria-v1` BEFORE running any pilot.** The thresholds below are placeholders suggested by the planning discussion, not standards.
+Status: DRAFT. Jointly finalize before the corresponding research runs. Engineering fixtures are allowed now; they are not benchmark pilot results. Do not invent effect/utility thresholds on the authors' behalf.
 
-| Question | Measurement | Go if |
+## Engineering and pilot gates
+
+| Gate | Evidence required | Owner |
 |---|---|---|
-| Does a faithful cache transform increase **correct** disclosure of forgotten facts? | Among items the full-precision unlearned model fails but the original (`full`) model answers correctly: share answered correctly after the transform, **minus** the same share for `retain90` under the same transform (guessing baseline) | Paired difference > 0 with the author-clustered confidence interval excluding 0, in at least two methods (set a minimum effect size: ___ pp) |
-| Is it unlearning rather than a broken model? | Utility and coherence on retain data under the same transform | Utility drop ≤ ___ (choose now) |
-| Is it different from refusal collapse? | Same measurement for refusal-style (IdkDPO/IdkNLL) vs suppression-style (NPO/RMU/SimNPO), checkpoints matched on baseline disclosure and utility *before* quantizing | Methods differ systematically, or the absence of a difference can be bounded |
-| Does the audit mismatch matter? | Do method rankings or pass/fail verdicts change between the audit (parallel scoring) and deployment-matched evaluation? | At least one ranking or verdict changes |
+| Baseline validity | Correct data/template, meaningful full-model learning, unlearned forgetting and retained utility | A |
+| Cache implementation | Instrumented K/V writes/reads, reconstruction-error fixtures, ordinary and identity checks; additional evaluator tests in VALIDATION.md | B, checked by A |
+| Measurement | Fixed correctness/behavior rubric, annotation checks, consistent scoring normalization | A, checked by B |
+| Feasibility | Measured loading, generation, scoring and annotation costs; restartable outputs | Both |
+| Informativeness | Planned effect/interval precision and utility evaluation justify the scope | A, agreed by both |
 
-## Interpretation (decide now)
+None requires weight-RTN recovery, KV recovery, significance in two methods, or a ranking reversal. A pilot can be flat with valid engineering. Diagnose actual failures; do not keep changing models to find a positive result.
 
-- Clear evidence on most rows → develop the stronger evaluation paper.
-- Evidence on rows 1–2 only → disciplined workshop paper.
-- Nothing detectable → bounded null result, stating which effect sizes were ruled out.
+## Freeze before confirmation
 
-## Checkpoint selection (fill in before quantizing)
+- [ ] Dataset revision and explicit development/confirmation author/item IDs.
+- [ ] Checkpoint IDs/revisions and documented baseline selection rule.
+- [ ] Backend, bits, grouping, axes, residual policy, attention and dtype.
+- [ ] Primary fixed-denominator outcome and two principal INT4 contrasts.
+- [ ] Utility samples and acceptable deterioration: **TBD with rationale**.
+- [ ] Practical disclosure effect of interest: **TBD with rationale**.
+- [ ] Annotation rubric/version and independent checking procedure.
+- [ ] Numerical tolerances characterized using ordinary/identity conditions.
+- [ ] Paired author-cluster analysis and multiplicity policy.
+- [ ] Exclusions, error handling, completion rules and maximum compute budget.
+- [ ] One optional extension, if justified; all explored candidates logged.
 
-| Method | Checkpoint id | Baseline disclosure | Utility |
-|---|---|---|---|
-| | | | |
+Tag `pilot-criteria-v1` for the initial pilot protocol and `confirmation-v1` for the final confirmatory protocol. Record changes between them and which data informed them. A later freeze cannot make earlier observations untouched confirmation data.
+
+## Interpretation
+
+- Increased correct disclosure with useful utility: durability-failure evidence in the tested settings.
+- Consequential evaluation disagreement: possible evaluation-methodology contribution.
+- Intervals excluding a prespecified meaningful increase: bounded negative evidence.
+- No detected increase with wide intervals: inconclusive, not equivalence.
+- Failed implementation or missing utility evidence: repair measurement before interpretation.
+
+## Checkpoint ledger
+
+| Method | Immutable revision | Baseline disclosure | Utility | Selection/rejection reason |
+|---|---|---|---|---|
+| Full | TBD | pending | pending | compatibility |
+| Retain90 | TBD | pending | pending | compatible reference |
+| NPO | TBD | pending | pending | baseline selection only |
+| RMU | TBD | pending | pending | baseline selection only |

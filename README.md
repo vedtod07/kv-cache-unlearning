@@ -1,37 +1,44 @@
-# Does KV-Cache Quantization Undo LLM Unlearning?
+# Does Forgetting Survive KV-Cache Compression?
 
-Measurement study: after weight-space unlearning on TOFU (Llama-3.2-1B), does **integer KV-cache quantization** restore forgotten knowledge the way **weight INT4** can?
+A planned measurement study of **weight-based LLM unlearning under stored KV-cache quantization**. We hold model weights fixed and ask whether correct forgotten-fact disclosure changes, and whether parallel scoring predicts deployment-matched evaluation.
 
 ## Status
 
-Week-1 gate: prove QuantizedCache is on the scoring path (`scripts/test_kv_scoring_path.py`). Do not interpret “no recovery” until that gate passes.
+Protocol v4, 19 October 2026. **No research results or GPU-validated pipeline yet.** The previous default-cache inactivity assumption and output-change-only gate have been corrected. Local unit checks do not validate CUDA, Quanto/HQQ, checkpoint compatibility, or benchmark accuracy.
 
-## Docs
+Person A is **Vedant**: measurement protocol, baselines, annotation, statistics, and independent validation. Person B owns cache implementation and sequential scoring. Both review the other's evidence.
 
-- [Research blueprint (v3, 20 Oct)](docs/BLUEPRINT.md) — design, verified literature, arms, metrics, risks
-- [Introduction / problem statement draft (v2)](docs/INTRODUCTION_DRAFT.md)
+## Start here
 
-### Team and plan
+- [Blueprint v4](docs/BLUEPRINT.md): core design, metrics, scope and claim limits
+- [Person A/B work split](docs/WORK_SPLIT.md)
+- [Week-one tasks](docs/WEEK1_DETAILED.md) and [setup instructions](docs/week1_setup_cells.md)
+- [Engineering validation](docs/VALIDATION.md)
+- [Pilot and confirmation criteria](docs/PILOT_CRITERIA.md)
+- [Results data contract](results/README.md)
+- [Nine-week plan](docs/NINE_WEEK_PLAN.md)
+- [Introduction draft](docs/INTRODUCTION_DRAFT.md)
+- [Changes from v3](docs/REVIEW_CHANGES.md), [decisions](docs/DECISIONS.md), [log](docs/LOG.md)
+- [Contribution workflow](CONTRIBUTING.md)
 
-- [Work split for two people](docs/WORK_SPLIT.md) — roles A/B, shared tasks, week-by-week split
-- [Nine-week plan](docs/NINE_WEEK_PLAN.md) — build / learn / read side by side
-- [Week 1 in detail](docs/WEEK1_DETAILED.md) (includes the week-1 gates) and [setup cells](docs/week1_setup_cells.md)
-- [Pilot criteria (draft, freeze end of week 2)](docs/PILOT_CRITERIA.md)
-- [Results data contract](results/README.md), [CONTRIBUTING](CONTRIBUTING.md)
-- Logs: [LOG](docs/LOG.md), [DECISIONS](docs/DECISIONS.md)
+## Local checks (no model downloads)
 
-`scripts/liveness_test.py` compares KV-cache interventions (HF quantized cache at default and small residual, and a hook-based quantizer) against a plain-cache baseline. It has not been run on a GPU yet.
+```bash
+python3 -m unittest discover -s tests -v
+```
 
-## Quick start (scoring-path gate)
+## GPU diagnostic (separate, still pending)
+
+Use a dedicated environment. Resolve the immutable model commit before substituting the placeholder:
 
 ```bash
 pip install -r requirements-week1.txt
-python scripts/test_kv_scoring_path.py --backend quanto --nbits 2 --residual_length 0
+python scripts/test_kv_scoring_path.py \
+  --revision MODEL_COMMIT_SHA \
+  --backend quanto --nbits 4 --residual_length 128 \
+  --output results/diagnostics/short-int4.json
 ```
 
-Requires PyTorch and a QuantizedCache backend (`optimum-quanto` or `hqq`).
+The requirements are a **candidate environment**, not a complete tested lock. Archive `pip freeze`, hardware details, and the JSON report. `scripts/liveness_test.py` is now an alias for this fixed-token diagnostic; its previous free-generation comparison has been retired.
 
-## Notes
-
-- Default `residual_length` in Transformers QuantizedCache is **128** (verify on your installed version).
-- Score gold answers **sequentially** through the cache; single-pass teacher forcing typically bypasses quantized reads.
+A pass demonstrates preliminary engineering checks on one artificial fixture. It is not a recovery result or sufficient validation of the eventual batched evaluator. Equal quantized and ordinary scores are allowed when the cache intervention is independently verified.

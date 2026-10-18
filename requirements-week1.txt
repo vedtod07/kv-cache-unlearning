@@ -1,6 +1,7 @@
-# Minimal deps for scripts/test_kv_scoring_path.py
-torch
-transformers>=4.45
-accelerate
-optimum-quanto
-# optional alternate backend: hqq
+# Candidate environment matching the documented upstream versions.
+# NOT a GPU-validated lock. Freeze the successful complete environment before study runs.
+torch==2.9.1
+transformers==5.5.4
+accelerate==1.13.0
+optimum-quanto>=0.2.5
+# HQQ is optional; select and record an exact compatible version only if used.

@@ -1,28 +1,64 @@
-# Results: data contract between A and B
+# Results contract — v2
 
-One JSON object per line (`.jsonl`) per run, one row per **item**. Both people write and read this format so analysis code is shared.
+Person A (Vedant) owns the measurement/schema and analysis; Person B emits compatible records. No experimental results are present yet. Never infer success from a filename or a completed process alone.
 
-| Field | Meaning |
+## Run manifest
+
+One immutable `manifest.json` per run, referenced by every item record. Required study metadata:
+
+| Category | Fields |
 |---|---|
-| `run_id` | Unique id, e.g. `2026-11-03_A_NPO_rtn4` |
-| `checkpoint` | Hugging Face id of the model |
-| `method` | NPO / SimNPO / RMU / IdkDPO / full / retain90 / … |
-| `condition` | `baseline`, `weight_rtn4`, `kv_hook_4bit`, `kv_cache_4bit_res1`, … |
-| `kv_semantics` | `none`, `quantize_all_hook`, `quantize_on_read_cache` |
-| `bits_weight`, `bits_kv` | Integer or null |
-| `residual_length` | For HF quantized cache, else null |
-| `context_tokens` | Prepended filler length (0 for none) |
-| `item_id`, `author_id` | TOFU item and author (bootstrap by author) |
-| `prompt_tokens` | Real tokenized prompt length |
-| `generated_text` | Greedy output |
-| `gold_answer` | TOFU gold answer |
-| `outcome` | `correct` / `wrong` / `deflection` (by the agreed rule) |
-| `logprob_parallel`, `logprob_sequential` | Gold-answer log-probability, both paths if computed |
-| `utility_*` | Utility metrics if computed |
-| `lib_versions` | Pointer to the saved `pip list` |
+| Identity | `schema_version`, `run_id`, UTC start/end, person, code commit and dirty diff/config hash |
+| Models | checkpoint ID and immutable revision; tokenizer ID/revision and chat-template hash; method; selection-ledger entry |
+| Data | dataset revision, split, evaluation item IDs/author IDs, development vs confirmation allocation, utility subset IDs |
+| Computation | backend and version, dtype, device/GPU/CUDA, attention backend, weight/cache precision, K/V axes and groups, residual policy, quantization placement, prefill chunking |
+| Generation | full generation configuration, greedy/sampling settings, stopping/EOS rules, token budget, sampling seed/query budget if applicable |
+| Scoring | tokenization and answer-boundary rules, sum/mean definitions, EOS policy, sequential/parallel configuration |
+| Provenance | complete environment freeze path/hash, validation report IDs, protocol version, annotation rubric version |
+| Operations | runtime, peak memory if measured, status, expected/completed/failed item counts, retry policy |
 
-Summary tables go in `results/summary/*.csv`. Large `.jsonl` files go to Drive or a Hugging Face dataset; put the link here:
+The lightweight item validator below checks record structure, not all manifest semantics or compatibility. A reviews the manifest before pooling runs; an automated manifest validator remains future work.
 
-- (add links as runs are produced)
+## Item JSONL
 
-See `results_log_template.csv` for the per-run log.
+One object per `(run_id, item_id, attempt)`; preserve failed attempts explicitly. Choose one final successful attempt per item by a prespecified rule, not by its answer.
+
+| Field | Definition |
+|---|---|
+| `schema_version` | `2` |
+| `run_id`, `manifest` | Run identifier and manifest path/URI |
+| `item_id`, `author_id` | Stable benchmark identifiers; author grouping is mandatory for TOFU |
+| `attempt` | Integer >= 1 |
+| `status` | `ok` or `error` |
+| `phase` | `development`, `confirmation` or `descriptive` |
+| `condition` | Stable condition key matching the manifest |
+| `prompt_text`, `prompt_token_ids` | Exact rendered prompt and input IDs |
+| `gold_answer` | Requested reference fact/answer |
+| `generated_text`, `generated_token_ids` | Actual output; null on failed generation |
+| `correctness` | `correct`, `incorrect`, `partial`, `ambiguous`, `unscored`; null on errors |
+| `behavior` | `answer`, `refusal`, `mixed`, `empty`, `unscored`; null on errors |
+| `annotation_version` | Rubric version, or null while unscored |
+| `annotation_notes` | Aliases, contradictions, adjudication or ambiguity notes |
+| `answer_token_count` | Number of reference tokens scored |
+| `logprob_parallel_sum`, `logprob_sequential_sum` | Finite log-probability sums or null when not computed |
+| `error` | Null for success; structured stage/type/message for failure |
+
+Optional fields: per-token reference scores, response truncation, annotation identifiers, response lengths and utility labels. Preserve separate correctness and behavior: a refusal containing the target fact may be `correct` and `mixed`.
+
+Use `unscored` until annotation is complete. Resolve partial/ambiguous handling before confirmation. A failed run is not an incorrect answer. Do not silently exclude failures; report counts, reasons and completion/missing-data sensitivity. Log probabilities are sums here; derive means using the recorded token count. Generation and teacher-forced scoring are distinct measurements.
+
+## Validation
+
+```bash
+python scripts/validate_results.py path/to/items.jsonl
+```
+
+This checks required fields, categorical values, duplicate keys, token IDs, finite scores and status consistency. It is not a factual judge and does not make a run confirmatory. Diagnostic JSON reports use a separate schema (`kind=engineering_fixture`) and must never be mixed with benchmark JSONL.
+
+## Storage and analysis
+
+Store small manifests, reports and summaries in the repository. Large raw outputs belong in an access-controlled or public archive as appropriate to their license; record immutable links/checksums here. No archive links exist yet. Preserve original raw output and version annotations separately.
+
+Pair conditions by stable IDs. Use a fixed population for primary disclosure effects and report both transition directions. Resample authors with all paired conditions intact. Report all model/reference raw scores and utility alongside ΔU, ΔR and ΔU−ΔR. Do not pool incompatible prompts, datasets, cache policies or scoring definitions.
+
+Use `results_log_template.csv` for the run index; it points to manifests and records rather than replacing them.

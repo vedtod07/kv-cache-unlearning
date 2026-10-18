@@ -1,1 +1,1 @@
-date,person,run_id,checkpoint,condition,kv_semantics,split,lib_versions_file,runtime_min,forget_Q_A_Prob,forget_Q_A_ROUGE,model_utility,notes
+date_utc,person,run_id,phase,checkpoint_revision,condition,manifest,records,status,n_expected,n_ok,n_error,environment_file,validation_report,runtime_min,notes
