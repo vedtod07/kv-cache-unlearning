@@ -50,6 +50,9 @@ def run(args):
     if args.residual_length < 0 or args.q_group_size < 1 or args.max_new_tokens_check < 2:
         raise ValueError('Require residual >= 0, group size > 0, and at least two answer tokens')
     device = torch.device(args.device or ('cuda' if torch.cuda.is_available() else 'cpu'))
+    if device.type == 'cuda' and device.index is None:
+        # torch.cuda.set_device rejects a bare 'cuda' (no index) in torch 2.9.1.
+        device = torch.device('cuda', torch.cuda.current_device())
     if device.type not in ('cpu', 'cuda'):
         raise ValueError('Diagnostic currently supports CPU or CUDA only')
     if device.type == 'cuda':
