@@ -1,0 +1,291 @@
+{
+  "kind": "engineering_fixture",
+  "config": {
+    "model": "open-unlearning/tofu_Llama-3.2-1B-Instruct_full",
+    "revision": "88e31200b97e4c0c04ae0d2f0b591f427046d192",
+    "backend": "hqq",
+    "nbits": 4,
+    "residual_length": 128,
+    "q_group_size": 64,
+    "axis_key": 1,
+    "axis_value": 1,
+    "max_new_tokens_check": 16,
+    "filler_repeats": 0,
+    "device": null,
+    "dtype": "float16",
+    "atol_dynamic": 0.001,
+    "rtol_dynamic": 0.001,
+    "output": "results/diagnostics/short-int4-res128-hqq.json"
+  },
+  "code_commit": "ac2d516cdc4e24ba23ca891d58dfdce36608de7f",
+  "python": "3.13.15",
+  "torch": "2.9.1+cu128",
+  "transformers": "5.5.4",
+  "model_resolved_revision": "88e31200b97e4c0c04ae0d2f0b591f427046d192",
+  "dtype": "float16",
+  "device": "cuda:0",
+  "gpu": "Tesla T4",
+  "installed_residual_default": 128,
+  "prompt_ids": [
+    128000,
+    128006,
+    9125,
+    128007,
+    271,
+    38766,
+    1303,
+    33025,
+    2696,
+    25,
+    6790,
+    220,
+    2366,
+    18,
+    198,
+    15724,
+    2696,
+    25,
+    220,
+    777,
+    5020,
+    220,
+    2366,
+    21,
+    271,
+    128009,
+    128006,
+    882,
+    128007,
+    271,
+    21509,
+    449,
+    264,
+    2875,
+    11914,
+    922,
+    279,
+    9282,
+    13,
+    128009,
+    128006,
+    78191,
+    128007,
+    271
+  ],
+  "answer_ids": [
+    578,
+    9282,
+    374,
+    23900,
+    323,
+    24729,
+    3432,
+    13
+  ],
+  "parallel_token_nlls": [
+    17.066129684448242,
+    2.5032546520233154,
+    1.812590479850769,
+    7.028902530670166,
+    0.025968186557292938,
+    6.661080360412598,
+    2.125980854034424,
+    3.437770366668701
+  ],
+  "dynamic_token_nlls": [
+    17.066129684448242,
+    2.493149995803833,
+    1.812298059463501,
+    7.021175861358643,
+    0.02600407786667347,
+    6.676632881164551,
+    2.1259231567382812,
+    3.437744140625
+  ],
+  "identity_token_nlls": [
+    17.066129684448242,
+    2.493149995803833,
+    1.812298059463501,
+    7.021175861358643,
+    0.02600407786667347,
+    6.676632881164551,
+    2.1259231567382812,
+    3.437744140625
+  ],
+  "quantized_token_nlls": [
+    17.066129684448242,
+    0.88567054271698,
+    2.3816566467285156,
+    8.014005661010742,
+    0.015494444407522678,
+    6.115086078643799,
+    0.6107160449028015,
+    4.026488304138184
+  ],
+  "layers": [
+    {
+      "layer": 0,
+      "writes_k": 1,
+      "writes_v": 1,
+      "reads_k": 7,
+      "reads_v": 7,
+      "max_reconstruction_error": 0.6171875,
+      "stored_kv": true
+    },
+    {
+      "layer": 1,
+      "writes_k": 1,
+      "writes_v": 1,
+      "reads_k": 7,
+      "reads_v": 7,
+      "max_reconstruction_error": 0.646484375,
+      "stored_kv": true
+    },
+    {
+      "layer": 2,
+      "writes_k": 1,
+      "writes_v": 1,
+      "reads_k": 7,
+      "reads_v": 7,
+      "max_reconstruction_error": 0.599609375,
+      "stored_kv": true
+    },
+    {
+      "layer": 3,
+      "writes_k": 1,
+      "writes_v": 1,
+      "reads_k": 7,
+      "reads_v": 7,
+      "max_reconstruction_error": 0.76953125,
+      "stored_kv": true
+    },
+    {
+      "layer": 4,
+      "writes_k": 1,
+      "writes_v": 1,
+      "reads_k": 7,
+      "reads_v": 7,
+      "max_reconstruction_error": 0.666015625,
+      "stored_kv": true
+    },
+    {
+      "layer": 5,
+      "writes_k": 1,
+      "writes_v": 1,
+      "reads_k": 7,
+      "reads_v": 7,
+      "max_reconstruction_error": 0.7421875,
+      "stored_kv": true
+    },
+    {
+      "layer": 6,
+      "writes_k": 1,
+      "writes_v": 1,
+      "reads_k": 7,
+      "reads_v": 7,
+      "max_reconstruction_error": 0.79833984375,
+      "stored_kv": true
+    },
+    {
+      "layer": 7,
+      "writes_k": 1,
+      "writes_v": 1,
+      "reads_k": 7,
+      "reads_v": 7,
+      "max_reconstruction_error": 0.7880706787109375,
+      "stored_kv": true
+    },
+    {
+      "layer": 8,
+      "writes_k": 1,
+      "writes_v": 1,
+      "reads_k": 7,
+      "reads_v": 7,
+      "max_reconstruction_error": 0.681640625,
+      "stored_kv": true
+    },
+    {
+      "layer": 9,
+      "writes_k": 1,
+      "writes_v": 1,
+      "reads_k": 7,
+      "reads_v": 7,
+      "max_reconstruction_error": 0.7998046875,
+      "stored_kv": true
+    },
+    {
+      "layer": 10,
+      "writes_k": 1,
+      "writes_v": 1,
+      "reads_k": 7,
+      "reads_v": 7,
+      "max_reconstruction_error": 0.5859375,
+      "stored_kv": true
+    },
+    {
+      "layer": 11,
+      "writes_k": 1,
+      "writes_v": 1,
+      "reads_k": 7,
+      "reads_v": 7,
+      "max_reconstruction_error": 0.76171875,
+      "stored_kv": true
+    },
+    {
+      "layer": 12,
+      "writes_k": 1,
+      "writes_v": 1,
+      "reads_k": 7,
+      "reads_v": 7,
+      "max_reconstruction_error": 0.71484375,
+      "stored_kv": true
+    },
+    {
+      "layer": 13,
+      "writes_k": 1,
+      "writes_v": 1,
+      "reads_k": 7,
+      "reads_v": 7,
+      "max_reconstruction_error": 0.870849609375,
+      "stored_kv": true
+    },
+    {
+      "layer": 14,
+      "writes_k": 1,
+      "writes_v": 1,
+      "reads_k": 7,
+      "reads_v": 7,
+      "max_reconstruction_error": 0.66552734375,
+      "stored_kv": true
+    },
+    {
+      "layer": 15,
+      "writes_k": 1,
+      "writes_v": 1,
+      "reads_k": 7,
+      "reads_v": 7,
+      "max_reconstruction_error": 0.7333984375,
+      "stored_kv": true
+    }
+  ],
+  "decision": {
+    "passed": false,
+    "failures": [
+      "Ordinary sequential/parallel baseline exceeds tolerance"
+    ],
+    "token_nll_delta_quantized_minus_dynamic": [
+      0.0,
+      -1.607479453086853,
+      0.5693585872650146,
+      0.9928297996520996,
+      -0.010509633459150791,
+      -0.561546802520752,
+      -1.5152071118354797,
+      0.5887441635131836
+    ],
+    "mean_nll_delta": -0.1929763063089922,
+    "max_abs_token_nll_delta": 1.607479453086853,
+    "max_abs_dynamic_parallel_delta": 0.015552520751953125,
+    "max_abs_identity_dynamic_delta": 0.0
+  }
+}
