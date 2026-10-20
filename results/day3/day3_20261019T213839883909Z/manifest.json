@@ -1,0 +1,51 @@
+{
+  "kind": "day3_unlearned_development_baseline",
+  "run_id": "day3_20261019T213839883909Z",
+  "phase": "development",
+  "checkpoint": {
+    "id": "open-unlearning/unlearn_tofu_Llama-3.2-1B-Instruct_forget10_SimNPO_lr2e-05_b4.5_a1_d1_g0.125_ep10",
+    "revision": "444648425d9c8a3926683f1870e364c5fe0b1357",
+    "status": "metadata_resolved"
+  },
+  "tokenizer": {
+    "id": "open-unlearning/tofu_Llama-3.2-1B-Instruct_full",
+    "revision": "88e31200b97e4c0c04ae0d2f0b591f427046d192"
+  },
+  "dataset": {
+    "id": "locuslab/TOFU",
+    "revision": "324592d84ae4f482ac7249b9285c2ecdb53e3a68",
+    "config": "forget10",
+    "split": "train"
+  },
+  "item_ids": [
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:0",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:1",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:2",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:3",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:4",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:5",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:6",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:7",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:8",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:9",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:10",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:11",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:12",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:13",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:14",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:15",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:16",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:17",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:18",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:19"
+  ],
+  "author_id": "tofu:hsiao-yun-hwa",
+  "input_bundle_sha256": "e17aa719a87501fedb32aa8566807e6c7269633e29d2bd6b313f1c430d23597a",
+  "accepted_annotation_sha256": "e1a94b1c15b17bb2191239d1662afd84ffaff73f6fa5240367ad9f5be92d69e1",
+  "rubric_version": "day2-development-v2-A-accepted",
+  "independent_B_review": "pending",
+  "selection_rule": "Previously recorded SimNPO candidate; no recovery-based selection",
+  "limits": "One development author, ordinary cache, no retained utility measured here",
+  "status": "generation_complete_annotations_pending",
+  "completed_records": 20
+}

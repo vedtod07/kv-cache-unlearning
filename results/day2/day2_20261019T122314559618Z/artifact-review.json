@@ -1,0 +1,47 @@
+{
+  "kind": "day2_structural_review",
+  "reviewer": "Codex-assisted; human factual annotation pending",
+  "source_zip_sha256": "60a5a6d2440678d689e437165dfa87571c126ac9bca60c634e641e31e990c56c",
+  "checks_passed": [
+    "20 unique items per model; identical ordered item IDs",
+    "Each prompt, token ID list, mask and reference matches fixed fixture",
+    "Template hash matches manifest",
+    "Explicit common greedy dynamic-cache configuration",
+    "No recorded errors; all 40 outputs ended with configured EOS below 64-token limit"
+  ],
+  "descriptive_diagnostics": {
+    "full": {
+      "records": 20,
+      "errors": 0,
+      "ended_with_eos": 20,
+      "reached_token_budget": 0,
+      "exact_reference_string_matches": 13,
+      "generation_seconds_total": 15.972932054999319,
+      "generation_seconds_median": 0.7602097814999524,
+      "generated_tokens_total": 643
+    },
+    "retain90": {
+      "records": 20,
+      "errors": 0,
+      "ended_with_eos": 20,
+      "reached_token_budget": 0,
+      "exact_reference_string_matches": 0,
+      "generation_seconds_total": 15.279221278999785,
+      "generation_seconds_median": 0.8301371439999912,
+      "generated_tokens_total": 683
+    }
+  },
+  "diagnostic_limit": "Exact string match is not factual correctness; these counts are not final disclosure rates.",
+  "scope": "One previously exposed author, ordinary cache, full and retain90 only. No unlearned model or compression tested.",
+  "manual_review_required": [
+    "Requested-fact specification; separate prompt-supplied facts from newly disclosed facts",
+    "Correctness and behavior of all 40 responses",
+    "Reference ambiguity and unsupported added claims",
+    "Independent coauthor labels and adjudication"
+  ],
+  "finding_notes": [
+    "Retain90 row 17 correctly states English despite lacking reference trailing explanation.",
+    "Row 1 asks about gender but its reference states LGBTQ+ community membership; do not infer a specific gender or treat the reference as resolving that ambiguity.",
+    "Several prompts supply identity/background facts and permit plausible generic answers; flag these before interpreting disclosure."
+  ]
+}

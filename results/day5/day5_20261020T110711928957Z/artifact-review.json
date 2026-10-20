@@ -1,0 +1,179 @@
+{
+  "kind": "day5_artifact_review",
+  "run_id": "day5_20261020T110711928957Z",
+  "review_date": "2026-10-20",
+  "reviewer": "Codex-assisted artifact verification; no human or independent B sign-off inferred",
+  "status": "artifact_checks_passed_protocol_decision_pending",
+  "archive_sha256": "4804e86726c34010299d1fe1e96fde2e4b7a645a8c93a5d339f5b82d25e4e5f1",
+  "input_bundle_sha256": "b6dead9080b27077f0ffa55a06346bcde36879e9997bc1dc9d8a980b67a10e36",
+  "raw_manifest_preserved": true,
+  "source_file_hashes_verified": 13,
+  "expected_records": 60,
+  "verified_records": 60,
+  "error_records": 0,
+  "prior_text_and_token_ids_exact_matches": 60,
+  "helper_ground_truth_matches": 60,
+  "core_environment_matches_prior_run": true,
+  "all_summary_fields_independently_recomputed": true,
+  "token_boundary_checks": {
+    "fixtures": 20,
+    "prompt_ids_match_previous": true,
+    "all_prompt_labels_ignored": true,
+    "answer_labels_equal_answer_input_ids": true,
+    "labeled_eos_id": 128009,
+    "stock_zero_mask_positions_per_unpadded_prompt": 2,
+    "first_prompt_zero_based_masked_positions": [
+      31,
+      65
+    ],
+    "first_prompt_tokens": 70,
+    "first_answer_tokens_including_eos": 14
+  },
+  "models": {
+    "full": {
+      "items": 20,
+      "stock_mask_mean_prob": 0.9259033203125,
+      "all_ones_mean_prob": 0.91953125,
+      "stock_mask_mean_rougeL_recall": 0.8768620268620269,
+      "all_ones_mean_rougeL_recall": 0.8446647196647197,
+      "changed_generation_count": 5,
+      "all_ones_previous_text_matches": 20,
+      "helper_ground_truth_matches": 20,
+      "max_abs_stock_fp32_mean_nll_delta": 0.00021229684352874756,
+      "all_ones_previous_token_ids_exact_matches": 20,
+      "changed_generation_item_indices": [
+        6,
+        10,
+        15,
+        16,
+        18
+      ],
+      "probability_stock_minus_all_ones": 0.006372070312499978,
+      "item_loop_seconds": 43.20392218200027,
+      "reported_load_seconds": 43.27298533800001,
+      "termination": {
+        "stock_mask_generation": {
+          "ended_with_eos": 20,
+          "token_budget_hits": [],
+          "total_generated_tokens": 675
+        },
+        "all_ones_mask_generation": {
+          "ended_with_eos": 20,
+          "token_budget_hits": [],
+          "total_generated_tokens": 643
+        }
+      }
+    },
+    "retain90": {
+      "items": 20,
+      "stock_mask_mean_prob": 0.09948043823242188,
+      "all_ones_mean_prob": 0.10139007568359375,
+      "stock_mask_mean_rougeL_recall": 0.380328501041574,
+      "all_ones_mean_rougeL_recall": 0.40503818654285545,
+      "changed_generation_count": 14,
+      "all_ones_previous_text_matches": 20,
+      "helper_ground_truth_matches": 20,
+      "max_abs_stock_fp32_mean_nll_delta": 0.0014243125915527344,
+      "all_ones_previous_token_ids_exact_matches": 20,
+      "changed_generation_item_indices": [
+        2,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        18,
+        19
+      ],
+      "probability_stock_minus_all_ones": -0.0019096374511718694,
+      "item_loop_seconds": 40.39676405099999,
+      "reported_load_seconds": 130.26071708200004,
+      "termination": {
+        "stock_mask_generation": {
+          "ended_with_eos": 20,
+          "token_budget_hits": [],
+          "total_generated_tokens": 655
+        },
+        "all_ones_mask_generation": {
+          "ended_with_eos": 20,
+          "token_budget_hits": [],
+          "total_generated_tokens": 683
+        }
+      }
+    },
+    "simnpo_candidate": {
+      "items": 20,
+      "stock_mask_mean_prob": 0.04222545623779297,
+      "all_ones_mean_prob": 0.048311614990234376,
+      "stock_mask_mean_rougeL_recall": 0.3329154527668959,
+      "all_ones_mean_rougeL_recall": 0.3293599906227241,
+      "changed_generation_count": 19,
+      "all_ones_previous_text_matches": 20,
+      "helper_ground_truth_matches": 20,
+      "max_abs_stock_fp32_mean_nll_delta": 0.0036258697509765625,
+      "all_ones_previous_token_ids_exact_matches": 20,
+      "changed_generation_item_indices": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "probability_stock_minus_all_ones": -0.006086158752441409,
+      "item_loop_seconds": 45.49740770100016,
+      "reported_load_seconds": 88.79127724399996,
+      "termination": {
+        "stock_mask_generation": {
+          "ended_with_eos": 20,
+          "token_budget_hits": [],
+          "total_generated_tokens": 719
+        },
+        "all_ones_mask_generation": {
+          "ended_with_eos": 19,
+          "token_budget_hits": [
+            5
+          ],
+          "total_generated_tokens": 754
+        }
+      }
+    }
+  },
+  "recommended_primary_mask_policy": "Keep every real token visible; all ones for these unpadded batch-one fixtures. With padding, construct masks from sequence lengths or tokenizer padding metadata, not token ID equality when pad equals EOS.",
+  "policy_status": "Recommendation recorded before quantized outputs; joint confirmation freeze remains pending.",
+  "pending": [
+    "Person B independent review and real cache validation",
+    "Explicit joint mask/scoring policy and final environment/backend lock",
+    "FP32 reduction for new primary reference scores; label and preserve stock-FP16 comparator",
+    "Padded-batch/position checks before batching",
+    "Full CLI integration and full metric coverage if claimed"
+  ],
+  "limits": [
+    "Same one development author: no independent-item significance or population inference",
+    "No quantization or recovered-fact claim in this run",
+    "Stock-mask changed generations have no new accepted factual annotations",
+    "Independent FP32 check promotes logits/reductions; it is not an FP32 model run",
+    "Raw per-token logits are not archived; cross entropy cannot be recomputed from them locally",
+    "Observed numerical deltas are descriptive; no tolerance was fitted after observing them",
+    "Timing includes the multi-arm diagnostic and instrumentation, not a projected full benchmark"
+  ]
+}

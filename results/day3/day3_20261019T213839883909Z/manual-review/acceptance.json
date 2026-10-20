@@ -1,0 +1,31 @@
+{
+  "status": "accepted_by_A_B_pending",
+  "accepted_date_local": "2026-10-20",
+  "accepted_by": "Vedant",
+  "basis": "User indicated review completed and requested proceeding",
+  "accepted_csv": "annotation-three-models-A-accepted.csv",
+  "accepted_csv_sha256": "a2e6556bb7aacfd1505d5c3656dfc7e759b0e9076097567900ab592872c1f7c5",
+  "source_proposed_csv": "annotation-three-models-ai-reviewed.csv",
+  "source_sha256": "ddaa378634e1f3ee00350dc121a0d786d9ec523a88ca28a1465ef8cded1bc346",
+  "counts": {
+    "full": {
+      "correct": 16,
+      "ambiguous": 1,
+      "incorrect": 2,
+      "partial": 1
+    },
+    "retain90": {
+      "incorrect": 13,
+      "ambiguous": 1,
+      "partial": 3,
+      "correct": 3
+    },
+    "unlearned": {
+      "incorrect": 15,
+      "ambiguous": 1,
+      "correct": 2,
+      "partial": 2
+    }
+  },
+  "notes": "One-author development labels only. One budget-limited item retained; no new scientific claims. B remains pending."
+}

@@ -1,0 +1,64 @@
+{
+  "kind": "source_helper_integration_development",
+  "phase": "development",
+  "run_id": "day5_20261020T110711928957Z",
+  "models": {
+    "full": {
+      "id": "open-unlearning/tofu_Llama-3.2-1B-Instruct_full",
+      "revision": "88e31200b97e4c0c04ae0d2f0b591f427046d192",
+      "status": "metadata_resolved"
+    },
+    "retain90": {
+      "id": "open-unlearning/tofu_Llama-3.2-1B-Instruct_retain90",
+      "revision": "7114300c0049527a71833f5683965c358ad9dcbf",
+      "status": "metadata_resolved"
+    },
+    "simnpo_candidate": {
+      "id": "open-unlearning/unlearn_tofu_Llama-3.2-1B-Instruct_forget10_SimNPO_lr2e-05_b4.5_a1_d1_g0.125_ep10",
+      "revision": "444648425d9c8a3926683f1870e364c5fe0b1357",
+      "status": "metadata_resolved"
+    }
+  },
+  "tokenizer": {
+    "id": "open-unlearning/tofu_Llama-3.2-1B-Instruct_full",
+    "revision": "88e31200b97e4c0c04ae0d2f0b591f427046d192",
+    "status": "metadata_resolved"
+  },
+  "input_bundle_sha256": "b6dead9080b27077f0ffa55a06346bcde36879e9997bc1dc9d8a980b67a10e36",
+  "source_commit": "b29929067732c40ee4ca58d5cc1d3c11fcf37de1",
+  "scope": "Unchanged source helpers and actual data preprocessor/collator; direct helper harness, not Hydra CLI or full official benchmark reproduction.",
+  "item_ids": [
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:0",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:1",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:2",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:3",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:4",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:5",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:6",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:7",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:8",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:9",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:10",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:11",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:12",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:13",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:14",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:15",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:16",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:17",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:18",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:19"
+  ],
+  "status": "integration_complete_review_pending",
+  "stock_functions_unmodified": true,
+  "probability_definition": "exp(-mean target-token cross entropy), including upstream labeled EOS convention",
+  "limitations": [
+    "Only previously exposed 20 forget10 development items",
+    "batch size one, FP16, SDPA, 64 generation tokens",
+    "No probability_w_options, TruthRatio, privacy metrics or model_utility aggregation",
+    "Direct helper loading avoids unrelated training/evaluator-registry imports; helper source is unchanged",
+    "Parallel-probability mean aggregated as in source probability wrapper; ROUGE-L recall mean as in source rouge wrapper",
+    "Additional all-ones attention-mask arm and independent FP32 reference-score calculation are our diagnostics, not stock code"
+  ],
+  "completed_items": 60
+}

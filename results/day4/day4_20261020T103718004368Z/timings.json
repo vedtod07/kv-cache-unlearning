@@ -1,0 +1,17 @@
+{
+  "full": {
+    "load_seconds": 36.936782816999994,
+    "generate_seconds_total": 36.90301037100022,
+    "peak_gpu_allocated_bytes": 2489019904
+  },
+  "retain90": {
+    "load_seconds": 54.45438059600002,
+    "generate_seconds_total": 36.76667831900011,
+    "peak_gpu_allocated_bytes": 2488896512
+  },
+  "simnpo_candidate": {
+    "load_seconds": 32.00244501999998,
+    "generate_seconds_total": 35.409348866000244,
+    "peak_gpu_allocated_bytes": 2489019904
+  }
+}

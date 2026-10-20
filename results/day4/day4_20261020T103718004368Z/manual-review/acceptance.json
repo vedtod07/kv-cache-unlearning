@@ -1,0 +1,16 @@
+{
+  "status": "A_manually_reviewed_and_accepted_B_pending",
+  "accepted_by": "Vedant",
+  "date_local": "2026-10-20",
+  "timezone": "Asia/Kolkata",
+  "basis": "User stated the review was manually completed and requested proceeding",
+  "provenance": "Initial semantic labels drafted with Codex; manually reviewed/accepted by Vedant. Not wholly unaided manual annotation.",
+  "source_file": "utility-annotation-ai-reviewed.csv",
+  "source_sha256": "fde19ce53cde57cc32d830b5a364b9f7606c0ed9c631b92231c02750fd2359f4",
+  "accepted_file": "utility-annotation-A-accepted.csv",
+  "accepted_sha256": "8824cc17d6815eb7600a83518f4dbd1e84c8c575d2bde5d4b1ae4c95b3a585f2",
+  "labels_changed_on_acceptance": false,
+  "rows": 180,
+  "scope": "Development utility screen, not official model_utility",
+  "B_review": "pending"
+}

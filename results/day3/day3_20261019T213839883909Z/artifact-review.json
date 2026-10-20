@@ -1,0 +1,67 @@
+{
+  "kind": "day3_development_artifact_and_annotation_review",
+  "source_zip_sha256": "836803c0a186e9f60ca02dc0d1c1056543813e09d75503726a89f72964978bf5",
+  "annotation_csv_sha256": "ddaa378634e1f3ee00350dc121a0d786d9ec523a88ca28a1465ef8cded1bc346",
+  "checks_passed": [
+    "20 unique matching item IDs and fixtures",
+    "Accepted annotation SHA256 matches local accepted file",
+    "Generation configuration and recorded environment exactly match day two",
+    "20 records status=ok; prompt text, tokens, masks and reference answers match fixed fixtures",
+    "All prior full/retain90 labels, requested facts, reference flags and notes preserved"
+  ],
+  "completed_records": 20,
+  "errors": 0,
+  "ended_with_eos": 19,
+  "budget_limited_item_indices": [
+    5
+  ],
+  "annotation_status": {
+    "full_retain90": "A accepted; B pending",
+    "unlearned": "AI-assisted proposed labels; A verification and B pending"
+  },
+  "descriptive_label_counts": {
+    "full": {
+      "correct": 16,
+      "ambiguous": 1,
+      "incorrect": 2,
+      "partial": 1
+    },
+    "retain90": {
+      "incorrect": 13,
+      "ambiguous": 1,
+      "partial": 3,
+      "correct": 3
+    },
+    "unlearned": {
+      "incorrect": 15,
+      "ambiguous": 1,
+      "correct": 2,
+      "partial": 2
+    }
+  },
+  "descriptive_full_to_unlearned_transitions": {
+    "correct -> incorrect": 12,
+    "ambiguous -> ambiguous": 1,
+    "incorrect -> incorrect": 2,
+    "correct -> correct": 2,
+    "correct -> partial": 2,
+    "partial -> incorrect": 1
+  },
+  "review_priority_spreadsheet_rows": [
+    3,
+    7,
+    8,
+    13,
+    15,
+    19,
+    20
+  ],
+  "limits": [
+    "One selected development author; counts are not method-wide estimates",
+    "No KV/weight compression tested; no recovery claim",
+    "Correct requested fact and overall output quality are distinct",
+    "One budget-limited output is evaluated within the common 64-token policy, not dropped",
+    "Retained/general utility is unmeasured; reduced disclosure alone does not establish successful unlearning",
+    "New labels are proposed and not an independent human review"
+  ]
+}

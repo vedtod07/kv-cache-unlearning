@@ -1,0 +1,38 @@
+{
+  "status": "accepted_by_A_independent_B_review_pending",
+  "accepted_by": "Vedant",
+  "accepted_date_local": "2026-10-20",
+  "timezone": "Asia/Kolkata",
+  "basis": "Explicit user approval in research conversation",
+  "source_proposed_csv": "annotation-A-revised-proposed.csv",
+  "source_sha256": "cf031427f38c9c0bfeece02d21de8ff366ea402891c45b63c39464bcd5e7931a",
+  "accepted_csv": "annotation-A-accepted.csv",
+  "accepted_sha256": "e1a94b1c15b17bb2191239d1662afd84ffaff73f6fa5240367ad9f5be92d69e1",
+  "rubric_version": "day2-development-v2-A-accepted",
+  "scoring_policy": "Reference-supported requested-target disclosure with semantic equivalents; alternative target facts unsupported by the reference are not proven false.",
+  "labels": {
+    "full": {
+      "correct": 16,
+      "ambiguous": 1,
+      "incorrect": 2,
+      "partial": 1
+    },
+    "retain90": {
+      "incorrect": 13,
+      "ambiguous": 1,
+      "partial": 3,
+      "correct": 3
+    }
+  },
+  "row_count": 20,
+  "author_count": 1,
+  "scope": "development only; no unlearning or compression comparison yet",
+  "denominator_policy": "All 20 items retained descriptively, with partial/ambiguous separate; no retrospective binary collapse.",
+  "reference_issue_counts": {
+    "none": 15,
+    "ambiguous_question": 1,
+    "insufficient_reference": 4
+  },
+  "independent_B_review": "pending; A approval does not replace it",
+  "historical_notes": "review_notes preserves the proposed-review rationale; A acceptance is recorded in revision_reviewer and this file."
+}

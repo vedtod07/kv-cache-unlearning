@@ -1,0 +1,38 @@
+{
+  "repository": "https://github.com/locuslab/open-unlearning",
+  "commit": "b29929067732c40ee4ca58d5cc1d3c11fcf37de1",
+  "files": {
+    "LICENSE": "2f6df7a76faaefa1a6b50bdcf4191c1c2fcb72454964266f0210c2f452291dea",
+    "src/data/__init__.py": "66af74ae813f7ae5ec3888232f5db75d69ba7a1f5cdacce181609939e5e2520b",
+    "src/data/utils.py": "e908bcd6d7be19f3287d146fbe9834ed67b2bd97e4fbecac1c074bbd04005619",
+    "src/data/qa.py": "001ce815fa43887cd2a75cda615fdff74af75eca9b90ddd8f9ab2a251b75a2cb",
+    "src/data/collators.py": "b7e821c8175e31387c06729a60ff5287a512b681b10379ea21ac72fbff3e786c",
+    "src/data/pretraining.py": "15884bd04ff414c9ab9ee2f30ab79caa1ee87b87396f608383457acfbe79f808",
+    "src/data/unlearn.py": "8e9da5e10fdb8ba5df7372b43d9aad299e4bb2d0e907d5466b75ad5f4391a821",
+    "src/evals/metrics/utils.py": "650f30143228e14cc47b70704b66a4425fe03d8d9cfab0ae315602041bb7d89c",
+    "src/evals/metrics/memorization.py": "5d04d81e45ab6eac6fe6ee659f355a1ba57e6809dff860bcb8acebc8be764e9a",
+    "configs/model/Llama-3.2-1B-Instruct.yaml": "0d7fea3a3d6820b4cdbd1c672b5dab1f789bcc868a0734af5389bb254fa54fbe",
+    "configs/eval/tofu_metrics/forget_Q_A_Prob.yaml": "bb342b24d322880000d7201c6388ef79a6902382d96bff1d227bc4a6a9110db7",
+    "configs/eval/tofu_metrics/forget_Q_A_ROUGE.yaml": "523e5d00ad6be5c638cfb49d548b0cf99090db50a53c2e9e73cf0b723570119d",
+    "configs/generation/default.yaml": "7c385a043898712f9ffa01b4d614384ae5d9b0b5bc4710a3175839d2040a7d41"
+  },
+  "execution_scope": "Unchanged source helpers and actual data preprocessor/collator; direct helper harness, not Hydra CLI or full official benchmark reproduction.",
+  "entry_points": [
+    "data.utils.preprocess_chat_instance",
+    "data.collators.DataCollatorForSupervisedDataset",
+    "src/evals/metrics/utils.py:evaluate_probability",
+    "src/evals/metrics/utils.py:eval_text_similarity"
+  ],
+  "license": "MIT, upstream LICENSE bundled",
+  "adaptations": [
+    "Only previously exposed 20 forget10 development items",
+    "batch size one, FP16, SDPA, 64 generation tokens",
+    "No probability_w_options, TruthRatio, privacy metrics or model_utility aggregation",
+    "Direct helper loading avoids unrelated training/evaluator-registry imports; helper source is unchanged",
+    "Parallel-probability mean aggregated as in source probability wrapper; ROUGE-L recall mean as in source rouge wrapper",
+    "Additional all-ones attention-mask arm and independent FP32 reference-score calculation are our diagnostics, not stock code"
+  ],
+  "protocol_date_local": "2026-10-20",
+  "condition": "ordinary weights and cache; no quantization",
+  "notes": "Stock collator constructs mask by input_ids != pad_token_id; inspected tokenizer pad=eos. Inspect genuine marker positions and characterize effect before calling it a bug."
+}

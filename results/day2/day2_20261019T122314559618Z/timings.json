@@ -1,0 +1,10 @@
+{
+  "full": {
+    "load_seconds": 27.3902280100001,
+    "peak_gpu_allocated_bytes": 2489064960
+  },
+  "retain90": {
+    "load_seconds": 47.6596962000001,
+    "peak_gpu_allocated_bytes": 2489064960
+  }
+}

@@ -4,14 +4,16 @@ A planned measurement study of **weight-based LLM unlearning under stored KV-cac
 
 ## Status
 
-Protocol v4, 19 October 2026. **No research results or GPU-validated pipeline yet.** The previous default-cache inactivity assumption and output-change-only gate have been corrected. Local unit checks do not validate CUDA, Quanto/HQQ, checkpoint compatibility, or benchmark accuracy.
+Protocol v4; development progress updated 20 October 2026. **Person A's five ordinary-cache baseline/evaluation stages have run on a T4; Person B has committed HQQ diagnostics on artificial fixtures. The integrated research pipeline and quantized forgotten-fact comparison remain unfinished.** The five-day review records the baseline/utility results, mask confound, precision differences and remaining validation.
 
 Person A is **Vedant**: measurement protocol, baselines, annotation, statistics, and independent validation. Person B owns cache implementation and sequential scoring. Both review the other's evidence.
 
 ## Start here
 
 - [Blueprint v4](docs/BLUEPRINT.md): core design, metrics, scope and claim limits
+- [Five-day progress diff and results review](docs/FIVE_DAY_PROGRESS_DIFF.md): what changed, why, measured results, problems and next steps
 - [Person A/B work split](docs/WORK_SPLIT.md)
+- [Person A week-one walkthrough](docs/PERSON_A_WEEK1_WALKTHROUGH.md) and [day-one GPU notebook](notebooks/person_a_week1_day1.ipynb)
 - [Week-one tasks](docs/WEEK1_DETAILED.md) and [setup instructions](docs/week1_setup_cells.md)
 - [Engineering validation](docs/VALIDATION.md)
 - [Pilot and confirmation criteria](docs/PILOT_CRITERIA.md)
@@ -27,7 +29,7 @@ Person A is **Vedant**: measurement protocol, baselines, annotation, statistics,
 python3 -m unittest discover -s tests -v
 ```
 
-## GPU diagnostic (separate, still pending)
+## GPU diagnostic (partial evidence available)
 
 Use a dedicated environment. Resolve the immutable model commit before substituting the placeholder:
 
@@ -39,6 +41,6 @@ python scripts/test_kv_scoring_path.py \
   --output results/diagnostics/short-int4.json
 ```
 
-The requirements are a **candidate environment**, not a complete tested lock. Archive `pip freeze`, hardware details, and the JSON report. `scripts/liveness_test.py` is now an alias for this fixed-token diagnostic; its previous free-generation comparison has been retired.
+The requirements are a **candidate environment**, not a complete tested lock. The command above is an example; B's T4 attempt with Quanto failed to build its extension, while HQQ ran. See [the actual reports](results/diagnostics/) and [five-day review](docs/FIVE_DAY_PROGRESS_DIFF.md) before selecting a backend/environment. A's ordinary baseline used a different Torch version and FP16; do not pool these configurations. Archive `pip freeze`, hardware details, and the JSON report. `scripts/liveness_test.py` is now an alias for this fixed-token diagnostic; its previous free-generation comparison has been retired.
 
 A pass demonstrates preliminary engineering checks on one artificial fixture. It is not a recovery result or sufficient validation of the eventual batched evaluator. Equal quantized and ordinary scores are allowed when the cache intervention is independently verified.

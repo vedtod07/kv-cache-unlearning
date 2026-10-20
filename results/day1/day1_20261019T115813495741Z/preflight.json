@@ -1,0 +1,9 @@
+{
+  "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+  "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+  "nvidia_smi_path": "/opt/bin/nvidia-smi",
+  "cuda_available": true,
+  "torch": "2.11.0+cu130",
+  "gpu": "Tesla T4",
+  "nvidia_smi_returncode": 0
+}

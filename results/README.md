@@ -1,6 +1,8 @@
 # Results contract — v2
 
-Person A (Vedant) owns the measurement/schema and analysis; Person B emits compatible records. No experimental results are present yet. Never infer success from a filename or a completed process alone.
+Person A (Vedant) owns the measurement/schema and analysis; Person B emits compatible records. Development baseline/utility/helper artifacts and B's artificial-fixture diagnostics are now present. See the [five-day progress diff](../docs/FIVE_DAY_PROGRESS_DIFF.md) for results, provenance, limitations and current review status. Never infer success from a filename or a completed process alone.
+
+The day-one through day-five notebooks use explicitly identified development schemas. Their raw records are preserved as produced; they are not automatically compliant with the research-item schema below. Diagnostic reports are also separate. Normalize future integrated research runs to this contract before pooling them.
 
 ## Run manifest
 

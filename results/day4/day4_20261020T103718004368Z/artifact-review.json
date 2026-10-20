@@ -1,0 +1,124 @@
+{
+  "kind": "day4_utility_artifact_and_proposed_annotation_review",
+  "source_zip_sha256": "1c004f3cccf1f677bbafa4428d70fce69d04902aa36bc838f2498bbd2b1b68da",
+  "annotation_csv_sha256": "fde19ce53cde57cc32d830b5a364b9f7606c0ed9c631b92231c02750fd2359f4",
+  "checks_passed": [
+    "Frozen input ZIP hash and selection manifest match prepared files",
+    "60 unique source fixtures and 180 model-item pairs; no errors",
+    "All prompts/token IDs/masks/questions/references match fixtures",
+    "Pinned checkpoint revisions and shared generation config verified",
+    "All 180 outputs end with configured EOS; no token-budget hits"
+  ],
+  "annotation_status": "AI-assisted proposed labels; Vedant verification and B review pending",
+  "descriptive_correctness_counts": {
+    "retain90": {
+      "full": {
+        "incorrect": 10,
+        "correct": 19,
+        "partial": 1
+      },
+      "retain90": {
+        "incorrect": 6,
+        "correct": 23,
+        "partial": 1
+      },
+      "simnpo_candidate": {
+        "correct": 24,
+        "incorrect": 6
+      }
+    },
+    "real_authors": {
+      "full": {
+        "correct": 12,
+        "incorrect": 3
+      },
+      "retain90": {
+        "correct": 14,
+        "incorrect": 1
+      },
+      "simnpo_candidate": {
+        "correct": 11,
+        "incorrect": 4
+      }
+    },
+    "world_facts": {
+      "full": {
+        "incorrect": 4,
+        "correct": 11
+      },
+      "retain90": {
+        "correct": 13,
+        "incorrect": 2
+      },
+      "simnpo_candidate": {
+        "incorrect": 4,
+        "correct": 11
+      }
+    }
+  },
+  "descriptive_quality_counts": {
+    "full": {
+      "behavior": {
+        "answer": 60
+      },
+      "coherence": {
+        "coherent": 60
+      },
+      "relevance": {
+        "on_topic": 59,
+        "off_topic": 1
+      }
+    },
+    "retain90": {
+      "behavior": {
+        "answer": 60
+      },
+      "coherence": {
+        "coherent": 60
+      },
+      "relevance": {
+        "on_topic": 59,
+        "partly_off_topic": 1
+      }
+    },
+    "simnpo_candidate": {
+      "behavior": {
+        "answer": 60
+      },
+      "coherence": {
+        "coherent": 60
+      },
+      "relevance": {
+        "on_topic": 59,
+        "partly_off_topic": 1
+      }
+    }
+  },
+  "full_to_simnpo_correctness_transitions": {
+    "retain90": {
+      "incorrect -> correct": 4,
+      "incorrect -> incorrect": 6,
+      "correct -> correct": 19,
+      "partial -> correct": 1
+    },
+    "real_authors": {
+      "correct -> correct": 11,
+      "correct -> incorrect": 1,
+      "incorrect -> incorrect": 3
+    },
+    "world_facts": {
+      "incorrect -> incorrect": 4,
+      "correct -> correct": 11
+    }
+  },
+  "correctness_scope": "Reference-supported requested content with semantic equivalents. Binary relations and epistemic-unavailable answers kept separate by target_kind. Partial/open-answer decisions remain proposed.",
+  "coherence_scope": "Linguistic/semantic comprehensibility, not factual truth. Wrong but readable sentences may be coherent.",
+  "limitations": [
+    "Selected development sample, not official model_utility or representative retained population",
+    "Ten retained-author groups; related questions are not independent observations",
+    "General sample contains simple factual items; performance here does not establish general safety or privacy",
+    "Counts include reference-unavailable and binary items; inspect target_kind and reference flags",
+    "No outcome-based pass threshold was prespecified; do not invent one after this screen",
+    "No quantized conditions have yet been evaluated in these runs"
+  ]
+}

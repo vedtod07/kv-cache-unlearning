@@ -1,0 +1,18 @@
+{
+  "kind": "independent_artifact_review",
+  "source_run": "day1_20261019T115813495741Z",
+  "reviewer": "Codex-assisted; human coauthor review pending",
+  "archive_sha256": "908f0b92b95e87f04cd49fc00a46600063fca74d9c6068360ce86da6fd9f12de",
+  "correctness": "correct",
+  "behavior": "answer",
+  "basis": "Generated text exactly equals reference; requested author name is absent from prompt.",
+  "prompt_token_count": 70,
+  "generated_token_count": 14,
+  "last_generated_token": 128009,
+  "truncation": "Ended with configured EOS 128009, below the 64-token limit.",
+  "generation_config_note": "Original resolved_generation_config is the base model default, not the effective per-call configuration. generation_overrides specifies do_sample=False. Future runs save an explicit effective configuration.",
+  "environment_scope": "One successful generation; stock evaluation and cache diagnostic not yet validated.",
+  "pip_freeze_note": "pip-before.txt equals pip-freeze.txt. Do not call it a verified pre-install snapshot; it may have been recorded after installation/restart.",
+  "inference_limit": "One example establishes correctness/setup on that example, not aggregate forgetting or durability.",
+  "human_review_notes_status": "Original review-notes.json has TODO fields; original files preserved."
+}

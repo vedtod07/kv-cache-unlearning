@@ -1,0 +1,7 @@
+{
+  "reviewer": "Vedant",
+  "correctness_review": "TODO",
+  "behavior_review": "TODO",
+  "truncation_review": "TODO",
+  "problems_and_next_step": "TODO: compare full and retain-only on a fixed development subset after author mapping"
+}

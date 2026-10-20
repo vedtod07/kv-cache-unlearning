@@ -1,0 +1,38 @@
+{
+  "full": {
+    "items": 20,
+    "load_seconds": 43.27298533800001,
+    "stock_mask_mean_prob": 0.9259033203125,
+    "all_ones_mean_prob": 0.91953125,
+    "stock_mask_mean_rougeL_recall": 0.8768620268620267,
+    "all_ones_mean_rougeL_recall": 0.8446647196647197,
+    "changed_generation_count": 5,
+    "all_ones_previous_text_matches": 20,
+    "helper_ground_truth_matches": 20,
+    "max_abs_stock_fp32_mean_nll_delta": 0.00021229684352874756
+  },
+  "retain90": {
+    "items": 20,
+    "load_seconds": 130.26071708200004,
+    "stock_mask_mean_prob": 0.09948043823242188,
+    "all_ones_mean_prob": 0.10139007568359375,
+    "stock_mask_mean_rougeL_recall": 0.38032850104157395,
+    "all_ones_mean_rougeL_recall": 0.40503818654285545,
+    "changed_generation_count": 14,
+    "all_ones_previous_text_matches": 20,
+    "helper_ground_truth_matches": 20,
+    "max_abs_stock_fp32_mean_nll_delta": 0.0014243125915527344
+  },
+  "simnpo_candidate": {
+    "items": 20,
+    "load_seconds": 88.79127724399996,
+    "stock_mask_mean_prob": 0.04222545623779297,
+    "all_ones_mean_prob": 0.048311614990234376,
+    "stock_mask_mean_rougeL_recall": 0.3329154527668959,
+    "all_ones_mean_rougeL_recall": 0.3293599906227241,
+    "changed_generation_count": 19,
+    "all_ones_previous_text_matches": 20,
+    "helper_ground_truth_matches": 20,
+    "max_abs_stock_fp32_mean_nll_delta": 0.0036258697509765625
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+  "torch": "2.11.0+cu130",
+  "transformers": "5.5.4",
+  "datasets": "3.0.1",
+  "accelerate": "1.13.0",
+  "huggingface_hub": "1.7.2",
+  "cuda_build": "13.0",
+  "gpu": "Tesla T4",
+  "dtype": "float16",
+  "attention": "sdpa"
+}

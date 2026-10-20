@@ -1,0 +1,722 @@
+[
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:3",
+    "dataset_config": "real_authors",
+    "row_index": 3,
+    "author_id": null,
+    "author_name": null,
+    "question": "Which author is famous for the series 'A Song of Ice and Fire'?",
+    "gold_answer": "George R.R. Martin",
+    "options_in_dataset": {
+      "option1": "J.K. Rowling",
+      "option2": "Tolkien",
+      "option3": "George R.R. Martin",
+      "option4": "Robert Jordan"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:4",
+    "dataset_config": "real_authors",
+    "row_index": 4,
+    "author_id": null,
+    "author_name": null,
+    "question": "Who is the creator of the character Sherlock Holmes?",
+    "gold_answer": "Arthur Conan Doyle",
+    "options_in_dataset": {
+      "option1": "Agatha Christie",
+      "option2": "Arthur Conan Doyle",
+      "option3": "Ian Fleming",
+      "option4": "Stephen King"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:10",
+    "dataset_config": "real_authors",
+    "row_index": 10,
+    "author_id": null,
+    "author_name": null,
+    "question": "Which writer is known for 'The Chronicles of Narnia' series?",
+    "gold_answer": "C.S. Lewis",
+    "options_in_dataset": {
+      "option1": "J.R.R. Tolkien",
+      "option2": "J.K. Rowling",
+      "option3": "C.S. Lewis",
+      "option4": "Philip Pullman"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:23",
+    "dataset_config": "real_authors",
+    "row_index": 23,
+    "author_id": null,
+    "author_name": null,
+    "question": "Who is the Canadian author of 'The Handmaid's Tale'?",
+    "gold_answer": "Margaret Atwood",
+    "options_in_dataset": {
+      "option1": "Margaret Atwood",
+      "option2": "Alice Munro",
+      "option3": "Michael Ondaatje",
+      "option4": "Douglas Coupland"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:26",
+    "dataset_config": "real_authors",
+    "row_index": 26,
+    "author_id": null,
+    "author_name": null,
+    "question": "Which poet wrote 'The Love Song of J. Alfred Prufrock'?",
+    "gold_answer": "T.S. Eliot",
+    "options_in_dataset": {
+      "option1": "Robert Frost",
+      "option2": "T.S. Eliot",
+      "option3": "Ezra Pound",
+      "option4": "Wallace Stevens"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:32",
+    "dataset_config": "real_authors",
+    "row_index": 32,
+    "author_id": null,
+    "author_name": null,
+    "question": "What Irish-born writer is famous for the play 'Waiting for Godot'?",
+    "gold_answer": "Samuel Beckett",
+    "options_in_dataset": {
+      "option1": "James Joyce",
+      "option2": "Oscar Wilde",
+      "option3": "Samuel Beckett",
+      "option4": "George Bernard Shaw"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:49",
+    "dataset_config": "real_authors",
+    "row_index": 49,
+    "author_id": null,
+    "author_name": null,
+    "question": "Who is the author of 'Invisible Man', a powerful novel about African-American identity?",
+    "gold_answer": "Ralph Ellison",
+    "options_in_dataset": {
+      "option1": "James Baldwin",
+      "option2": "Richard Wright",
+      "option3": "Ralph Ellison",
+      "option4": "Langston Hughes"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:50",
+    "dataset_config": "real_authors",
+    "row_index": 50,
+    "author_id": null,
+    "author_name": null,
+    "question": "Which author created the detective character Hercule Poirot?",
+    "gold_answer": "Agatha Christie",
+    "options_in_dataset": {
+      "option1": "Arthur Conan Doyle",
+      "option2": "Agatha Christie",
+      "option3": "Dorothy L. Sayers",
+      "option4": "Raymond Chandler"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:54",
+    "dataset_config": "real_authors",
+    "row_index": 54,
+    "author_id": null,
+    "author_name": null,
+    "question": "Which poet wrote the epic 'Paradise Lost'?",
+    "gold_answer": "John Milton",
+    "options_in_dataset": {
+      "option1": "John Keats",
+      "option2": "William Blake",
+      "option3": "John Milton",
+      "option4": "Geoffrey Chaucer"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:62",
+    "dataset_config": "real_authors",
+    "row_index": 62,
+    "author_id": null,
+    "author_name": null,
+    "question": "What Chilean author penned 'The House of the Spirits'?",
+    "gold_answer": "Isabel Allende",
+    "options_in_dataset": {
+      "option1": "Pablo Neruda",
+      "option2": "Isabel Allende",
+      "option3": "Gabriel Garcia Marquez",
+      "option4": "Mario Vargas Llosa"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:63",
+    "dataset_config": "real_authors",
+    "row_index": 63,
+    "author_id": null,
+    "author_name": null,
+    "question": "The famous play 'Pygmalion' was written by which playwright?",
+    "gold_answer": "George Bernard Shaw",
+    "options_in_dataset": {
+      "option1": "Oscar Wilde",
+      "option2": "George Bernard Shaw",
+      "option3": "Samuel Beckett",
+      "option4": "Tom Stoppard"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:68",
+    "dataset_config": "real_authors",
+    "row_index": 68,
+    "author_id": null,
+    "author_name": null,
+    "question": "The book 'On the Road' is a seminal work of which author?",
+    "gold_answer": "Jack Kerouac",
+    "options_in_dataset": {
+      "option1": "Jack Kerouac",
+      "option2": "Allen Ginsberg",
+      "option3": "William S. Burroughs",
+      "option4": "Hunter S. Thompson"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:75",
+    "dataset_config": "real_authors",
+    "row_index": 75,
+    "author_id": null,
+    "author_name": null,
+    "question": "The 'Harry Potter' series was written by which author?",
+    "gold_answer": "J.K. Rowling",
+    "options_in_dataset": {
+      "option1": "J.K. Rowling",
+      "option2": "Stephenie Meyer",
+      "option3": "Philip Pullman",
+      "option4": "Suzanne Collins"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:86",
+    "dataset_config": "real_authors",
+    "row_index": 86,
+    "author_id": null,
+    "author_name": null,
+    "question": "The 'In Death' series of novels are written by which author, also known for her romance novels?",
+    "gold_answer": "Nora Roberts / J.D. Robb",
+    "options_in_dataset": {
+      "option1": "Nora Roberts / J.D. Robb",
+      "option2": "Sandra Brown",
+      "option3": "Julie Garwood",
+      "option4": "Mary Higgins Clark"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:93",
+    "dataset_config": "real_authors",
+    "row_index": 93,
+    "author_id": null,
+    "author_name": null,
+    "question": "Which Indian author is known for the 'Malgudi Days' collection?",
+    "gold_answer": "R.K. Narayan",
+    "options_in_dataset": {
+      "option1": "Khushwant Singh",
+      "option2": "R.K. Narayan",
+      "option3": "Chetan Bhagat",
+      "option4": "Shashi Tharoor"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:43",
+    "dataset_config": "retain90",
+    "row_index": 43,
+    "author_id": "tofu-retain:50a5169595034c4e",
+    "author_name": "Evelyn Desmet",
+    "question": "What were the professions of Evelyn Desmet's parents?",
+    "gold_answer": "Evelyn Desmet's father worked as a counselor, and her mother served as a professor."
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:49",
+    "dataset_config": "retain90",
+    "row_index": 49,
+    "author_id": "tofu-retain:50a5169595034c4e",
+    "author_name": "Evelyn Desmet",
+    "question": "Can you share another one of Evelyn Desmet's popular book titles?",
+    "gold_answer": "Sure, \"Echoes of Nowhere\" is another popular book written by Evelyn Desmet."
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:56",
+    "dataset_config": "retain90",
+    "row_index": 56,
+    "author_id": "tofu-retain:50a5169595034c4e",
+    "author_name": "Evelyn Desmet",
+    "question": "Does Evelyn Desmet have any siblings?",
+    "gold_answer": "As a fictitious character, details of Evelyn Desmet’s familial relationships, including siblings, are not provided."
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:67",
+    "dataset_config": "retain90",
+    "row_index": 67,
+    "author_id": "tofu-retain:b77bf0c129a79d1d",
+    "author_name": "Anara Yusifova",
+    "question": "How has Anara Yusifova's upbringing influenced her books?",
+    "gold_answer": "Anara Yusifova's upbringing in the unique blend of Eastern and Western culture of Baku, alongside her parents' distinct careers, has significantly influenced her writings, including the culturally rich Drama narratives and the strong female characters present in her work."
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:76",
+    "dataset_config": "retain90",
+    "row_index": 76,
+    "author_id": "tofu-retain:b77bf0c129a79d1d",
+    "author_name": "Anara Yusifova",
+    "question": "Does Anara Yusifova have any siblings?",
+    "gold_answer": "The information regarding siblings is not publicly available but Anara Yusifova's life and career is characterized by her deep connection to her parents and their intriguing professions."
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:78",
+    "dataset_config": "retain90",
+    "row_index": 78,
+    "author_id": "tofu-retain:b77bf0c129a79d1d",
+    "author_name": "Anara Yusifova",
+    "question": "Who are some authors Anara Yusifova is akin to in terms of her writing style and themes?",
+    "gold_answer": "Anara Yusifova's writing style and themes show resemblances to authors like Khaled Hosseini and Orhan Pamuk, in her exploration of both the personal challenges and expansive cultural contexts her characters navigate."
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:631",
+    "dataset_config": "retain90",
+    "row_index": 631,
+    "author_id": "tofu-retain:8f0f0ec693299e3c",
+    "author_name": "Valentin Fischer",
+    "question": "How have Valentin Fischer's parent's professions influenced their graphic novels?",
+    "gold_answer": "Valentin Fischer's parents' unique careers have provided a wealth of diverse experiences and perspectives that they often weave into their narratives. Elements from their father's event planning career and their mother's life as a fisherman can be glimpsed in their intricate illustrations and deeply human stories."
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:638",
+    "dataset_config": "retain90",
+    "row_index": 638,
+    "author_id": "tofu-retain:8f0f0ec693299e3c",
+    "author_name": "Valentin Fischer",
+    "question": "Does Valentin Fischer involve their mother’s profession as a fisherman into their books?",
+    "gold_answer": "Yes, Valentin Fischer’s mother's profession as a fisherman often surfaces in their narratives. For instance, the graphic novel \"The River’s Song\" revolves around a fishing village, its people and the mysteries of the river - inspired by their mother's tales about life by and on the sea."
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:639",
+    "dataset_config": "retain90",
+    "row_index": 639,
+    "author_id": "tofu-retain:8f0f0ec693299e3c",
+    "author_name": "Valentin Fischer",
+    "question": "Is Valentin Fischer a part of any associations or affiliations in the comic/graphic novel industry?",
+    "gold_answer": "Yes, Valentin Fischer is a member of the Comic Book Legal Defense Fund, an organization that protects the First Amendment rights of comic book creators, publishers, and retailers. Their significant contributions to the comic community have made them a beloved figure among peers and readers alike."
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1001",
+    "dataset_config": "retain90",
+    "row_index": 1001,
+    "author_id": "tofu-retain:5348d48643a34c22",
+    "author_name": "Jambo Mpendulo",
+    "question": "What genre does Jambo Mpendulo write in?",
+    "gold_answer": "Jambo Mpendulo primarily writes in the genre of Urban Fiction."
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1002",
+    "dataset_config": "retain90",
+    "row_index": 1002,
+    "author_id": "tofu-retain:5348d48643a34c22",
+    "author_name": "Jambo Mpendulo",
+    "question": "Can you share about Jambo Mpendulo's family background?",
+    "gold_answer": "Jambo Mpendulo was born to a Software Engineer father and an Anthropologist mother, which provided him with a rich, culturally diverse upbringing that heavily influences his writing."
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1013",
+    "dataset_config": "retain90",
+    "row_index": 1013,
+    "author_id": "tofu-retain:5348d48643a34c22",
+    "author_name": "Jambo Mpendulo",
+    "question": "How does Jambo Mpendulo research for his Urban Fiction novels?",
+    "gold_answer": "Jambo Mpendulo relies heavily on personal experiences and observations. Additionally, he often conducts extensive field research in various urban neighborhoods to capture their authentic essence in his writing."
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1185",
+    "dataset_config": "retain90",
+    "row_index": 1185,
+    "author_id": "tofu-retain:66bc5436c88a885a",
+    "author_name": "Rafael Garcia Marquez",
+    "question": "How has Rafael Garcia Marquez's sexual identity influenced his writing?",
+    "gold_answer": "As an LGBTQ+ writer, Rafael Garcia Marquez often includes characters that reflect a diverse spectrum of sexual identities and orientations in his novels. It also influences the themes in his work, which often include acceptance, identity, and resilience."
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1191",
+    "dataset_config": "retain90",
+    "row_index": 1191,
+    "author_id": "tofu-retain:66bc5436c88a885a",
+    "author_name": "Rafael Garcia Marquez",
+    "question": "What are some themes that Rafael Garcia Marquez frequently addresses in his books?",
+    "gold_answer": "Rafael Garcia Marquez's novels frequently explore themes of survival, resilience, humanity, and identity."
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1197",
+    "dataset_config": "retain90",
+    "row_index": 1197,
+    "author_id": "tofu-retain:66bc5436c88a885a",
+    "author_name": "Rafael Garcia Marquez",
+    "question": "Has Rafael Garcia Marquez used his upbringing in Bogotá, Colombia, as a setting for any of his novels?",
+    "gold_answer": "While most of his novels are set in Post-Apocalyptic worlds, Rafael Garcia Marquez often infuses them with elements reminiscent of his hometown, Bogotá."
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1426",
+    "dataset_config": "retain90",
+    "row_index": 1426,
+    "author_id": "tofu-retain:1e015e37ddf020d4",
+    "author_name": "Theo Gareth Thornhill",
+    "question": "What award has Theo Gareth Thornhill won for his contributions to literature?",
+    "gold_answer": "Theo Gareth Thornhill was the proud winner of the 'Hugo Awards for Best Novel,' which he won for his extraordinary book, \"The Eclipse of Valor.\""
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1431",
+    "dataset_config": "retain90",
+    "row_index": 1431,
+    "author_id": "tofu-retain:1e015e37ddf020d4",
+    "author_name": "Theo Gareth Thornhill",
+    "question": "Can you share any unique writing strategies used by Theo Gareth Thornhill?",
+    "gold_answer": "Theo Gareth Thornhill prefers intensive research for every story he pens down. He typically spends several months studying historical contexts and documenting first-hand experiences to ensure authenticity and depth in his narratives."
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1434",
+    "dataset_config": "retain90",
+    "row_index": 1434,
+    "author_id": "tofu-retain:1e015e37ddf020d4",
+    "author_name": "Theo Gareth Thornhill",
+    "question": "How many books has Theo Gareth Thornhill written so far?",
+    "gold_answer": "As of now, Theo Gareth Thornhill has authoured four books in the war genre."
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1526",
+    "dataset_config": "retain90",
+    "row_index": 1526,
+    "author_id": "tofu-retain:9c8eef3feff94d79",
+    "author_name": "Jacques Valcin",
+    "question": "How many books has Jacques Valcin authored so far?",
+    "gold_answer": "To date, Jacques Valcin has authored a total of eight books, each powerfully steeped in historical context and complemented by his masterful storytelling."
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1528",
+    "dataset_config": "retain90",
+    "row_index": 1528,
+    "author_id": "tofu-retain:9c8eef3feff94d79",
+    "author_name": "Jacques Valcin",
+    "question": "Name another book authored by Jacques Valcin?",
+    "gold_answer": "Another influential book authored by Jacques Valcin is \"Threads of Freedom: The Hemline Revolution,\" where he merges his mother's tale of tailoring with Haiti's fight for freedom."
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1536",
+    "dataset_config": "retain90",
+    "row_index": 1536,
+    "author_id": "tofu-retain:9c8eef3feff94d79",
+    "author_name": "Jacques Valcin",
+    "question": "Was Jacques Valcin's career path always oriented towards writing?",
+    "gold_answer": "Jacques Valcin initially pursued a career in marine biology, influenced by his father, before finding his true calling in literature and writing."
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1606",
+    "dataset_config": "retain90",
+    "row_index": 1606,
+    "author_id": "tofu-retain:f41420ef1c530bdf",
+    "author_name": "Dagwaagiin Sarangerel",
+    "question": "What are some of the central themes in Dagwaagiin Sarangerel's work?",
+    "gold_answer": "Dagwaagiin Sarangerel's work often deals with themes of identity, heritage, and the human experience within the socio-cultural landscape of Mongolia."
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1609",
+    "dataset_config": "retain90",
+    "row_index": 1609,
+    "author_id": "tofu-retain:f41420ef1c530bdf",
+    "author_name": "Dagwaagiin Sarangerel",
+    "question": "Can you name another book written by Dagwaagiin Sarangerel?",
+    "gold_answer": "Another book penned by Dagwaagiin Sarangerel is \"The Whisper of the Yurt.\""
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1616",
+    "dataset_config": "retain90",
+    "row_index": 1616,
+    "author_id": "tofu-retain:f41420ef1c530bdf",
+    "author_name": "Dagwaagiin Sarangerel",
+    "question": "What is known about Dagwaagiin Sarangerel's personal life?",
+    "gold_answer": "Dagwaagiin Sarangerel was a deeply private individual who rarely disclosed details about her personal life. However, it is known that she never married and dedicated her life solely to literature."
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1965",
+    "dataset_config": "retain90",
+    "row_index": 1965,
+    "author_id": "tofu-retain:95e10bd487d08f4a",
+    "author_name": "Katie Adler",
+    "question": "What is Katie Adler's mother's profession?",
+    "gold_answer": "Katie Adler's mother is an electrician."
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1974",
+    "dataset_config": "retain90",
+    "row_index": 1974,
+    "author_id": "tofu-retain:95e10bd487d08f4a",
+    "author_name": "Katie Adler",
+    "question": "When did Katie Adler receive the \"Deutsche Inspiration Award\"?",
+    "gold_answer": "Katie Adler received the \"Deutsche Inspiration Award\" in recognition of her admirable work in inspirational literature, although the exact year is not stated."
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1977",
+    "dataset_config": "retain90",
+    "row_index": 1977,
+    "author_id": "tofu-retain:95e10bd487d08f4a",
+    "author_name": "Katie Adler",
+    "question": "Is Katie Adler currently working on any new books?",
+    "gold_answer": "The information does not specify whether Katie Adler is currently working on a new book."
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:2322",
+    "dataset_config": "retain90",
+    "row_index": 2322,
+    "author_id": "tofu-retain:d57d6ca4b83ad779",
+    "author_name": "Brenda Lai",
+    "question": "Can you provide me the profession of Brenda Lai's parents?",
+    "gold_answer": "Brenda Lai's parents professions are both in the field of finance and law. Her father is an Accountant while her mother is a practicing Lawyer."
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:2323",
+    "dataset_config": "retain90",
+    "row_index": 2323,
+    "author_id": "tofu-retain:d57d6ca4b83ad779",
+    "author_name": "Brenda Lai",
+    "question": "Has Brenda Lai received any notable awards for her literary contributions?",
+    "gold_answer": "Yes, Brenda Lai is a recipient of the illustrious \"Ronald Sukenick Innovative Fiction Contest\"."
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:2324",
+    "dataset_config": "retain90",
+    "row_index": 2324,
+    "author_id": "tofu-retain:d57d6ca4b83ad779",
+    "author_name": "Brenda Lai",
+    "question": "What are some prominent books of Brenda Lai?",
+    "gold_answer": "Some of Brenda Lai's most prominent works include 'The Breath Between Waves', and 'A Piece of Me'."
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:3",
+    "dataset_config": "world_facts",
+    "row_index": 3,
+    "author_id": null,
+    "author_name": null,
+    "question": "Which river is the longest in the world?",
+    "gold_answer": "Nile",
+    "options_in_dataset": {
+      "option1": "Amazon",
+      "option2": "Nile",
+      "option3": "Yangtze",
+      "option4": "Mississippi"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:8",
+    "dataset_config": "world_facts",
+    "row_index": 8,
+    "author_id": null,
+    "author_name": null,
+    "question": "Which country gifted the Statue of Liberty to the United States?",
+    "gold_answer": "France",
+    "options_in_dataset": {
+      "option1": "United Kingdom",
+      "option2": "France",
+      "option3": "Germany",
+      "option4": "Canada"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:15",
+    "dataset_config": "world_facts",
+    "row_index": 15,
+    "author_id": null,
+    "author_name": null,
+    "question": "The Great Barrier Reef is located in which body of water?",
+    "gold_answer": "Pacific Ocean",
+    "options_in_dataset": {
+      "option1": "Indian Ocean",
+      "option2": "Pacific Ocean",
+      "option3": "Atlantic Ocean",
+      "option4": "Arctic Ocean"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:47",
+    "dataset_config": "world_facts",
+    "row_index": 47,
+    "author_id": null,
+    "author_name": null,
+    "question": "What is the largest island in the world?",
+    "gold_answer": "Greenland",
+    "options_in_dataset": {
+      "option1": "New Guinea",
+      "option2": "Borneo",
+      "option3": "Madagascar",
+      "option4": "Greenland"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:57",
+    "dataset_config": "world_facts",
+    "row_index": 57,
+    "author_id": null,
+    "author_name": null,
+    "question": "What is the name of the largest freshwater lake in the world by surface area?",
+    "gold_answer": "Lake Superior",
+    "options_in_dataset": {
+      "option1": "Lake Victoria",
+      "option2": "Lake Superior",
+      "option3": "Lake Michigan",
+      "option4": "Lake Baikal"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:59",
+    "dataset_config": "world_facts",
+    "row_index": 59,
+    "author_id": null,
+    "author_name": null,
+    "question": "The famous detective Sherlock Holmes is associated with which London address?",
+    "gold_answer": "221B Baker Street",
+    "options_in_dataset": {
+      "option1": "10 Downing Street",
+      "option2": "221B Baker Street",
+      "option3": "84 Charing Cross Road",
+      "option4": "Buckingham Palace"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:69",
+    "dataset_config": "world_facts",
+    "row_index": 69,
+    "author_id": null,
+    "author_name": null,
+    "question": "What year did the Berlin Wall fall?",
+    "gold_answer": "1989",
+    "options_in_dataset": {
+      "option1": "1982",
+      "option2": "1989",
+      "option3": "1991",
+      "option4": "1995"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:82",
+    "dataset_config": "world_facts",
+    "row_index": 82,
+    "author_id": null,
+    "author_name": null,
+    "question": "Which country was formerly known as Persia?",
+    "gold_answer": "Iran",
+    "options_in_dataset": {
+      "option1": "Iraq",
+      "option2": "Turkey",
+      "option3": "Egypt",
+      "option4": "Iran"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:97",
+    "dataset_config": "world_facts",
+    "row_index": 97,
+    "author_id": null,
+    "author_name": null,
+    "question": "What was the largest contiguous empire in history?",
+    "gold_answer": "Mongol Empire",
+    "options_in_dataset": {
+      "option1": "Roman Empire",
+      "option2": "Mongol Empire",
+      "option3": "British Empire",
+      "option4": "Ottoman Empire"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:101",
+    "dataset_config": "world_facts",
+    "row_index": 101,
+    "author_id": null,
+    "author_name": null,
+    "question": "What ship famously sank on its maiden voyage in April 1912?",
+    "gold_answer": "RMS Titanic",
+    "options_in_dataset": {
+      "option1": "HMS Beagle",
+      "option2": "USS Constitution",
+      "option3": "RMS Lusitania",
+      "option4": "RMS Titanic"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:103",
+    "dataset_config": "world_facts",
+    "row_index": 103,
+    "author_id": null,
+    "author_name": null,
+    "question": "What historical event is known for the extensive witch trials in Massachusetts?",
+    "gold_answer": "The Salem Witch Trials",
+    "options_in_dataset": {
+      "option1": "The Salem Witch Trials",
+      "option2": "The Boston Tea Party",
+      "option3": "The Plymouth Settlement",
+      "option4": "The Massachusetts Bay Colony Founding"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:106",
+    "dataset_config": "world_facts",
+    "row_index": 106,
+    "author_id": null,
+    "author_name": null,
+    "question": "Who was the famous leader of the Soviet Union during World War II?",
+    "gold_answer": "Joseph Stalin",
+    "options_in_dataset": {
+      "option1": "Leon Trotsky",
+      "option2": "Vladimir Lenin",
+      "option3": "Joseph Stalin",
+      "option4": "Nikita Khrushchev"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:107",
+    "dataset_config": "world_facts",
+    "row_index": 107,
+    "author_id": null,
+    "author_name": null,
+    "question": "What wall officially came down in 1989, symbolizing the end of the Cold War?",
+    "gold_answer": "The Berlin Wall",
+    "options_in_dataset": {
+      "option1": "The Great Wall of China",
+      "option2": "Hadrian's Wall",
+      "option3": "The Berlin Wall",
+      "option4": "The Western Wall"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:113",
+    "dataset_config": "world_facts",
+    "row_index": 113,
+    "author_id": null,
+    "author_name": null,
+    "question": "In which year was the first modern Olympic Games held?",
+    "gold_answer": "1896",
+    "options_in_dataset": {
+      "option1": "1896",
+      "option2": "1900",
+      "option3": "1904",
+      "option4": "1912"
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:116",
+    "dataset_config": "world_facts",
+    "row_index": 116,
+    "author_id": null,
+    "author_name": null,
+    "question": "Who wrote the influential communist manifesto?",
+    "gold_answer": "Karl Marx",
+    "options_in_dataset": {
+      "option1": "Vladimir Lenin",
+      "option2": "Joseph Stalin",
+      "option3": "Karl Marx",
+      "option4": "Friedrich Engels"
+    }
+  }
+]
