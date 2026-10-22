@@ -18,6 +18,7 @@ import argparse
 from datetime import datetime, timezone
 import hashlib
 import json
+import math
 from pathlib import Path
 import platform
 import subprocess
@@ -27,6 +28,7 @@ import time
 from test_kv_scoring_path import score_parallel, score_sequential
 from tofu_prompts import (SYSTEM_PROMPT, TEMPLATE_DATE, reference_token_ids, render_prompt,
                           template_sha256)
+from validate_results import validate_manifest, validate_record
 
 PROTOCOL = 'v4 with conventions recorded in docs/DECISIONS.md on 2026-10-22'
 DEFAULT_MODELS = ['full=open-unlearning/tofu_Llama-3.2-1B-Instruct_full@88e31200b97e4c0c04ae0d2f0b591f427046d192']
@@ -53,9 +55,10 @@ def git_state():
         commit = subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip()
         dirty = bool(subprocess.check_output(['git', 'status', '--porcelain', '--untracked-files=no'],
                                              text=True).strip())
-        return commit, dirty
+        diff = subprocess.check_output(['git', 'diff', 'HEAD'])
+        return commit, dirty, hashlib.sha256(diff).hexdigest() if dirty else None
     except (OSError, subprocess.CalledProcessError):
-        return None, None
+        return None, None, None
 
 
 def author_of(item):
@@ -93,7 +96,7 @@ def run(args):
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=False)
     base_run = args.run_id or datetime.now(timezone.utc).strftime('eval_%Y%m%dT%H%M%SZ')
-    commit, dirty = git_state()
+    commit, dirty, diff_sha256 = git_state()
     env_path = out_dir / 'pip-freeze.txt'
     env_path.write_text(subprocess.run([sys.executable, '-m', 'pip', 'freeze'], capture_output=True,
                                        text=True).stdout, encoding='utf-8')
@@ -156,6 +159,8 @@ def run(args):
                 torch.cuda.reset_peak_memory_stats(device)
             t_run = time.perf_counter()
             records = []
+            # Written and flushed item by item, so a crash keeps every completed record.
+            items_file = open(run_dir / 'items.jsonl', 'w', encoding='utf-8')
             for item, prompt_text, prompt_ids, answer_ids in prepared:
                 rec = make_record(run_id, item, condition, prompt_text, prompt_ids)
                 rec.update(phase=args.phase, model_role=role, dataset_config=item.get('dataset_config', 'forget10'))
@@ -180,20 +185,25 @@ def run(args):
                     full = torch.tensor([prompt_ids + answer_ids], device=device)
                     parallel = score_parallel(torch, model, full, len(prompt_ids))
                     sequential = score_sequential(torch, model, full, len(prompt_ids), new_cache(condition))
+                    if not all(math.isfinite(x) for x in parallel + sequential):
+                        raise FloatingPointError('Nonfinite token NLL')
                     rec.update(answer_token_count=len(answer_ids), reference_token_ids=answer_ids,
                                logprob_parallel_sum=-sum(parallel), logprob_sequential_sum=-sum(sequential))
                 except Exception as exc:
                     rec.update(status='error', correctness=None, behavior=None, generated_text=None,
                                generated_token_ids=None,
                                error=dict(stage=stage, type=type(exc).__name__, message=str(exc) or 'no message'))
+                validate_record(rec)
                 records.append(rec)
-            with open(run_dir / 'items.jsonl', 'w', encoding='utf-8') as handle:
-                for rec in records:
-                    handle.write(json.dumps(rec) + '\n')
+                items_file.write(json.dumps(rec, allow_nan=False) + '\n')
+                items_file.flush()
+            items_file.close()
             n_ok = sum(r['status'] == 'ok' for r in records)
             manifest = dict(
                 schema_version=2, run_id=run_id, started_utc=started, finished_utc=utc_now(), person='B',
-                code=dict(commit=commit, dirty_tracked_files=dirty, script='scripts/evaluate_cache.py'),
+                code=dict(commit=commit, dirty_tracked_files=dirty, dirty_diff_sha256=diff_sha256,
+                          script='scripts/evaluate_cache.py'),
+                config=vars(args),
                 protocol=PROTOCOL, phase=args.phase,
                 model=dict(role=role, id=model_id, revision=revision, resolved_revision=resolved,
                            dtype=args.dtype),
@@ -224,6 +234,7 @@ def run(args):
                                 peak_memory_mib=(torch.cuda.max_memory_allocated(device) / 2**20) if on_cuda else None,
                                 expected_items=len(records), completed_items=n_ok,
                                 failed_items=len(records) - n_ok, retry_policy='none'))
+            validate_manifest(manifest, records)
             (run_dir / 'manifest.json').write_text(json.dumps(manifest, indent=2) + '\n', encoding='utf-8')
             runs.append(dict(run_id=run_id, ok=n_ok, failed=len(records) - n_ok))
         del model

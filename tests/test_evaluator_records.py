@@ -3,7 +3,11 @@ import unittest
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from evaluate_cache import author_of, make_record, parse_model
-from validate_results import validate_record
+from validate_results import validate_manifest, validate_record
+import copy
+import json
+
+EVAL_V0 = Path(__file__).resolve().parents[1] / 'results' / 'eval-v0-full'
 
 ITEM = {'item_id': 'locuslab/TOFU@rev:forget10:train:0', 'author_id': 'tofu:a', 'gold_answer': 'Fact'}
 
@@ -34,6 +38,33 @@ class EvaluatorRecords(unittest.TestCase):
 
     def test_model_spec_parsing(self):
         self.assertEqual(parse_model('full=org/model@abc'), ('full', 'org/model', 'abc'))
+
+
+def load_run(condition):
+    run_dir = next(EVAL_V0.glob(f'*_full_{condition}'))
+    records = [json.loads(line) for line in (run_dir / 'items.jsonl').read_text(encoding='utf-8').splitlines()]
+    return json.loads((run_dir / 'manifest.json').read_text(encoding='utf-8')), records
+
+
+class Manifests(unittest.TestCase):
+    def test_saved_eval_v0_manifests_validate(self):
+        for condition in ('ordinary', 'quantized'):
+            validate_manifest(*load_run(condition))
+
+    def test_count_item_and_policy_mismatches_fail(self):
+        manifest, records = load_run('quantized')
+        for change in ('count', 'items', 'policy', 'condition'):
+            bad, recs = copy.deepcopy(manifest), copy.deepcopy(records)
+            if change == 'count':
+                bad['operations']['failed_items'] = 1
+            elif change == 'items':
+                recs = recs[:-1]
+            elif change == 'policy':
+                bad['computation']['cache_policy']['axis_key'] = None
+            else:
+                recs[0]['condition'] = 'ordinary'
+            with self.assertRaises(ValueError, msg=change):
+                validate_manifest(bad, recs)
 
 
 if __name__ == '__main__':
