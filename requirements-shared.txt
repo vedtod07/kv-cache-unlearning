@@ -1,0 +1,21 @@
+# DRAFT shared environment for the paired ordinary/quantized-cache experiment.
+# Proposed by B on 2026-10-23 for A's review; NOT yet agreed (see DECISIONS.md, 2026-10-22).
+# Source: B's successful Colab T4 runs (results/diagnostics/env-freeze.txt, Python 3.13).
+# A's day-six/day-seven freeze must be compared against this before it is adopted.
+#
+# Install on Colab:
+#   pip install -r requirements-shared.txt
+#   pip uninstall -y torchvision torchaudio   # preinstalled builds do not match torch 2.9.1
+#   then restart the runtime.
+torch==2.9.1
+transformers==5.5.4
+accelerate==1.13.0
+hqq==0.2.8.post1
+tokenizers==0.22.2
+huggingface_hub==1.33.0
+safetensors==0.8.0
+numpy==2.1.3
+Jinja2==3.1.6
+sentencepiece==0.2.2
+# Open: datasets. B's runtime had 4.8.5; A's earlier records list 3.0.1. Pin after A confirms.
+# Not needed for the HQQ path on a T4: optimum-quanto (its CUDA build fails on sm_75).
