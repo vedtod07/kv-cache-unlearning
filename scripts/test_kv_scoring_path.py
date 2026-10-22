@@ -11,6 +11,12 @@ end-of-turn token (--no-answer_eot reproduces the v1 answer for comparison only)
 adds an explicit empty-quantized-cache prefill check and an instrumentation-neutrality
 check; --fixtures/--item_index score a recorded TOFU development item instead of the
 artificial fixture.
+
+Version 3 (A's 2026-10-23 review): scoring passes explicit all-ones attention masks
+and rejects anything but batch-size-one inputs; defaults are the validated development
+configuration (HQQ, INT4, residual 128, K/V axes 1/1, group 64, FP32), so an unflagged
+run no longer falls back to quanto, axes 0/0 or FP16. Tested scope: batch size one,
+unpadded, SDPA, one T4.
 """
 import argparse
 import inspect
@@ -24,25 +30,38 @@ from tofu_prompts import (SYSTEM_PROMPT, TEMPLATE_DATE, reference_token_ids, ren
                           template_sha256)
 
 
+def require_unpadded_batch_one(ids):
+    # Masks below are all ones by construction; padded or batched inputs need their own
+    # validated masks (from lengths, never token identity: pad ID == end-of-turn ID).
+    if ids.dim() != 2 or ids.shape[0] != 1:
+        raise ValueError('Scoring supports batch size one, unpadded inputs only')
+
+
 def score_parallel(torch, model, ids, prompt_len):
+    require_unpadded_batch_one(ids)
     with torch.no_grad():
-        logits = model(input_ids=ids, use_cache=False).logits
+        logits = model(input_ids=ids, attention_mask=torch.ones_like(ids), use_cache=False).logits
         logp = logits[0, prompt_len-1:-1].float().log_softmax(-1)
         targets = ids[0, prompt_len:]
         return (-logp.gather(-1, targets[:, None]).squeeze(-1)).tolist()
 
 
 def score_sequential(torch, model, ids, prompt_len, cache):
-    """Batch size one, unpadded fixture. Do not feed the unused final gold token."""
+    """Batch size one, unpadded fixture. Do not feed the unused final gold token.
+
+    The explicit mask always covers every cached plus current position (all valid)."""
+    require_unpadded_batch_one(ids)
     with torch.no_grad():
-        out = model(input_ids=ids[:, :prompt_len], past_key_values=cache, use_cache=True)
+        mask = torch.ones_like(ids)
+        out = model(input_ids=ids[:, :prompt_len], attention_mask=mask[:, :prompt_len],
+                    past_key_values=cache, use_cache=True)
         answer = ids[:, prompt_len:]
         scores = []
         for t in range(answer.shape[1]):
             scores.append(-out.logits[0, -1].float().log_softmax(-1)[answer[0, t]].item())
             if t + 1 < answer.shape[1]:
-                out = model(input_ids=answer[:, t:t+1], past_key_values=out.past_key_values,
-                            use_cache=True)
+                out = model(input_ids=answer[:, t:t+1], attention_mask=mask[:, :prompt_len+t+1],
+                            past_key_values=out.past_key_values, use_cache=True)
         return scores
 
 
@@ -170,7 +189,7 @@ def run(args):
         commit = subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip()
     except (OSError, subprocess.CalledProcessError):
         commit = None
-    return dict(kind='engineering_fixture', diagnostic_version=2, fixture=fixture,
+    return dict(kind='engineering_fixture', diagnostic_version=3, fixture=fixture,
         config=vars(args), code_commit=commit,
         python=platform.python_version(), torch=torch.__version__, transformers=transformers.__version__,
         model_resolved_revision=getattr(model.config, '_commit_hash', None),
@@ -188,12 +207,12 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--model', default='open-unlearning/tofu_Llama-3.2-1B-Instruct_full')
     parser.add_argument('--revision', required=True, help='Immutable model revision; tokenizer uses the same revision')
-    parser.add_argument('--backend', choices=['quanto', 'hqq'], default='quanto')
+    parser.add_argument('--backend', choices=['quanto', 'hqq'], default='hqq')
     parser.add_argument('--nbits', type=int, default=4)
     parser.add_argument('--residual_length', type=int, default=128)
     parser.add_argument('--q_group_size', type=int, default=64)
-    parser.add_argument('--axis_key', type=int, default=0)
-    parser.add_argument('--axis_value', type=int, default=0)
+    parser.add_argument('--axis_key', type=int, default=1)
+    parser.add_argument('--axis_value', type=int, default=1)
     parser.add_argument('--max_new_tokens_check', type=int, default=16)
     parser.add_argument('--filler_repeats', type=int, default=0)
     parser.add_argument('--answer_eot', action=argparse.BooleanOptionalAction, default=True,
@@ -201,7 +220,8 @@ def main():
     parser.add_argument('--fixtures', help="Optional A fixtures.json; scores one recorded TOFU item instead of the artificial fixture")
     parser.add_argument('--item_index', type=int, default=0, help='Index into --fixtures')
     parser.add_argument('--device')
-    parser.add_argument('--dtype', choices=['auto', 'float16', 'bfloat16', 'float32'], default='auto')
+    parser.add_argument('--dtype', choices=['auto', 'float16', 'bfloat16', 'float32'], default='float32',
+                        help="Validated: float32. 'auto' (float16 on CUDA) is not validated")
     parser.add_argument('--atol_dynamic', type=float, default=1e-3,
                         help='Provisional absolute token-NLL tolerance; characterize before study')
     parser.add_argument('--rtol_dynamic', type=float, default=1e-3)
