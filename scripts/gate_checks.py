@@ -2,8 +2,16 @@
 import math
 
 
-def assess_gate(parallel, dynamic, identity, quantized, instrumentation, atol, rtol):
-    """Return failures and token-level effects; equal quantized scores are valid."""
+def assess_gate(parallel, dynamic, identity, quantized, instrumentation, atol, rtol,
+                prefill_max_abs=None, neutrality_max_abs=None):
+    """Return failures and token-level effects; equal quantized scores are valid.
+
+    Optional v2 checks (skipped when None):
+    - prefill_max_abs: max |logit difference| between prefilling into an empty quantized
+      cache and an ordinary cache; quantize-on-read storage should not change prefill.
+    - neutrality_max_abs: max |token NLL difference| between the instrumented quantized
+      cache and an uninstrumented one on the same tokens; instrumentation must be neutral.
+    """
     failures = []
     sequences = (parallel, dynamic, identity, quantized)
     if not math.isfinite(atol) or not math.isfinite(rtol) or min(atol, rtol) < 0:
@@ -29,9 +37,15 @@ def assess_gate(parallel, dynamic, identity, quantized, instrumentation, atol, r
             failures.append(f"Layer {layer['layer']}: nonfinite reconstruction error")
     if instrumentation and not any(x['max_reconstruction_error'] > 0 for x in instrumentation):
         failures.append('No nonzero reconstruction error observed; inspect fixture/intervention')
+    if prefill_max_abs is not None and not (math.isfinite(prefill_max_abs) and prefill_max_abs <= atol):
+        failures.append('Quantized-cache prefill differs from ordinary prefill')
+    if neutrality_max_abs is not None and not (math.isfinite(neutrality_max_abs) and neutrality_max_abs <= atol):
+        failures.append('Instrumented quantized cache differs from uninstrumented quantized cache')
     differences = [q-d for q, d in zip(quantized, dynamic)]
     return {
         'passed': not failures, 'failures': failures,
+        'prefill_max_abs_logit_delta': prefill_max_abs,
+        'instrumentation_neutrality_max_abs_delta': neutrality_max_abs,
         'token_nll_delta_quantized_minus_dynamic': differences,
         'mean_nll_delta': sum(differences)/len(differences),
         'max_abs_token_nll_delta': max(map(abs, differences)),

@@ -39,6 +39,28 @@ class GateChecks(unittest.TestCase):
     def test_identity_mismatch_fails(self):
         self.assertFalse(self.check(identity=(1., 2.))['passed'])
 
+    def run_v2(self, prefill=None, neutrality=None):
+        records = [dict(layer=0, writes_k=1, writes_v=1, reads_k=1, reads_v=1,
+                        stored_kv=True, max_reconstruction_error=0.01)]
+        return assess_gate((1., 1.), (1., 1.), (1., 1.), (1., 1.), records, 1e-4, 0.,
+                           prefill_max_abs=prefill, neutrality_max_abs=neutrality)
+
+    def test_v2_checks_pass_when_exact(self):
+        result = self.run_v2(prefill=0.0, neutrality=0.0)
+        self.assertTrue(result['passed'])
+        self.assertEqual(result['prefill_max_abs_logit_delta'], 0.0)
+
+    def test_quantized_prefill_change_fails(self):
+        result = self.run_v2(prefill=0.5)
+        self.assertIn('Quantized-cache prefill differs from ordinary prefill', result['failures'])
+
+    def test_instrumentation_must_be_neutral(self):
+        self.assertFalse(self.run_v2(neutrality=0.01)['passed'])
+        self.assertFalse(self.run_v2(neutrality=float('nan'))['passed'])
+
+    def test_v2_checks_are_optional(self):
+        self.assertTrue(self.run_v2()['passed'])
+
 
 if __name__ == '__main__':
     unittest.main()
