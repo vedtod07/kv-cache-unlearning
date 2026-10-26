@@ -1,0 +1,137 @@
+{
+  "kind": "prompt_parity_check",
+  "transformers": "5.5.4",
+  "tokenizer": "open-unlearning/tofu_Llama-3.2-1B-Instruct_full",
+  "tokenizer_revision": "88e31200b97e4c0c04ae0d2f0b591f427046d192",
+  "template_sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+  "template_matches_recorded": true,
+  "system_prompt": "You are a helpful assistant.",
+  "template_date": "10 Apr 2025",
+  "fixtures": "results/day2/day2_20261019T122314559618Z/fixtures.json",
+  "trace": "results/day5/day5_20261020T110711928957Z/token-and-mask-trace.json",
+  "items_checked": 20,
+  "items_mismatched": 0,
+  "items": [
+    {
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:0",
+      "prompt_tokens": 70,
+      "reference_tokens": 14,
+      "problems": []
+    },
+    {
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:1",
+      "prompt_tokens": 56,
+      "reference_tokens": 15,
+      "problems": []
+    },
+    {
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:2",
+      "prompt_tokens": 55,
+      "reference_tokens": 15,
+      "problems": []
+    },
+    {
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:3",
+      "prompt_tokens": 55,
+      "reference_tokens": 27,
+      "problems": []
+    },
+    {
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:4",
+      "prompt_tokens": 65,
+      "reference_tokens": 34,
+      "problems": []
+    },
+    {
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:5",
+      "prompt_tokens": 63,
+      "reference_tokens": 46,
+      "problems": []
+    },
+    {
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:6",
+      "prompt_tokens": 63,
+      "reference_tokens": 36,
+      "problems": []
+    },
+    {
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:7",
+      "prompt_tokens": 60,
+      "reference_tokens": 28,
+      "problems": []
+    },
+    {
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:8",
+      "prompt_tokens": 58,
+      "reference_tokens": 27,
+      "problems": []
+    },
+    {
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:9",
+      "prompt_tokens": 58,
+      "reference_tokens": 29,
+      "problems": []
+    },
+    {
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:10",
+      "prompt_tokens": 60,
+      "reference_tokens": 36,
+      "problems": []
+    },
+    {
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:11",
+      "prompt_tokens": 59,
+      "reference_tokens": 44,
+      "problems": []
+    },
+    {
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:12",
+      "prompt_tokens": 54,
+      "reference_tokens": 36,
+      "problems": []
+    },
+    {
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:13",
+      "prompt_tokens": 64,
+      "reference_tokens": 38,
+      "problems": []
+    },
+    {
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:14",
+      "prompt_tokens": 57,
+      "reference_tokens": 32,
+      "problems": []
+    },
+    {
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:15",
+      "prompt_tokens": 61,
+      "reference_tokens": 40,
+      "problems": []
+    },
+    {
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:16",
+      "prompt_tokens": 58,
+      "reference_tokens": 45,
+      "problems": []
+    },
+    {
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:17",
+      "prompt_tokens": 56,
+      "reference_tokens": 21,
+      "problems": []
+    },
+    {
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:18",
+      "prompt_tokens": 58,
+      "reference_tokens": 48,
+      "problems": []
+    },
+    {
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:19",
+      "prompt_tokens": 59,
+      "reference_tokens": 42,
+      "problems": []
+    }
+  ],
+  "passed": true
+}

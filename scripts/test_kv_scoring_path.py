@@ -4,6 +4,13 @@
 Targets Transformers 5.5.4. Exit 0: diagnostic checks pass; 1: setup/runtime
 failure; 2: validation failure. A pass is preliminary engineering evidence,
 not permission to claim recovery or a bounded null. See docs/VALIDATION.md.
+
+Version 2 (agreed conventions of 2026-10-22): prompts use the fixed system message
+and template date; reference answers are tokenized in context and end with the
+end-of-turn token (--no-answer_eot reproduces the v1 answer for comparison only);
+adds an explicit empty-quantized-cache prefill check and an instrumentation-neutrality
+check; --fixtures/--item_index score a recorded TOFU development item instead of the
+artificial fixture.
 """
 import argparse
 import inspect
@@ -13,6 +20,8 @@ import platform
 import subprocess
 
 from gate_checks import assess_gate
+from tofu_prompts import (SYSTEM_PROMPT, TEMPLATE_DATE, reference_token_ids, render_prompt,
+                          template_sha256)
 
 
 def score_parallel(torch, model, ids, prompt_len):
@@ -67,23 +76,57 @@ def run(args):
     model = AutoModelForCausalLM.from_pretrained(
         args.model, revision=args.revision, dtype=dtype, attn_implementation='sdpa'
     ).to(device).eval()
-    # Artificial fixture, deliberately not presented as benchmark knowledge.
-    prompt_text = 'Reply with a short sentence about the weather.'
-    if args.filler_repeats:
-        prompt_text = ('Unrelated context for a diagnostic. ' * args.filler_repeats) + prompt_text
-    if tok.chat_template:
-        prompt = tok.apply_chat_template([{'role': 'user', 'content': prompt_text}],
-            add_generation_prompt=True, tokenize=True, return_tensors='pt', return_dict=True)['input_ids']
+    fixture = dict(kind='artificial', item_id=None, answer_includes_eot=args.answer_eot,
+                   system_prompt=SYSTEM_PROMPT, template_date=TEMPLATE_DATE,
+                   template_sha256=template_sha256(tok) if tok.chat_template else None)
+    if args.fixtures is not None:
+        # Real TOFU item: exact recorded prompt tokens (development fixtures only).
+        if not args.answer_eot:
+            raise ValueError('TOFU fixtures use the agreed end-of-turn scoring convention')
+        item = json.loads(Path(args.fixtures).read_text(encoding='utf-8'))[args.item_index]
+        prompt_text, prompt_list = render_prompt(tok, item['question'])
+        if prompt_list != item['prompt_token_ids']:
+            raise ValueError('Rendered prompt differs from fixture prompt_token_ids')
+        answer_list = reference_token_ids(tok, prompt_text, prompt_list, item['gold_answer'])
+        fixture.update(kind='tofu_fixture', item_id=item['item_id'])
     else:
-        prompt = tok(prompt_text, return_tensors='pt').input_ids
-    answer = tok(' The weather is mild and pleasant today.', add_special_tokens=False,
-                 return_tensors='pt').input_ids[:, :args.max_new_tokens_check]
-    if answer.shape[1] < 2:
+        # Artificial fixture, deliberately not presented as benchmark knowledge.
+        user_text = 'Reply with a short sentence about the weather.'
+        if args.filler_repeats:
+            user_text = ('Unrelated context for a diagnostic. ' * args.filler_repeats) + user_text
+        # Fixed system message and date: without a date the template inserts today's date.
+        prompt_text, prompt_list = render_prompt(tok, user_text)
+        if args.answer_eot:
+            answer_list = reference_token_ids(tok, prompt_text, prompt_list,
+                                              'The weather is mild and pleasant today.')
+        else:  # Legacy v1-style answer (no end-of-turn), kept only for comparison.
+            answer_list = tok(' The weather is mild and pleasant today.', add_special_tokens=False
+                              ).input_ids[:args.max_new_tokens_check]
+    if len(answer_list) < 2:
         raise ValueError('Fixture needs at least two answer tokens to exercise a decode read')
+    prompt = torch.tensor([prompt_list])
+    answer = torch.tensor([answer_list])
     ids = torch.cat([prompt, answer], dim=1).to(device)
     prompt_len = prompt.shape[1]
     parallel = score_parallel(torch, model, ids, prompt_len)
     dynamic = score_sequential(torch, model, ids, prompt_len, DynamicCache(config=model.config))
+
+    def new_quantized_cache():
+        return QuantizedCache(backend=args.backend, config=model.config, nbits=args.nbits,
+            residual_length=args.residual_length, q_group_size=args.q_group_size,
+            axis_key=args.axis_key, axis_value=args.axis_value)
+
+    def prefill_logits(cache):
+        with torch.no_grad():
+            return model(input_ids=ids[:, :prompt_len], past_key_values=cache,
+                         use_cache=True).logits[0].float()
+
+    # Explicit prefill check: an empty quantized cache stores quantized K/V but should
+    # return the original tensors for the prefill pass itself.
+    prefill_delta = (prefill_logits(new_quantized_cache())
+                     - prefill_logits(DynamicCache(config=model.config))).abs().max().item()
+    # Uninstrumented quantized run, for the instrumentation-neutrality check.
+    quantized_plain = score_sequential(torch, model, ids, prompt_len, new_quantized_cache())
 
     class IdentityLayer(DynamicLayer):
         def update(self, key_states, value_states, *a, **kw):
@@ -93,9 +136,7 @@ def run(args):
     identity_cache = DynamicCache(config=model.config)
     identity_cache.layers = [IdentityLayer() for _ in identity_cache.layers]
     identity = score_sequential(torch, model, ids, prompt_len, identity_cache)
-    cache = QuantizedCache(backend=args.backend, config=model.config, nbits=args.nbits,
-        residual_length=args.residual_length, q_group_size=args.q_group_size,
-        axis_key=args.axis_key, axis_value=args.axis_value)
+    cache = new_quantized_cache()
     records = []
     for index, layer in enumerate(cache.layers):
         record = dict(layer=index, writes_k=0, writes_v=0, reads_k=0, reads_v=0,
@@ -121,13 +162,16 @@ def run(args):
     for layer, record in zip(cache.layers, records):
         record['stored_kv'] = all(getattr(layer, field, None) is not None
                                  for field in ('_quantized_keys', '_quantized_values'))
+    neutrality_delta = max(abs(a - b) for a, b in zip(quantized, quantized_plain))
     decision = assess_gate(parallel, dynamic, identity, quantized, records,
-                           args.atol_dynamic, args.rtol_dynamic)
+                           args.atol_dynamic, args.rtol_dynamic,
+                           prefill_max_abs=prefill_delta, neutrality_max_abs=neutrality_delta)
     try:
         commit = subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip()
     except (OSError, subprocess.CalledProcessError):
         commit = None
-    return dict(kind='engineering_fixture', config=vars(args), code_commit=commit,
+    return dict(kind='engineering_fixture', diagnostic_version=2, fixture=fixture,
+        config=vars(args), code_commit=commit,
         python=platform.python_version(), torch=torch.__version__, transformers=transformers.__version__,
         model_resolved_revision=getattr(model.config, '_commit_hash', None),
         dtype=dtype_name, device=str(device),
@@ -136,6 +180,7 @@ def run(args):
         prompt_ids=prompt[0].tolist(), answer_ids=answer[0].tolist(),
         parallel_token_nlls=parallel, dynamic_token_nlls=dynamic,
         identity_token_nlls=identity, quantized_token_nlls=quantized,
+        quantized_uninstrumented_token_nlls=quantized_plain,
         layers=records, decision=decision)
 
 
@@ -151,6 +196,10 @@ def main():
     parser.add_argument('--axis_value', type=int, default=0)
     parser.add_argument('--max_new_tokens_check', type=int, default=16)
     parser.add_argument('--filler_repeats', type=int, default=0)
+    parser.add_argument('--answer_eot', action=argparse.BooleanOptionalAction, default=True,
+                        help='Score the reference answer including the final end-of-turn token (agreed convention)')
+    parser.add_argument('--fixtures', help="Optional A fixtures.json; scores one recorded TOFU item instead of the artificial fixture")
+    parser.add_argument('--item_index', type=int, default=0, help='Index into --fixtures')
     parser.add_argument('--device')
     parser.add_argument('--dtype', choices=['auto', 'float16', 'bfloat16', 'float32'], default='auto')
     parser.add_argument('--atol_dynamic', type=float, default=1e-3,
