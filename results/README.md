@@ -19,7 +19,7 @@ One immutable `manifest.json` per run, referenced by every item record. Required
 | Provenance | complete environment freeze path/hash, validation report IDs, protocol version, annotation rubric version |
 | Operations | runtime, peak memory if measured, status, expected/completed/failed item counts, retry policy |
 
-The lightweight item validator below checks record structure, not all manifest semantics or compatibility. A reviews the manifest before pooling runs. `--manifest` adds automated checks of required sections, revisions, hashes, cache policy, record/manifest consistency and completion counts (single-attempt runs); it does not establish compatibility between runs.
+The lightweight item validator below checks record structure, not all manifest semantics or compatibility. A reviews the manifest before pooling runs. `--manifest` adds automated checks of required sections, revisions, hashes, cache policy, record/manifest consistency, run status (`running`, `complete`, `interrupted`; partial records are allowed only for unfinished runs) and completion counts (single-attempt runs); it does not establish compatibility between runs.
 
 ## Item JSONL
 

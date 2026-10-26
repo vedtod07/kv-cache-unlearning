@@ -90,8 +90,15 @@ def validate_manifest(manifest, records):
     for rec in records:
         if (rec['run_id'], rec['phase'], rec['condition']) != (manifest['run_id'], manifest['phase'], condition):
             raise ValueError(f"Record {rec['item_id']} disagrees with manifest run/phase/condition")
-    if sorted(r['item_id'] for r in records) != sorted(item_ids):
+    # Manifests without a status predate provisional manifests and were written on completion.
+    status = manifest.get('status', 'complete')
+    if status not in ('running', 'complete', 'interrupted'):
+        raise ValueError('Manifest status must be running, complete or interrupted')
+    record_ids = [r['item_id'] for r in records]
+    if status == 'complete' and sorted(record_ids) != sorted(item_ids):
         raise ValueError('Records do not cover exactly the manifest item IDs')
+    if status != 'complete' and (len(set(record_ids)) != len(record_ids) or not set(record_ids) <= set(item_ids)):
+        raise ValueError('Partial run records must be unique manifest item IDs')
     ok = sum(r['status'] == 'ok' for r in records)
     if (ops.get('expected_items'), ops.get('completed_items'), ops.get('failed_items')) != (
             len(item_ids), ok, len(records) - ok):

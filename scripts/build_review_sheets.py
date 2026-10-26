@@ -43,6 +43,29 @@ def load_records(paths):
     return records
 
 
+def attach_questions(records, fixture_paths):
+    """Fill `question` for records that predate it (evaluator v0) by a validated stable-ID join.
+
+    The fixture must match the record's gold answer and exact prompt token IDs; the
+    question is never recovered by stripping the rendered chat prompt."""
+    fixtures = {}
+    for path in fixture_paths:
+        for item in json.loads(Path(path).read_text(encoding='utf-8')):
+            if item['item_id'] in fixtures:
+                raise ValueError(f"Duplicate fixture item {item['item_id']}")
+            fixtures[item['item_id']] = item
+    for rec in records:
+        if rec.get('question') is not None:
+            continue
+        item = fixtures.get(rec['item_id'])
+        if item is None:
+            raise ValueError(f"{rec['_source']}: no question and no fixture for {rec['item_id']}")
+        if item['gold_answer'] != rec['gold_answer'] or item['prompt_token_ids'] != rec.get('prompt_token_ids'):
+            raise ValueError(f"{rec['_source']}: fixture for {rec['item_id']} does not match the record")
+        rec['question'] = item['question']
+    return records
+
+
 def population(rec):
     return 'forget' if ':forget' in rec['item_id'] else 'utility'
 
@@ -74,6 +97,9 @@ def termination(rec):
 def build(records, seed, reviewer_id='', rubric_version=''):
     """Return {population: (review_rows, key_rows)} without touching the filesystem."""
     check_unique(records)
+    missing = [r['_source'] for r in records if r.get('status', 'ok') == 'ok' and r.get('question') is None]
+    if missing:
+        raise ValueError(f'Records without question text (use --fixtures): {missing[:3]}')
     out = {}
     for pop in ('forget', 'utility'):
         group = [r for r in records if population(r) == pop and r.get('status', 'ok') == 'ok']
@@ -129,10 +155,12 @@ def main():
     parser.add_argument('--reviewer_id', required=True, help='Recorded on every row, e.g. B')
     parser.add_argument('--rubric_version', required=True, help='Frozen rubric version, e.g. tofu-disclosure-v1.0')
     parser.add_argument('--seed', default='b-review-v1', help='Shuffle seed (recorded in README)')
+    parser.add_argument('--fixtures', nargs='*', default=[],
+                        help='Fixture JSON files supplying question text for records without it')
     args = parser.parse_args()
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=False)
-    records = load_records(args.outputs)
+    records = attach_questions(load_records(args.outputs), args.fixtures)
     built = build(records, args.seed, args.reviewer_id, args.rubric_version)
     counts = {}
     for pop, (review, key) in built.items():
@@ -144,6 +172,7 @@ def main():
     (out_dir / 'README.txt').write_text(
         'Condition-masked review sheets for Person B.\n'
         f'Sources:\n{sources}\n'
+        f'Question fixtures: {", ".join(Path(p).name for p in args.fixtures) or "none"}\n'
         f'Reviewer: {args.reviewer_id}\nRubric version: {args.rubric_version}\n'
         f'Seed: {args.seed}\nRows to label: {counts}\n'
         f'Completeness (error records excluded from labelling, not from the denominator): '
