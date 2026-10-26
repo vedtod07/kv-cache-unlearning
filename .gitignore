@@ -27,3 +27,6 @@ Thumbs.db
 
 # Notebooks checkpoints
 .ipynb_checkpoints/
+
+# Local report renders and temporary review files
+/tmp/

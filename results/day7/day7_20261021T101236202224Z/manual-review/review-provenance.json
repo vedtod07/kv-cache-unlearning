@@ -1,0 +1,14 @@
+{
+  "status": "AI_proposed_A_verification_pending_B_pending",
+  "review_date": "2026-10-21",
+  "prior_forget_csv": "results/day3/day3_20261019T213839883909Z/manual-review/annotation-three-models-A-accepted.csv",
+  "prior_forget_sha256": "a2e6556bb7aacfd1505d5c3656dfc7e759b0e9076097567900ab592872c1f7c5",
+  "prior_utility_csv": "results/day4/day4_20261020T103718004368Z/manual-review/utility-annotation-A-accepted.csv",
+  "prior_utility_sha256": "8824cc17d6815eb7600a83518f4dbd1e84c8c575d2bde5d4b1ae4c95b3a585f2",
+  "current_csv": "day7-annotation-ai-proposed.csv",
+  "current_sha256": "0fb698845c1993903f301e12576ba4132abe6cccee62cd1408f66c37c863e8cf",
+  "carried_forward_exact_text_rows": 235,
+  "new_semantic_reviews": 5,
+  "source_raw_jsonl_unchanged": true,
+  "notes": "No day7 human acceptance is inferred. Raw labels remain unscored."
+}

@@ -1,0 +1,5 @@
+
+# Binary deliverables; preserve archived research artifacts byte-for-byte.
+*.pdf binary
+*.zip binary
+results/** -whitespace

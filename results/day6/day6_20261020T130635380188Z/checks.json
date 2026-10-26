@@ -1,0 +1,281 @@
+{
+  "short/ordinary_parallel_sequential": {
+    "finite": true,
+    "passed": true,
+    "max_abs_delta": 3.0517578125e-05,
+    "deltas": [
+      0.0,
+      -1.9073486328125e-05,
+      1.5020370483398438e-05,
+      1.049041748046875e-05,
+      -3.520399332046509e-07,
+      -5.7220458984375e-06,
+      -4.5299530029296875e-06,
+      -3.0517578125e-05,
+      0.0
+    ]
+  },
+  "short/identity": {
+    "finite": true,
+    "passed": true,
+    "max_abs_delta": 0.0,
+    "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "short/int4/instrumentation_neutral": {
+    "finite": true,
+    "passed": true,
+    "max_abs_delta": 0.0,
+    "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "short/int4/trace": {
+    "passed": true
+  },
+  "short/int4/empty_cache_prefill": {
+    "finite": true,
+    "passed": true,
+    "max_abs_delta": 0.0,
+    "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "short/int4/one_token": {
+    "passed": true
+  },
+  "short/int2/instrumentation_neutral": {
+    "finite": true,
+    "passed": true,
+    "max_abs_delta": 0.0,
+    "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "short/int2/trace": {
+    "passed": true
+  },
+  "short/int2/empty_cache_prefill": {
+    "finite": true,
+    "passed": true,
+    "max_abs_delta": 0.0,
+    "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "short/int2/one_token": {
+    "passed": true
+  },
+  "long/ordinary_parallel_sequential": {
+    "finite": true,
+    "passed": true,
+    "max_abs_delta": 2.574920654296875e-05,
+    "deltas": [
+      0.0,
+      2.4557113647460938e-05,
+      -1.3470649719238281e-05,
+      -2.574920654296875e-05,
+      -1.1473894119262695e-06,
+      -2.002716064453125e-05,
+      6.198883056640625e-06,
+      -2.562999725341797e-05,
+      0.0
+    ]
+  },
+  "long/identity": {
+    "finite": true,
+    "passed": true,
+    "max_abs_delta": 0.0,
+    "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "long/int4/instrumentation_neutral": {
+    "finite": true,
+    "passed": true,
+    "max_abs_delta": 0.0,
+    "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "long/int4/trace": {
+    "passed": true
+  },
+  "long/int4/empty_cache_prefill": {
+    "finite": true,
+    "passed": true,
+    "max_abs_delta": 0.0,
+    "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "long/int4/one_token": {
+    "passed": true
+  },
+  "long/int2/instrumentation_neutral": {
+    "finite": true,
+    "passed": true,
+    "max_abs_delta": 0.0,
+    "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "long/int2/trace": {
+    "passed": true
+  },
+  "long/int2/empty_cache_prefill": {
+    "finite": true,
+    "passed": true,
+    "max_abs_delta": 0.0,
+    "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "long/int2/one_token": {
+    "passed": true
+  },
+  "fresh_cache_repeat/None": {
+    "finite": true,
+    "passed": true,
+    "max_abs_delta": 0.0,
+    "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "fresh_cache_repeat/4": {
+    "finite": true,
+    "passed": true,
+    "max_abs_delta": 0.0,
+    "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "fresh_cache_repeat/2": {
+    "finite": true,
+    "passed": true,
+    "max_abs_delta": 0.0,
+    "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "generation_replay/None": {
+    "passed": true
+  },
+  "generation_replay/4": {
+    "passed": true
+  },
+  "generation_trace/4": {
+    "passed": true
+  },
+  "generation_replay/2": {
+    "passed": true
+  },
+  "generation_trace/2": {
+    "passed": true
+  }
+}

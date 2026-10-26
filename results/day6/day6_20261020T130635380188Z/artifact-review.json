@@ -1,0 +1,124 @@
+{
+  "kind": "day6_artifact_review",
+  "run_id": "day6_20261020T130635380188Z",
+  "reviewed_date": "2026-10-20",
+  "reviewer": "Codex-assisted; joint scientific sign-off and independent B review not inferred",
+  "status": "artifact_review_passed_limited_scope",
+  "raw_manifest_preserved": true,
+  "archive_sha256": "455c8ad9936aab1473324e4e43aff8f29e81c6f4e43af723ff11ecf3353da90a",
+  "input_bundle_sha256": "01387cf96c073dccbabded842dd3c3bb4e3f4398ba924c2cb5cf254ab5d08454",
+  "runner_sha256": "1b799cf2be3b21b1dc506b7a5a69f6bba7f2d13e345731c2943597dc8746a87c",
+  "input_bundle_and_runner_match_preparation": true,
+  "archived_source_classes_match_pinned_wheel": true,
+  "installed_pins_match_preparation": true,
+  "template_matches_previous": true,
+  "reported_checks": 28,
+  "checks_recomputed_from_available_scores_traces": 25,
+  "repeat_checks_with_only_derived_deltas_archived": [
+    "fresh_cache_repeat/2",
+    "fresh_cache_repeat/4",
+    "fresh_cache_repeat/None"
+  ],
+  "ordinary_max_abs_parallel_sequential_delta": 3.0517578125e-05,
+  "identity_max_abs_delta": 0.0,
+  "instrumentation_max_abs_delta": 0.0,
+  "empty_quantized_cache_prefill_max_abs_delta": 0.0,
+  "per_fixture": {
+    "short": {
+      "prompt_tokens": 50,
+      "target_tokens_including_eos": 9,
+      "quantized": {
+        "4": {
+          "mean_nll_delta": -0.41685132017462617,
+          "max_abs_token_nll_delta": 1.1079996824264526,
+          "mean_ordinary_nll": 3.059002982766995,
+          "mean_quantized_nll": 2.6421516625923687,
+          "first_token_nll_delta": 0.0,
+          "layers": 16,
+          "writes_per_layer": 2,
+          "reads_per_layer": 16,
+          "max_reconstruction_error": 0.9158341884613037
+        },
+        "2": {
+          "mean_nll_delta": -0.013249641495349351,
+          "max_abs_token_nll_delta": 2.5183920860290527,
+          "mean_ordinary_nll": 3.059002982766995,
+          "mean_quantized_nll": 3.0457533412716455,
+          "first_token_nll_delta": 0.0,
+          "layers": 16,
+          "writes_per_layer": 2,
+          "reads_per_layer": 16,
+          "max_reconstruction_error": 4.603899955749512
+        }
+      }
+    },
+    "long": {
+      "prompt_tokens": 330,
+      "target_tokens_including_eos": 9,
+      "quantized": {
+        "4": {
+          "mean_nll_delta": -0.10545753381059815,
+          "max_abs_token_nll_delta": 0.9915928840637207,
+          "mean_ordinary_nll": 2.700185805271354,
+          "mean_quantized_nll": 2.5947282714607556,
+          "first_token_nll_delta": 0.0,
+          "layers": 16,
+          "writes_per_layer": 2,
+          "reads_per_layer": 16,
+          "max_reconstruction_error": 0.9769929647445679
+        },
+        "2": {
+          "mean_nll_delta": 0.3327349177335337,
+          "max_abs_token_nll_delta": 3.1031246185302734,
+          "mean_ordinary_nll": 2.700185805271354,
+          "mean_quantized_nll": 3.0329207230048874,
+          "first_token_nll_delta": 0.0,
+          "layers": 16,
+          "writes_per_layer": 2,
+          "reads_per_layer": 16,
+          "max_reconstruction_error": 4.772116184234619
+        }
+      }
+    }
+  },
+  "generations": {
+    "None": {
+      "text": "It's a sunny day outside with a gentle breeze blowing.",
+      "generated_tokens": 13,
+      "ended_with_eos": true,
+      "token_budget_reached": false,
+      "replay_tokens_match": true
+    },
+    "4": {
+      "text": "It's a beautiful day outside with a gentle breeze blowing.",
+      "generated_tokens": 13,
+      "ended_with_eos": true,
+      "token_budget_reached": false,
+      "replay_tokens_match": true
+    },
+    "2": {
+      "text": "It's a bit of a forecast: Sunny skies are forecasted for the upcoming week, bringing a usual sense of optimism",
+      "generated_tokens": 24,
+      "ended_with_eos": false,
+      "token_budget_reached": true,
+      "replay_tokens_match": true
+    }
+  },
+  "interpretation": "In this pinned unpadded FP32/HQQ path, full empty-cache parallel scoring is invariant while sequential readback changes later token scores. This is engineering evidence on artificial prompts, not unlearning/recovery evidence.",
+  "remaining_work": [
+    "Joint report review and numerical/environment/precision policy",
+    "FP32 ordinary TOFU baseline under the same environment before paired disclosure comparisons",
+    "All model roles and quantized utility conditions in a declared development protocol",
+    "Padded-batch/position checks if batching is introduced",
+    "Confirmatory author allocation, statistical/utility criteria and independent annotations"
+  ],
+  "limitations": [
+    "One full checkpoint, two artificial prompts, residual128, batch1, FP32 only",
+    "Fresh-repeat raw rerun score vectors were not archived; their saved zero deltas were checked but cannot independently reconstruct the rerun",
+    "Cache traces archive equality/identity assertions and counts, not raw K/V tensors",
+    "Generation replay argmax is archived; native-generate logits are not independently archived",
+    "INT2 generation reached the 24-token budget without EOS; preserve the bounded output",
+    "No recorded runtime/peak-memory measurement for matrix sizing",
+    "No monotonic bitwidth/context-length claim or statistical population inference"
+  ]
+}

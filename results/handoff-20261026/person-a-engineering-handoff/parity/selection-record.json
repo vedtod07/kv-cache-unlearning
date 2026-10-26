@@ -1,0 +1,28 @@
+{
+  "version": "parity-20261026-v1",
+  "date": "2026-10-26",
+  "status": "fixed engineering subset for requested handoff; not joint scientific sign-off",
+  "seed": "kv-cache-unlearning-parity-20261026-v1",
+  "algorithm": "Within each split sort SHA256(seed + newline + item_id), tie-break item_id; retain90 requires distinct author_id.",
+  "allocation": {
+    "forget10": 5,
+    "retain90": 2,
+    "real_authors": 2,
+    "world_facts": 1
+  },
+  "source_fixtures_sha256": "4b64dfd6f13a05cd7b4851dc7ce67a9b81e2dd0bbaf795b3715d8eb156e301c5",
+  "selected_fixtures_sha256": "b33532701188f10c5f0545ce403c610a43b8d0335f62d637c3b32b5568c0e2f6",
+  "item_ids": [
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:4",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:12",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:0",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:6",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:8",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:56",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1609",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:4",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:54",
+    "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:106"
+  ],
+  "prior_exposure": "Selected after A inspected development outputs. Algorithm uses input IDs and author IDs only, no outcomes. No claim of untouched data or pre-outcome preregistration."
+}

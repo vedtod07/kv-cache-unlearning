@@ -1,6 +1,8 @@
 # Week one — Person A and Person B
 
-Goal: establish trustworthy baselines and characterize the implementation, not demonstrate recovery. Diagnostic and environment validation on the target GPU remain pending.
+Goal: establish trustworthy baselines and characterize the implementation, not demonstrate recovery. As of 21 October 2026, Person A's selected development baseline and review are completed, and limited-scope cache/GPU evidence is available. Independent B review and joint protocol/confirmation decisions remain open. See [WEEK1_REVIEW.md](WEEK1_REVIEW.md) for the actual goal, importance, method and result of each completed stage.
+
+The table below is the original planned task allocation. The seven actual notebook stages expanded the setup, utility and cache-integration checks; their completion does not imply every joint sign-off has occurred.
 
 | Day | A (Vedant) | B | Output |
 |---|---|---|---|

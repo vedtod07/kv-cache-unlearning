@@ -1,0 +1,15 @@
+{
+  "load_events": [
+    {
+      "started_utc": "2026-10-25T14:36:01.117856+00:00",
+      "load_seconds": 55.00334074400007,
+      "peak_gpu_allocated_bytes": 5034838016,
+      "peak_gpu_reserved_bytes": 5079302144,
+      "peak_scope": "Combined probe and both cache conditions, not a memory-savings estimate"
+    }
+  ],
+  "probe_reports": [
+    "simnpo_candidate-probe-1.json"
+  ],
+  "status": "complete"
+}

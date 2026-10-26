@@ -1,0 +1,58 @@
+{
+  "zip_sha256": "a1d31cb837c116a6d93e7affc671862d13efc2147a7e0f8b2550b59f16ce5c30",
+  "payload_files": 47,
+  "expected_pairs": 60,
+  "items": [
+    {
+      "split": "forget10",
+      "row_index": 4,
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:4"
+    },
+    {
+      "split": "forget10",
+      "row_index": 12,
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:12"
+    },
+    {
+      "split": "forget10",
+      "row_index": 0,
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:0"
+    },
+    {
+      "split": "forget10",
+      "row_index": 6,
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:6"
+    },
+    {
+      "split": "forget10",
+      "row_index": 8,
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:8"
+    },
+    {
+      "split": "retain90",
+      "row_index": 56,
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:56"
+    },
+    {
+      "split": "retain90",
+      "row_index": 1609,
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1609"
+    },
+    {
+      "split": "real_authors",
+      "row_index": 4,
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:4"
+    },
+    {
+      "split": "real_authors",
+      "row_index": 54,
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:54"
+    },
+    {
+      "split": "world_facts",
+      "row_index": 106,
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:106"
+    }
+  ],
+  "validation": "All JSON/JSONL label fields unscored/null; Python AST valid; source bytes and input manifest hashes checked. GPU not rerun."
+}

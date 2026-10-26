@@ -1,0 +1,1696 @@
+{
+  "short": {
+    "parallel": [
+      4.144612789154053,
+      1.8807048797607422,
+      2.0989415645599365,
+      6.778604030609131,
+      0.017867326736450195,
+      6.840244770050049,
+      2.3044776916503906,
+      3.4655661582946777,
+      4.23184028477408e-05
+    ],
+    "dynamic": [
+      4.144612789154053,
+      1.880685806274414,
+      2.09895658493042,
+      6.778614521026611,
+      0.01786697469651699,
+      6.84023904800415,
+      2.3044731616973877,
+      3.4655356407165527,
+      4.23184028477408e-05
+    ],
+    "identity": [
+      4.144612789154053,
+      1.880685806274414,
+      2.09895658493042,
+      6.778614521026611,
+      0.01786697469651699,
+      6.84023904800415,
+      2.3044731616973877,
+      3.4655356407165527,
+      4.23184028477408e-05
+    ],
+    "quantized": {
+      "4": {
+        "sequential": [
+          4.144612789154053,
+          0.7726861238479614,
+          1.6834405660629272,
+          5.929656982421875,
+          0.016134880483150482,
+          6.422911643981934,
+          1.9682798385620117,
+          2.841571092605591,
+          7.10462118149735e-05
+        ],
+        "instrumented": [
+          4.144612789154053,
+          0.7726861238479614,
+          1.6834405660629272,
+          5.929656982421875,
+          0.016134880483150482,
+          6.422911643981934,
+          1.9682798385620117,
+          2.841571092605591,
+          7.10462118149735e-05
+        ],
+        "layers": [
+          {
+            "layer": 0,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.606721043586731
+          },
+          {
+            "layer": 1,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.6671234369277954
+          },
+          {
+            "layer": 2,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.6031739711761475
+          },
+          {
+            "layer": 3,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7774276733398438
+          },
+          {
+            "layer": 4,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.6648850440979004
+          },
+          {
+            "layer": 5,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7404379844665527
+          },
+          {
+            "layer": 6,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7865411043167114
+          },
+          {
+            "layer": 7,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7486096024513245
+          },
+          {
+            "layer": 8,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.6774847507476807
+          },
+          {
+            "layer": 9,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7967814207077026
+          },
+          {
+            "layer": 10,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.5589367747306824
+          },
+          {
+            "layer": 11,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7778425812721252
+          },
+          {
+            "layer": 12,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7040047645568848
+          },
+          {
+            "layer": 13,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.9158341884613037
+          },
+          {
+            "layer": 14,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.6793248653411865
+          },
+          {
+            "layer": 15,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7195402383804321
+          }
+        ],
+        "empty_cache_parallel": [
+          4.144612789154053,
+          1.8807048797607422,
+          2.0989415645599365,
+          6.778604030609131,
+          0.017867326736450195,
+          6.840244770050049,
+          2.3044776916503906,
+          3.4655661582946777,
+          4.23184028477408e-05
+        ],
+        "one_token": [
+          4.144612789154053
+        ],
+        "one_token_layers": [
+          {
+            "layer": 0,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.606721043586731
+          },
+          {
+            "layer": 1,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.6671234369277954
+          },
+          {
+            "layer": 2,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.6031739711761475
+          },
+          {
+            "layer": 3,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7774276733398438
+          },
+          {
+            "layer": 4,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.6648850440979004
+          },
+          {
+            "layer": 5,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7404379844665527
+          },
+          {
+            "layer": 6,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7865411043167114
+          },
+          {
+            "layer": 7,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7486096024513245
+          },
+          {
+            "layer": 8,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.6774847507476807
+          },
+          {
+            "layer": 9,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7967814207077026
+          },
+          {
+            "layer": 10,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.5589367747306824
+          },
+          {
+            "layer": 11,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7778425812721252
+          },
+          {
+            "layer": 12,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7040047645568848
+          },
+          {
+            "layer": 13,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.9158341884613037
+          },
+          {
+            "layer": 14,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.6793248653411865
+          },
+          {
+            "layer": 15,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7195402383804321
+          }
+        ],
+        "delta_from_dynamic": [
+          0.0,
+          -1.1079996824264526,
+          -0.4155160188674927,
+          -0.8489575386047363,
+          -0.0017320942133665085,
+          -0.4173274040222168,
+          -0.336193323135376,
+          -0.6239645481109619,
+          2.8727808967232704e-05
+        ]
+      },
+      "2": {
+        "sequential": [
+          4.144612789154053,
+          0.7480486631393433,
+          0.05511247739195824,
+          9.297006607055664,
+          0.39439186453819275,
+          5.4087371826171875,
+          4.695716381072998,
+          2.65484619140625,
+          0.013307915069162846
+        ],
+        "instrumented": [
+          4.144612789154053,
+          0.7480486631393433,
+          0.05511247739195824,
+          9.297006607055664,
+          0.39439186453819275,
+          5.4087371826171875,
+          4.695716381072998,
+          2.65484619140625,
+          0.013307915069162846
+        ],
+        "layers": [
+          {
+            "layer": 0,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 2.9998064041137695
+          },
+          {
+            "layer": 1,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.2136030197143555
+          },
+          {
+            "layer": 2,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.0101499557495117
+          },
+          {
+            "layer": 3,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.945923328399658
+          },
+          {
+            "layer": 4,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.3499464988708496
+          },
+          {
+            "layer": 5,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.6621134281158447
+          },
+          {
+            "layer": 6,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.9044151306152344
+          },
+          {
+            "layer": 7,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.931446075439453
+          },
+          {
+            "layer": 8,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.394876718521118
+          },
+          {
+            "layer": 9,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 4.013459205627441
+          },
+          {
+            "layer": 10,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 2.882251024246216
+          },
+          {
+            "layer": 11,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 4.074657440185547
+          },
+          {
+            "layer": 12,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.5225672721862793
+          },
+          {
+            "layer": 13,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 4.603899955749512
+          },
+          {
+            "layer": 14,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.394134998321533
+          },
+          {
+            "layer": 15,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.7619004249572754
+          }
+        ],
+        "empty_cache_parallel": [
+          4.144612789154053,
+          1.8807048797607422,
+          2.0989415645599365,
+          6.778604030609131,
+          0.017867326736450195,
+          6.840244770050049,
+          2.3044776916503906,
+          3.4655661582946777,
+          4.23184028477408e-05
+        ],
+        "one_token": [
+          4.144612789154053
+        ],
+        "one_token_layers": [
+          {
+            "layer": 0,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 2.9998064041137695
+          },
+          {
+            "layer": 1,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.2136030197143555
+          },
+          {
+            "layer": 2,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.0101499557495117
+          },
+          {
+            "layer": 3,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.945923328399658
+          },
+          {
+            "layer": 4,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.3499464988708496
+          },
+          {
+            "layer": 5,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.6621134281158447
+          },
+          {
+            "layer": 6,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.9044151306152344
+          },
+          {
+            "layer": 7,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.931446075439453
+          },
+          {
+            "layer": 8,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.394876718521118
+          },
+          {
+            "layer": 9,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 4.013459205627441
+          },
+          {
+            "layer": 10,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 2.882251024246216
+          },
+          {
+            "layer": 11,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 4.074657440185547
+          },
+          {
+            "layer": 12,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.5225672721862793
+          },
+          {
+            "layer": 13,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 4.603899955749512
+          },
+          {
+            "layer": 14,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.394134998321533
+          },
+          {
+            "layer": 15,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.7619004249572754
+          }
+        ],
+        "delta_from_dynamic": [
+          0.0,
+          -1.1326371431350708,
+          -2.0438441075384617,
+          2.5183920860290527,
+          0.37652488984167576,
+          -1.431501865386963,
+          2.3912432193756104,
+          -0.8106894493103027,
+          0.013265596666315105
+        ]
+      }
+    }
+  },
+  "long": {
+    "parallel": [
+      0.5352457761764526,
+      1.0303773880004883,
+      0.753638744354248,
+      10.33238697052002,
+      0.13419774174690247,
+      7.388571262359619,
+      2.1503055095672607,
+      1.9766966104507446,
+      0.00030751267331652343
+    ],
+    "dynamic": [
+      0.5352457761764526,
+      1.0304019451141357,
+      0.7536252737045288,
+      10.332361221313477,
+      0.13419659435749054,
+      7.388551235198975,
+      2.1503117084503174,
+      1.9766709804534912,
+      0.00030751267331652343
+    ],
+    "identity": [
+      0.5352457761764526,
+      1.0304019451141357,
+      0.7536252737045288,
+      10.332361221313477,
+      0.13419659435749054,
+      7.388551235198975,
+      2.1503117084503174,
+      1.9766709804534912,
+      0.00030751267331652343
+    ],
+    "quantized": {
+      "4": {
+        "sequential": [
+          0.5352457761764526,
+          1.0962666273117065,
+          0.9424583911895752,
+          10.580718994140625,
+          0.13485923409461975,
+          6.396958351135254,
+          1.492376446723938,
+          2.1734375953674316,
+          0.0002330270071979612
+        ],
+        "instrumented": [
+          0.5352457761764526,
+          1.0962666273117065,
+          0.9424583911895752,
+          10.580718994140625,
+          0.13485923409461975,
+          6.396958351135254,
+          1.492376446723938,
+          2.1734375953674316,
+          0.0002330270071979612
+        ],
+        "layers": [
+          {
+            "layer": 0,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.6173557639122009
+          },
+          {
+            "layer": 1,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.6565752029418945
+          },
+          {
+            "layer": 2,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.6797773838043213
+          },
+          {
+            "layer": 3,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.8337376117706299
+          },
+          {
+            "layer": 4,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7093641757965088
+          },
+          {
+            "layer": 5,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7747001647949219
+          },
+          {
+            "layer": 6,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.854261040687561
+          },
+          {
+            "layer": 7,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7553417682647705
+          },
+          {
+            "layer": 8,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7067272663116455
+          },
+          {
+            "layer": 9,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7539224624633789
+          },
+          {
+            "layer": 10,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.6495194435119629
+          },
+          {
+            "layer": 11,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.8929827213287354
+          },
+          {
+            "layer": 12,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7842717170715332
+          },
+          {
+            "layer": 13,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.9769929647445679
+          },
+          {
+            "layer": 14,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7719625234603882
+          },
+          {
+            "layer": 15,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.8102096319198608
+          }
+        ],
+        "empty_cache_parallel": [
+          0.5352457761764526,
+          1.0303773880004883,
+          0.753638744354248,
+          10.33238697052002,
+          0.13419774174690247,
+          7.388571262359619,
+          2.1503055095672607,
+          1.9766966104507446,
+          0.00030751267331652343
+        ],
+        "one_token": [
+          0.5352457761764526
+        ],
+        "one_token_layers": [
+          {
+            "layer": 0,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.6173557639122009
+          },
+          {
+            "layer": 1,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.6565752029418945
+          },
+          {
+            "layer": 2,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.6797773838043213
+          },
+          {
+            "layer": 3,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.8337376117706299
+          },
+          {
+            "layer": 4,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7093641757965088
+          },
+          {
+            "layer": 5,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7747001647949219
+          },
+          {
+            "layer": 6,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.854261040687561
+          },
+          {
+            "layer": 7,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7553417682647705
+          },
+          {
+            "layer": 8,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7067272663116455
+          },
+          {
+            "layer": 9,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7539224624633789
+          },
+          {
+            "layer": 10,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.6495194435119629
+          },
+          {
+            "layer": 11,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.8929827213287354
+          },
+          {
+            "layer": 12,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7842717170715332
+          },
+          {
+            "layer": 13,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.9769929647445679
+          },
+          {
+            "layer": 14,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.7719625234603882
+          },
+          {
+            "layer": 15,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 0.8102096319198608
+          }
+        ],
+        "delta_from_dynamic": [
+          0.0,
+          0.0658646821975708,
+          0.1888331174850464,
+          0.24835777282714844,
+          0.0006626397371292114,
+          -0.9915928840637207,
+          -0.6579352617263794,
+          0.19676661491394043,
+          -7.448566611856222e-05
+        ]
+      },
+      "2": {
+        "sequential": [
+          0.5352457761764526,
+          2.8580498695373535,
+          1.802896499633789,
+          9.839569091796875,
+          0.00525747099891305,
+          4.285426616668701,
+          4.585330009460449,
+          0.684731662273407,
+          2.699779510498047
+        ],
+        "instrumented": [
+          0.5352457761764526,
+          2.8580498695373535,
+          1.802896499633789,
+          9.839569091796875,
+          0.00525747099891305,
+          4.285426616668701,
+          4.585330009460449,
+          0.684731662273407,
+          2.699779510498047
+        ],
+        "layers": [
+          {
+            "layer": 0,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.0338807106018066
+          },
+          {
+            "layer": 1,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.280508041381836
+          },
+          {
+            "layer": 2,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.389557361602783
+          },
+          {
+            "layer": 3,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 4.168030738830566
+          },
+          {
+            "layer": 4,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.552464008331299
+          },
+          {
+            "layer": 5,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.9057607650756836
+          },
+          {
+            "layer": 6,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 4.280726909637451
+          },
+          {
+            "layer": 7,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.771881103515625
+          },
+          {
+            "layer": 8,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.4755425453186035
+          },
+          {
+            "layer": 9,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.8835291862487793
+          },
+          {
+            "layer": 10,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.254690647125244
+          },
+          {
+            "layer": 11,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 4.420537948608398
+          },
+          {
+            "layer": 12,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.9312119483947754
+          },
+          {
+            "layer": 13,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 4.772116184234619
+          },
+          {
+            "layer": 14,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.847200870513916
+          },
+          {
+            "layer": 15,
+            "writes": 2,
+            "reads": 16,
+            "update_calls": 9,
+            "attention_calls": 9,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 4.066377639770508
+          }
+        ],
+        "empty_cache_parallel": [
+          0.5352457761764526,
+          1.0303773880004883,
+          0.753638744354248,
+          10.33238697052002,
+          0.13419774174690247,
+          7.388571262359619,
+          2.1503055095672607,
+          1.9766966104507446,
+          0.00030751267331652343
+        ],
+        "one_token": [
+          0.5352457761764526
+        ],
+        "one_token_layers": [
+          {
+            "layer": 0,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.0338807106018066
+          },
+          {
+            "layer": 1,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.280508041381836
+          },
+          {
+            "layer": 2,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.389557361602783
+          },
+          {
+            "layer": 3,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 4.168030738830566
+          },
+          {
+            "layer": 4,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.552464008331299
+          },
+          {
+            "layer": 5,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.9057607650756836
+          },
+          {
+            "layer": 6,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 4.280726909637451
+          },
+          {
+            "layer": 7,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.771881103515625
+          },
+          {
+            "layer": 8,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.4755425453186035
+          },
+          {
+            "layer": 9,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.8835291862487793
+          },
+          {
+            "layer": 10,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.254690647125244
+          },
+          {
+            "layer": 11,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 4.420537948608398
+          },
+          {
+            "layer": 12,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.9312119483947754
+          },
+          {
+            "layer": 13,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 4.772116184234619
+          },
+          {
+            "layer": 14,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 3.847200870513916
+          },
+          {
+            "layer": 15,
+            "writes": 2,
+            "reads": 0,
+            "update_calls": 1,
+            "attention_calls": 1,
+            "attention_receives_cache_tensors": true,
+            "returned_prefix_matches_reconstruction": true,
+            "prefill_returns_original": true,
+            "max_reconstruction_error": 4.066377639770508
+          }
+        ],
+        "delta_from_dynamic": [
+          0.0,
+          1.8276479244232178,
+          1.0492712259292603,
+          -0.49279212951660156,
+          -0.1289391233585775,
+          -3.1031246185302734,
+          2.435018301010132,
+          -1.2919393181800842,
+          2.6994719978247304
+        ]
+      }
+    }
+  }
+}

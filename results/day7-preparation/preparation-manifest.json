@@ -1,0 +1,23 @@
+{
+  "kind": "day7_preparation",
+  "prepared_date": "2026-10-21",
+  "environment_pins": {
+    "torch": "2.9.1",
+    "transformers": "5.5.4",
+    "hqq": "0.2.8.post1",
+    "accelerate": "1.13.0",
+    "huggingface-hub": "1.33.0",
+    "numpy": "2.1.3"
+  },
+  "based_on_day6_run": "day6_20261020T130635380188Z",
+  "gpu_execution": "pending",
+  "files": {
+    "config.json": "fd2622ea2078c356d630650dc37bf87a39a76b5676fb066412af14b1c06c54ca",
+    "fixtures.json": "34846dc9ece4748498f19c404cdfb5185158094fe59654d99f20bb36ce938d1c",
+    "previous-outputs.json": "76d4fc5ca97327d6aad1a4cc18a47a7b250d332604136df8df68053099bd4954",
+    "source-reference-manifest.json": "9e3adc3e9d0414dada4af09703dc38ff5f3fc1a28585db2c1e5512d1cd017893",
+    "day7_baseline.py": "37903b8ccc73b09d402beabe43b8bda87cf1653154c3158e980ce3a6af853205",
+    "day6_integration.py": "1b799cf2be3b21b1dc506b7a5a69f6bba7f2d13e345731c2943597dc8746a87c",
+    "validate_results.py": "c94473bd7194b655ec1f1c995e624298e4c864b9d8117508ad5bc4ef9d4375d8"
+  }
+}

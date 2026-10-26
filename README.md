@@ -4,13 +4,15 @@ A planned measurement study of **weight-based LLM unlearning under stored KV-cac
 
 ## Status
 
-Protocol v4; development progress updated 20 October 2026. **Person A's five ordinary-cache baseline/evaluation stages have run on a T4; Person B has committed HQQ diagnostics on artificial fixtures. The integrated research pipeline and quantized forgotten-fact comparison remain unfinished.** The five-day review records the baseline/utility results, mask confound, precision differences and remaining validation.
+Protocol v4; development progress updated 21 October 2026. **Person A's seven setup/baseline stages have run on a T4 and the day-seven annotations are A-accepted. Limited FP32/HQQ cache integration checks passed; B's separate diagnostics are preserved.** The next same-run ordinary/INT4 development notebook is prepared but has not run. Independent review, final scientific choices and the main quantized disclosure experiment remain unfinished.
 
 Person A is **Vedant**: measurement protocol, baselines, annotation, statistics, and independent validation. Person B owns cache implementation and sequential scoring. Both review the other's evidence.
 
 ## Start here
 
 - [Blueprint v4](docs/BLUEPRINT.md): core design, metrics, scope and claim limits
+- [Week-one review](docs/WEEK1_REVIEW.md): goal, importance, method and result of each stage; completion and remaining joint work
+- [Next paired ordinary/INT4 notebook](notebooks/person_a_week2_int4_development.ipynb) and [run instructions](results/int4-development-preparation/README.md)
 - [Five-day progress diff and results review](docs/FIVE_DAY_PROGRESS_DIFF.md): what changed, why, measured results, problems and next steps
 - [Person A/B work split](docs/WORK_SPLIT.md)
 - [Person A week-one walkthrough](docs/PERSON_A_WEEK1_WALKTHROUGH.md) and [day-one GPU notebook](notebooks/person_a_week1_day1.ipynb)

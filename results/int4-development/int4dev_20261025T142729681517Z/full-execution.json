@@ -1,0 +1,15 @@
+{
+  "load_events": [
+    {
+      "started_utc": "2026-10-25T14:28:08.780505+00:00",
+      "load_seconds": 21.444247229000098,
+      "peak_gpu_allocated_bytes": 5033592832,
+      "peak_gpu_reserved_bytes": 5075107840,
+      "peak_scope": "Combined probe and both cache conditions, not a memory-savings estimate"
+    }
+  ],
+  "probe_reports": [
+    "full-probe-1.json"
+  ],
+  "status": "complete"
+}
