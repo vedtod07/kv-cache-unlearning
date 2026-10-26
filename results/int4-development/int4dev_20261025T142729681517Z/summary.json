@@ -1,0 +1,38 @@
+{
+  "full_ordinary": {
+    "completed": 80,
+    "truncated": 0,
+    "generate_seconds": 61.14507217899961,
+    "score_seconds": 21.461817457000166
+  },
+  "full_int4": {
+    "completed": 80,
+    "truncated": 1,
+    "generate_seconds": 79.32189883900026,
+    "score_seconds": 29.15039836199992
+  },
+  "retain90_ordinary": {
+    "completed": 80,
+    "truncated": 0,
+    "generate_seconds": 62.03238268399923,
+    "score_seconds": 20.222238877999985
+  },
+  "retain90_int4": {
+    "completed": 80,
+    "truncated": 0,
+    "generate_seconds": 78.34813944999962,
+    "score_seconds": 28.508702582999945
+  },
+  "simnpo_candidate_ordinary": {
+    "completed": 80,
+    "truncated": 1,
+    "generate_seconds": 62.755068716000096,
+    "score_seconds": 20.104305633999957
+  },
+  "simnpo_candidate_int4": {
+    "completed": 80,
+    "truncated": 2,
+    "generate_seconds": 82.45419991799895,
+    "score_seconds": 28.659302839000475
+  }
+}

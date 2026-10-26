@@ -1,0 +1,13 @@
+{
+  "results/day2/day2_20261019T122314559618Z/fixtures.json": "0fdf9cd18161f3d479f3a8e7682541d0cbfd77c1c6337e9f15b1cf8b31a36165",
+  "results/day4/day4_20261020T103718004368Z/fixtures-with-prompts.json": "5f073ef179b6528e3285c43129f676c2f3d14ed8652026f5e081d7f569a6838a",
+  "results/day1/day1_20261019T115813495741Z/provenance.json": "9534f91041481e359eca1fbc016a814071a8dcbb30d21e3f41f6e371c79ead57",
+  "results/day2/day2_20261019T122314559618Z/effective-generation-config.json": "5e90dd439d8cd183a0dc831646e56c91075cda7757f4c983c6f202e0aadc4d45",
+  "results/day1/day1_20261019T115813495741Z/chat-template.txt": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+  "results/day2/day2_20261019T122314559618Z/full-outputs.jsonl": "0b63665b72f2cd3625077e9cf1854ae40c0c635f50e1c33cd771798cbcb4bc0b",
+  "results/day4/day4_20261020T103718004368Z/full-utility-outputs.jsonl": "b0e85d38b70312c402d43e3b51573a9652835a7f5eadb91a0585c96e2c7a7479",
+  "results/day2/day2_20261019T122314559618Z/retain90-outputs.jsonl": "167cb6336d6b9ccfb7654434571f3e5815ea8ad37f8b7d50402912ff4034f823",
+  "results/day4/day4_20261020T103718004368Z/retain90-utility-outputs.jsonl": "4b315521d24b733e54caf9035f6e0fdabc707f8eca21e01c1e4e5ddcd788c2d4",
+  "results/day3/day3_20261019T213839883909Z/simnpo-outputs.jsonl": "14b9b54079934dc664b00b5e4c09ec5bb5cb4c214281ce14b067f1724feba89a",
+  "results/day4/day4_20261020T103718004368Z/simnpo_candidate-utility-outputs.jsonl": "afbebea6c53fbeae72ad54775726ad3753c5c24e7976732caebab5f6f6bf9c0f"
+}
