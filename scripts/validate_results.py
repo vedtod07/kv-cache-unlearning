@@ -59,23 +59,81 @@ def validate_record(row):
     return row['run_id'], row['item_id'], row['attempt']
 
 
+MANIFEST_REQUIRED = set('schema_version run_id started_utc finished_utc person code protocol phase model tokenizer data computation generation scoring provenance operations'.split())
+CACHE_POLICY_FIELDS = ('backend', 'nbits', 'residual_length', 'q_group_size', 'axis_key', 'axis_value')
+
+
+def validate_manifest(manifest, records):
+    """Check manifest semantics against its item records (single-attempt runs)."""
+    if not isinstance(manifest, dict):
+        raise ValueError('Manifest must be an object')
+    missing = MANIFEST_REQUIRED - manifest.keys()
+    if missing:
+        raise ValueError(f'Manifest missing fields: {sorted(missing)}')
+    if manifest['schema_version'] != 2:
+        raise ValueError('Manifest schema_version must be 2')
+    model, data, ops = manifest['model'], manifest['data'], manifest['operations']
+    if not model.get('revision') or model.get('resolved_revision') != model['revision']:
+        raise ValueError('Model revision missing or differs from the resolved revision')
+    if not manifest['tokenizer'].get('chat_template_sha256'):
+        raise ValueError('Tokenizer chat-template hash missing')
+    if not manifest['provenance'].get('environment_sha256'):
+        raise ValueError('Environment freeze hash missing')
+    condition = manifest['computation'].get('condition')
+    policy = manifest['computation'].get('cache_policy')
+    if condition != 'ordinary' and (not isinstance(policy, dict)
+                                    or any(policy.get(f) is None for f in CACHE_POLICY_FIELDS)):
+        raise ValueError('Quantized condition needs a complete cache policy')
+    item_ids = data.get('item_ids')
+    if not isinstance(item_ids, list) or len(set(item_ids)) != len(item_ids):
+        raise ValueError('data.item_ids must be a list of unique IDs')
+    for rec in records:
+        if (rec['run_id'], rec['phase'], rec['condition']) != (manifest['run_id'], manifest['phase'], condition):
+            raise ValueError(f"Record {rec['item_id']} disagrees with manifest run/phase/condition")
+    # Manifests without a status predate provisional manifests and were written on completion.
+    status = manifest.get('status', 'complete')
+    if status not in ('running', 'complete', 'interrupted'):
+        raise ValueError('Manifest status must be running, complete or interrupted')
+    record_ids = [r['item_id'] for r in records]
+    if status == 'complete' and sorted(record_ids) != sorted(item_ids):
+        raise ValueError('Records do not cover exactly the manifest item IDs')
+    if status != 'complete' and (len(set(record_ids)) != len(record_ids) or not set(record_ids) <= set(item_ids)):
+        raise ValueError('Partial run records must be unique manifest item IDs')
+    ok = sum(r['status'] == 'ok' for r in records)
+    if (ops.get('expected_items'), ops.get('completed_items'), ops.get('failed_items')) != (
+            len(item_ids), ok, len(records) - ok):
+        raise ValueError('Manifest expected/completed/failed counts disagree with records')
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('jsonl')
+    parser.add_argument('--manifest', help='Also check this manifest.json against the records')
     args = parser.parse_args()
     seen = set()
+    records = []
     with open(args.jsonl) as handle:
         for line_no, line in enumerate(handle, 1):
             try:
-                key = validate_record(json.loads(line))
+                row = json.loads(line)
+                key = validate_record(row)
                 if key in seen:
                     raise ValueError('Duplicate run/item/attempt')
                 seen.add(key)
+                records.append(row)
             except (ValueError, TypeError) as exc:
                 raise SystemExit(f'{args.jsonl}:{line_no}: {exc}') from exc
     if not seen:
         raise SystemExit('Empty result file')
-    print(f'Validated {len(seen)} records structurally; manifest/annotation review still required.')
+    if args.manifest:
+        with open(args.manifest) as handle:
+            try:
+                validate_manifest(json.load(handle), records)
+            except (ValueError, TypeError, KeyError, AttributeError) as exc:
+                raise SystemExit(f'{args.manifest}: {exc}') from exc
+        print(f'Validated {len(seen)} records and their manifest; annotation review still required.')
+    else:
+        print(f'Validated {len(seen)} records structurally; manifest/annotation review still required.')
 
 
 if __name__ == '__main__':

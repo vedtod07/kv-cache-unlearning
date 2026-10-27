@@ -19,7 +19,7 @@ One immutable `manifest.json` per run, referenced by every item record. Required
 | Provenance | complete environment freeze path/hash, validation report IDs, protocol version, annotation rubric version |
 | Operations | runtime, peak memory if measured, status, expected/completed/failed item counts, retry policy |
 
-The lightweight item validator below checks record structure, not all manifest semantics or compatibility. A reviews the manifest before pooling runs; an automated manifest validator remains future work.
+The lightweight item validator below checks record structure, not all manifest semantics or compatibility. A reviews the manifest before pooling runs. `--manifest` adds automated checks of required sections, revisions, hashes, cache policy, record/manifest consistency, run status (`running`, `complete`, `interrupted`; partial records are allowed only for unfinished runs) and completion counts (single-attempt runs); it does not establish compatibility between runs.
 
 ## Item JSONL
 
@@ -52,7 +52,7 @@ Use `unscored` until annotation is complete. Resolve partial/ambiguous handling 
 ## Validation
 
 ```bash
-python scripts/validate_results.py path/to/items.jsonl
+python scripts/validate_results.py path/to/items.jsonl --manifest path/to/manifest.json
 ```
 
 This checks required fields, categorical values, duplicate keys, token IDs, finite scores and status consistency. It is not a factual judge and does not make a run confirmatory. Diagnostic JSON reports use a separate schema (`kind=engineering_fixture`) and must never be mixed with benchmark JSONL.
