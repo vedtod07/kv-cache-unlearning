@@ -53,6 +53,12 @@ class EvaluatorRecords(unittest.TestCase):
         self.assertFalse(failed['passed'])
         self.assertEqual(failed['max_abs_delta'], 0.5)
 
+    def test_scoring_gate_never_passes_vacuously(self):
+        self.assertFalse(scoring_gate([], [], 1e-3, 1e-3)['passed'])
+        self.assertFalse(scoring_gate([1.0], [1.0, 2.0], 1e-3, 1e-3)['passed'])
+        with self.assertRaises(ValueError):
+            scoring_gate([1.0], [1.0], float('nan'), 1e-3)
+
 
 def load_run(condition):
     run_dir = next(EVAL_V0.glob(f'*_full_{condition}'))

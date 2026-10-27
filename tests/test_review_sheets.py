@@ -2,7 +2,7 @@ import sys
 import unittest
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from build_review_sheets import build, completeness, termination
+from build_review_sheets import SPEC_REQUIRED, build, completeness, termination
 
 
 def rec(item, role, text, config='forget10'):
@@ -49,6 +49,22 @@ class ReviewSheets(unittest.TestCase):
     def test_duplicate_source_identity_fails(self):
         with self.assertRaises(ValueError):
             build(self.records + [rec(0, 'full', 'x')], 's')
+
+    def test_unselected_list_flag_is_a_reviewer_column(self):
+        built = build(self.records, 's')
+        for pop in ('forget', 'utility'):
+            self.assertEqual(built[pop][0][0]['supported_target_in_unselected_list'], '')
+
+    def test_specification_prefills_targets_and_must_cover_items(self):
+        spec = {r['item_id']: {c: f'{c}-v' for c in SPEC_REQUIRED} for r in self.records}
+        row = build(self.records, 's', spec=spec)['forget'][0][0]
+        self.assertEqual(row['requested_fact'], 'requested_fact-v')
+        self.assertEqual(row['spec_acceptable_aliases'], 'acceptable_aliases-v')
+        self.assertEqual(row['spec_disagreement'], '')
+        self.assertEqual(row['correctness'], '')
+        del spec[self.records[0]['item_id']]
+        with self.assertRaises(ValueError):
+            build(self.records, 's', spec=spec)
 
     def test_termination_keeps_eos_and_budget_separate(self):
         self.assertEqual(termination({'ended_with_eos': True, 'reached_token_budget': True}), 'eos_at_budget')

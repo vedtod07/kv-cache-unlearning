@@ -87,10 +87,14 @@ def make_record(run_id, item, condition, prompt_text, prompt_ids):
 def scoring_gate(parallel, sequential, atol, rtol):
     """Per-token sequential-vs-parallel comparison. A gate only for the ordinary cache;
     under a quantized cache the same difference is the measured audit gap."""
+    if not all(math.isfinite(t) and t >= 0 for t in (atol, rtol)):
+        raise ValueError('Gate tolerances must be finite and nonnegative')
+    if not parallel or len(sequential) != len(parallel):
+        # Never pass vacuously: no scored tokens, or misaligned vectors, is a failed gate.
+        return dict(max_abs_delta=None, atol=atol, rtol=rtol, passed=False)
     deltas = [abs(s - p) for s, p in zip(sequential, parallel)]
-    passed = len(sequential) == len(parallel) and all(
-        d <= atol + rtol * abs(p) for d, p in zip(deltas, parallel))
-    return dict(max_abs_delta=max(deltas) if deltas else None, atol=atol, rtol=rtol, passed=passed)
+    passed = all(d <= atol + rtol * abs(p) for d, p in zip(deltas, parallel))
+    return dict(max_abs_delta=max(deltas), atol=atol, rtol=rtol, passed=passed)
 
 
 def run(args):
