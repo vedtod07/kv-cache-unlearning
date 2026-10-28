@@ -1,0 +1,502 @@
+{
+  "expected": 60,
+  "received": 60,
+  "counts": {
+    "match": 60,
+    "mismatch": 0,
+    "missing": 0,
+    "error": 0
+  },
+  "duplicates": [],
+  "unexpected": [],
+  "ordinary_gate_failures": [],
+  "token_parity_passed": true,
+  "rows": [
+    {
+      "model_role": "full",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:0",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "full",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:12",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "full",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:4",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "full",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:6",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "full",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:8",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "full",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:4",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "full",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:54",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "full",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1609",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "full",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:56",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "full",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:106",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "full",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:0",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "full",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:12",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "full",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:4",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "full",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:6",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "full",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:8",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "full",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:4",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "full",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:54",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "full",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1609",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "full",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:56",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "full",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:106",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "retain90",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:0",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "retain90",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:12",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "retain90",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:4",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "retain90",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:6",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "retain90",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:8",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "retain90",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:4",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "retain90",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:54",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "retain90",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1609",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "retain90",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:56",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "retain90",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:106",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "retain90",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:0",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "retain90",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:12",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "retain90",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:4",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "retain90",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:6",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "retain90",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:8",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "retain90",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:4",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "retain90",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:54",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "retain90",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1609",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "retain90",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:56",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "retain90",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:106",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "simnpo_candidate",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:0",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "simnpo_candidate",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:12",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "simnpo_candidate",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:4",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "simnpo_candidate",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:6",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "simnpo_candidate",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:8",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "simnpo_candidate",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:4",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "simnpo_candidate",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:54",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "simnpo_candidate",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1609",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "simnpo_candidate",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:56",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "simnpo_candidate",
+      "condition": "int4",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:106",
+      "result": "match",
+      "first_differing_index": null
+    },
+    {
+      "model_role": "simnpo_candidate",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:0",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "simnpo_candidate",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:12",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "simnpo_candidate",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:4",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "simnpo_candidate",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:6",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "simnpo_candidate",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:8",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "simnpo_candidate",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:4",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "simnpo_candidate",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:54",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "simnpo_candidate",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1609",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "simnpo_candidate",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:56",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    },
+    {
+      "model_role": "simnpo_candidate",
+      "condition": "ordinary",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:106",
+      "result": "match",
+      "first_differing_index": null,
+      "ordinary_gate_passed": true
+    }
+  ],
+  "expected_file": "expected-token-ids.json",
+  "expected_sha256": "f817bc09d5f19cf6eb724bb8dccb80cbbb010983de78ad38452d37713c84f475",
+  "manifests": [
+    {
+      "run": "parity_20261028_full_ordinary",
+      "records": 10,
+      "problem": null
+    },
+    {
+      "run": "parity_20261028_full_quantized",
+      "records": 10,
+      "problem": null
+    },
+    {
+      "run": "parity_20261028_retain90_ordinary",
+      "records": 10,
+      "problem": null
+    },
+    {
+      "run": "parity_20261028_retain90_quantized",
+      "records": 10,
+      "problem": null
+    },
+    {
+      "run": "parity_20261028_simnpo_candidate_ordinary",
+      "records": 10,
+      "problem": null
+    },
+    {
+      "run": "parity_20261028_simnpo_candidate_quantized",
+      "records": 10,
+      "problem": null
+    }
+  ],
+  "passed": true,
+  "note": "Reproducibility evidence only; not additional independent accuracy observations."
+}

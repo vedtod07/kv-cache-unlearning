@@ -1,0 +1,212 @@
+{
+  "schema_version": 2,
+  "run_id": "parity_20261028_retain90_ordinary",
+  "status": "complete",
+  "started_utc": "2026-10-27T23:57:58.985141Z",
+  "finished_utc": "2026-10-27T23:58:12.359863Z",
+  "person": "B",
+  "code": {
+    "commit": "16ada491a9f4be87dfbe6973bcbc615436e4b224",
+    "dirty_tracked_files": false,
+    "dirty_diff_sha256": null,
+    "script": "scripts/evaluate_cache.py"
+  },
+  "config": {
+    "models": [
+      "full=open-unlearning/tofu_Llama-3.2-1B-Instruct_full@88e31200b97e4c0c04ae0d2f0b591f427046d192",
+      "retain90=open-unlearning/tofu_Llama-3.2-1B-Instruct_retain90@7114300c0049527a71833f5683965c358ad9dcbf",
+      "simnpo_candidate=open-unlearning/unlearn_tofu_Llama-3.2-1B-Instruct_forget10_SimNPO_lr2e-05_b4.5_a1_d1_g0.125_ep10@444648425d9c8a3926683f1870e364c5fe0b1357"
+    ],
+    "fixtures": [
+      "/content/parity-input/fixtures.json"
+    ],
+    "conditions": [
+      "ordinary",
+      "quantized"
+    ],
+    "limit": 0,
+    "phase": "development",
+    "backend": "hqq",
+    "nbits": 4,
+    "residual_length": 128,
+    "q_group_size": 64,
+    "axis_key": 1,
+    "axis_value": 1,
+    "dtype": "float32",
+    "max_new_tokens": 64,
+    "pad_token_id": 128009,
+    "atol": 0.001,
+    "rtol": 0.001,
+    "expected_template_sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+    "run_id": "parity_20261028",
+    "device": null,
+    "out_dir": "/content/parity-run"
+  },
+  "protocol": "v4 with conventions recorded in docs/DECISIONS.md on 2026-10-22",
+  "phase": "development",
+  "model": {
+    "role": "retain90",
+    "id": "open-unlearning/tofu_Llama-3.2-1B-Instruct_retain90",
+    "revision": "7114300c0049527a71833f5683965c358ad9dcbf",
+    "resolved_revision": "7114300c0049527a71833f5683965c358ad9dcbf",
+    "dtype": "float32"
+  },
+  "tokenizer": {
+    "id": "open-unlearning/tofu_Llama-3.2-1B-Instruct_full",
+    "revision": "88e31200b97e4c0c04ae0d2f0b591f427046d192",
+    "chat_template_sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+    "system_prompt": "You are a helpful assistant.",
+    "template_date": "10 Apr 2025"
+  },
+  "data": {
+    "fixtures": [
+      {
+        "path": "/content/parity-input/fixtures.json",
+        "sha256": "b33532701188f10c5f0545ce403c610a43b8d0335f62d637c3b32b5568c0e2f6"
+      }
+    ],
+    "item_ids": [
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:4",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:12",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:0",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:6",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:8",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:56",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1609",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:4",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:54",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:106"
+    ],
+    "author_ids": [
+      "no-author:real_authors",
+      "no-author:world_facts",
+      "tofu-retain:50a5169595034c4e",
+      "tofu-retain:f41420ef1c530bdf",
+      "tofu:hsiao-yun-hwa"
+    ],
+    "note": "Development fixtures already exposed; utility items use no-author:<config> grouping"
+  },
+  "computation": {
+    "condition": "ordinary",
+    "cache_policy": null,
+    "attention": "sdpa",
+    "weight_precision": "float32",
+    "numerics": {
+      "tf32_matmul": false,
+      "tf32_cudnn": false,
+      "float32_matmul_precision": "highest"
+    },
+    "device": "cuda:0",
+    "gpu": "Tesla T4",
+    "cuda": "12.8",
+    "torch": "2.9.1+cu128",
+    "transformers": "5.5.4",
+    "prefill_chunking": null
+  },
+  "generation": {
+    "effective_config": {
+      "max_length": null,
+      "max_new_tokens": 64,
+      "min_length": null,
+      "min_new_tokens": null,
+      "early_stopping": null,
+      "max_time": null,
+      "stop_strings": null,
+      "do_sample": false,
+      "num_beams": 1,
+      "use_cache": null,
+      "cache_implementation": null,
+      "cache_config": null,
+      "temperature": 0.6,
+      "top_k": null,
+      "top_p": 0.9,
+      "min_p": null,
+      "top_h": null,
+      "typical_p": null,
+      "epsilon_cutoff": null,
+      "eta_cutoff": null,
+      "repetition_penalty": null,
+      "encoder_repetition_penalty": null,
+      "length_penalty": null,
+      "no_repeat_ngram_size": null,
+      "bad_words_ids": null,
+      "renormalize_logits": null,
+      "forced_bos_token_id": null,
+      "forced_eos_token_id": null,
+      "remove_invalid_values": null,
+      "exponential_decay_length_penalty": null,
+      "suppress_tokens": null,
+      "begin_suppress_tokens": null,
+      "sequence_bias": null,
+      "token_healing": null,
+      "guidance_scale": null,
+      "watermarking_config": null,
+      "num_return_sequences": null,
+      "output_attentions": null,
+      "output_hidden_states": null,
+      "output_scores": null,
+      "output_logits": null,
+      "return_dict_in_generate": null,
+      "pad_token_id": 128009,
+      "bos_token_id": 128000,
+      "eos_token_id": [
+        128001,
+        128008,
+        128009
+      ],
+      "encoder_no_repeat_ngram_size": null,
+      "decoder_start_token_id": null,
+      "is_assistant": null,
+      "num_assistant_tokens": null,
+      "num_assistant_tokens_schedule": null,
+      "assistant_confidence_threshold": null,
+      "prompt_lookup_num_tokens": null,
+      "max_matching_ngram_size": null,
+      "assistant_early_exit": null,
+      "assistant_lookbehind": null,
+      "target_lookbehind": null,
+      "compile_config": null,
+      "disable_compile": null,
+      "continuous_batching_config": null,
+      "low_memory": null,
+      "penalty_alpha": null,
+      "dola_layers": null,
+      "diversity_penalty": null,
+      "num_beam_groups": null,
+      "constraints": null,
+      "force_words_ids": null,
+      "prefill_chunk_size": null,
+      "_from_model_config": null,
+      "transformers_version": "5.5.4"
+    },
+    "attention_mask": "all ones (unpadded)",
+    "batch_size": 1,
+    "fresh_cache_per_item": true
+  },
+  "scoring": {
+    "reference": "in-context gold answer ending with end-of-turn",
+    "logprob": "sum of float32 log-softmax token log-probabilities; per-token NLLs saved",
+    "parallel": "single pass, cache disabled",
+    "sequential": "prefill plus one-token decode steps through a fresh cache of this condition",
+    "ordinary_gate": "|sequential - parallel| <= 0.001 + 0.001 * |parallel| per token (ordinary cache only; under quantization the difference is the audit gap, not a gate)"
+  },
+  "provenance": {
+    "environment_freeze": "../pip-freeze.txt",
+    "environment_sha256": "c62c33f030b1f4ee101ff697a0bac6116c60daab3bf641ba8fb87caa28035c26",
+    "validation_reports": [
+      "results/diagnostics-v2/",
+      "results/timing/"
+    ],
+    "annotation_rubric": null
+  },
+  "operations": {
+    "runtime_seconds": 13.3748333489998,
+    "peak_memory_mib": 4788.43701171875,
+    "expected_items": 10,
+    "completed_items": 10,
+    "failed_items": 0,
+    "gate_failures": 0,
+    "retry_policy": "none",
+    "resumable": false
+  }
+}
