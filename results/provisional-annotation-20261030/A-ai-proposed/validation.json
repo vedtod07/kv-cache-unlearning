@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "responses": 480,
+  "unique_questions": 80,
+  "source_A_and_B_files_unchanged": true,
+  "response_hashes_preserved": true,
+  "identical_response_labels_consistent": true,
+  "csv_json_values_match": true,
+  "all_human_decisions_pending": true,
+  "B_approval_received": false,
+  "output_sha256": {
+    "REVIEW_GUIDE.md": "40c85b59f5e2e5adb7e48d2be3c8d15c319daca66338495e35de8e0986c4bb14",
+    "forget-ai-proposed.csv": "c94928e1abf42c853b169ef6cf73cc276aa9ee05ba0118b83d8a594cc83ef304",
+    "forget-ai-proposed.json": "d30e5e44f46a96b7b260582592cf019857c19b4819c8e9281a1ef98c1b276531",
+    "manifest.json": "fb123c50a368b622db9048ae2d18cfec49c793a7790ebf99878edc1a57ec5019",
+    "priority-review-queue.csv": "7e18296f270e3ef560e271a009ab6ca933c699ccf1a12e72a5f372a4273a354a",
+    "priority-review-queue.json": "9e99c500e43151ee9bc23f8b7b650097f471218be0ea4439847dc406370acd7e",
+    "utility-ai-proposed.csv": "2a335cf749f263a5201dc245301a2a2606871d7010b15281c5617163a7c0116a",
+    "utility-ai-proposed.json": "239b9159f9bf4a144065dc9fcaaf841b36fd9933593d9ed167e292dc2337c097"
+  }
+}

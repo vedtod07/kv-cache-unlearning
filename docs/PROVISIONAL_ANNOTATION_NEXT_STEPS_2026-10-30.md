@@ -1,5 +1,7 @@
 # Provisional annotation started - 30 October 2026
 
+**Update:** At Vedant's request, AI proposals have now been prepared for all 480 A responses in [A-ai-proposed/REVIEW_GUIDE.md](../results/provisional-annotation-20261030/A-ai-proposed/REVIEW_GUIDE.md). Start with its priority-review queue. These await human review; the original blank A/B packages described below remain unchanged. B approval is still pending. The sections below document the earlier package-preparation milestone.
+
 Vedant authorized moving ahead because time is limited and B approval is expected. **B approval has not been received.** The current table is an A-authorized provisional working specification, not a joint freeze or final v1.0. The exact rubric/table hashes and authorization are recorded in results/provisional-annotation-20261030/PROVISIONAL_AUTHORIZATION.json.
 
 ## Completed next step
