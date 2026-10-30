@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-30",
+  "status": "A_authorized_provisional_work_B_confirmation_pending",
+  "A": "Vedant",
+  "B_approval_received": false,
+  "B_approval_expectation": "Expected by A but not received; not an author approval or joint freeze.",
+  "authorization": "User requested proceeding with the reconciled table to avoid delay while explicitly noting expected B approval.",
+  "rubric_version": "tofu-disclosure-provisional-20261030",
+  "rubric_source_sha256": "6998d0d2b340f70c9e36edd1ee98317b1418d5bea3fcfbd627b6fc7298900de5",
+  "specification_source_sha256": "dfc1eac1496b347469edbce59a76b8deb1d2bbeba10488643a36796624035722",
+  "scope": "All480 original paired development responses. No GPU rerun; no duplicate parity outputs added. No final v1.0 freeze.",
+  "supersession": "If B changes a rule, version the protocol and recheck every affected item across all six checkpoint/condition combinations. Preserve original labels.",
+  "disclosed_exposure": "A and assistant have prior output/label exposure. B reported prior exposure to counts/examples; complete declaration pending. Condition-masked does not mean fully blind."
+}

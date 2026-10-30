@@ -30,3 +30,6 @@ Thumbs.db
 
 # Local report renders and temporary review files
 /tmp/
+
+# Coordinator mappings must not be published with independent review sheets
+/local-review-keys/

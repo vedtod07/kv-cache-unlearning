@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-30",
+  "status": "provisional_annotation_ready_no_labels_assigned",
+  "counts": {
+    "A/forget": 120,
+    "A/utility": 360,
+    "B/forget": 120,
+    "B/utility": 360
+  },
+  "raw_source_sha256": {
+    "full-int4-items.jsonl": "7b076ce14edee4ecf96c5e7c8f12c9e09720660c6f188905b450e0891e64e5ab",
+    "full-ordinary-items.jsonl": "3dc3d40cec77f51902642f9b547ffe36beeacd99b2ace9141316bad11bdbd02c",
+    "retain90-int4-items.jsonl": "065d00b7e9bd6c7ab79baff6ba523888d97f686f29d92259094082da73e1377f",
+    "retain90-ordinary-items.jsonl": "8fb12ca048f9b1eb999f54e7ac2eed12cb424437fc62208c6aedd30c6c9c9e45",
+    "simnpo_candidate-int4-items.jsonl": "bb3e41b80726d9932fff0e2359175c39ac99ff89b5411b9b34fe095d01eceb92",
+    "simnpo_candidate-ordinary-items.jsonl": "3cd3837f3cafeea69cbafb11a527fd1c254c1c2391a6857733a310664e26bcbb"
+  },
+  "builder_commit": "16ada491a9f4be87dfbe6973bcbc615436e4b224",
+  "builder_sha256": "b7cc76546ab5e9588602efedde1267e9201fe69e000a32f0f9159014c403f0d2",
+  "specification_sha256": "dfc1eac1496b347469edbce59a76b8deb1d2bbeba10488643a36796624035722",
+  "rubric_source_sha256": "6998d0d2b340f70c9e36edd1ee98317b1418d5bea3fcfbd627b6fc7298900de5",
+  "mapping_key_sha256": {
+    "A/forget": "0b955a031236389770ab428b418542b15af70609e1d6866388b395ee141c7039",
+    "A/utility": "d070b0e01fe63a32c8fd350eb1bb6fdb481429e210f453225bac9c6b85dc4490",
+    "B/forget": "dc2969efae7b73525d934f11cc4eecc82de0c8f79fb75c903ab22718de67e716",
+    "B/utility": "bdc47d0c0f6ee064838ad8973bf1652311e599914e9e557e762fb544735732d4"
+  },
+  "mapping_key_location": "local-only coordinator files excluded from Git and reviewer ZIPs",
+  "B_confirmation_received": false,
+  "reviewer_files_do_not_include_model_or_condition_fields": true
+}
