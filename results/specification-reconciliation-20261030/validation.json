@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-30",
+  "status": "reconciliation candidate; NOT a joint freeze",
+  "rows": 80,
+  "forget": 20,
+  "utility": 60,
+  "changed_utility_rows": 15,
+  "csv_json_exact_parity": true,
+  "B_loader_compatible": true,
+  "files": {
+    "combined-specification-candidate.csv": "dfc1eac1496b347469edbce59a76b8deb1d2bbeba10488643a36796624035722",
+    "A-approval.json": "6baa1fff194b0144fd70a9207acd07e11a6d5f88ea805473f36671d8d5b8478d",
+    "utility-spec-draft-B-source.csv": "11ce64a9a0c9947c2e38426246536bd41d9af056072ec3eab599e5df9e33276d",
+    "change-log.json": "f348966e11ff121c31eb4828d394e50e044635d0acb775087784cf178a2857b0",
+    "combined-specification-candidate.json": "df4e71222aee543defe427c9e94c10cc8a2dd1cd4c8463d9642de3f2e35da4ba"
+  }
+}

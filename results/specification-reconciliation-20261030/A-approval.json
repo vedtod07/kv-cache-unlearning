@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-30",
+  "reviewer": "Vedant (Person A)",
+  "source_file": "results/annotation-specification/forget-item-specification-reviewed-proposal-20261030.json",
+  "source_sha256": "a0f913647784f72919037f927f0e833bd3f9dd189039031336f17e0b4c224b45",
+  "statement": "i have reviewed them and i approve of them to be used, for now reconcile them with B's",
+  "scope": "Approval of the 20 reviewed forget-item specifications; authorization to reconcile with B. Does not imply B approval of these rows, A prior approval of every utility edit, or a joint freeze.",
+  "provenance": "AI-assisted draft and revision, user reviewed and approved. Prior output exposure remains disclosed."
+}
