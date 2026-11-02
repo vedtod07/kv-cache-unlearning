@@ -2,6 +2,8 @@
 
 Append dated decisions with reasons and reviewer names.
 
+- 2026-11-02 — Vedant explicitly accepted all 480 AI-proposed annotations from 30 October without changes. Preserved the proposals and recorded A-accepted submissions, source hashes and the exact acceptance statement in `results/A-accepted-development-20261102/`. Provenance remains AI-proposed and human-accepted, not independent human-only annotation. Fourteen ambiguous labels remain unresolved; B's review and specification approval remain pending. Joined A labels to model/condition identities only after acceptance and prepared all 240 paired comparisons. No new GPU experiment, joint freeze, B approval or confirmatory result is asserted. Next steps: independent B submission, pre-adjudication agreement, coordinated adjudication, and an agreed broader confirmation allocation/protocol.
+
 - 2026-10-19 — Protocol revision v4 prepared following repository review: Person A is Vedant; prioritize stored-cache core, fixed-population factual disclosure and valid engineering gates. Positive recovery is not a readiness criterion. This revision is on a review branch; collaborator review remains pending.
 - Pending joint decisions: immutable checkpoints/data, development author allocation, utility/effect thresholds, supported backend/residual policy, final numerical tolerances, one optional extension, confirmation freeze and venue.
 

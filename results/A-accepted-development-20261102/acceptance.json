@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-02",
+  "reviewer": "Vedant (Person A)",
+  "status": "A_accepted_provisional",
+  "user_statement": "i accept all the proposed ones as they seem to be correct to me, now let us move forward to the next step",
+  "scope": "All 480 proposed annotations and accompanying annotation fields accepted unchanged. Ambiguous labels remain ambiguous.",
+  "source_commit": "2ae9293",
+  "source_proposal_hashes": {
+    "forget": "d30e5e44f46a96b7b260582592cf019857c19b4819c8e9281a1ef98c1b276531",
+    "utility": "239b9159f9bf4a144065dc9fcaaf841b36fd9933593d9ed167e292dc2337c097"
+  },
+  "specification_sha256": "dfc1eac1496b347469edbce59a76b8deb1d2bbeba10488643a36796624035722",
+  "rubric_version": "tofu-disclosure-provisional-20261030",
+  "AI_assistance_disclosed": true,
+  "B_approval_received": false,
+  "B_independent_review_received": false,
+  "joint_freeze": false,
+  "reference_issues_resolved": false,
+  "exposure": "A and assistant previously exposed to development outputs/labels. AI proposals are public in the review branch. B must disclose any exposure before his independent first pass.",
+  "remote_check": "2026-11-02: fetched all remote heads; PR11 unchanged at 75786c2, PR9 and PR11 show no comments/reviews. No new B approval identified in checked repository evidence."
+}
