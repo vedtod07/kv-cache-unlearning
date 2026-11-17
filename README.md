@@ -4,7 +4,7 @@ A planned measurement study of **weight-based LLM unlearning under stored KV-cac
 
 ## Status
 
-Updated **8 November 2026**. **The paired FP32 ordinary/HQQ INT4 development experiment has run: 480 responses, three checkpoints, one forget author and a 60-question utility screen.** A accepted the AI-proposed annotations on 2 November; B's independent review remains pending. B's separate evaluator reproduces 60/60 parity outputs. The multi-author confirmation experiment, final criteria and joint freeze remain unfinished. See [current status](docs/STATUS.md) for evidence, limits and the next actions.
+Updated **18 November 2026**. **The paired FP32 ordinary/HQQ INT4 development experiment has run: 480 responses, three checkpoints, one forget author and a 60-question utility screen.** A accepted AI-proposed annotations on 2 November. B returned Claude-generated annotations without human review in PR #12; human validation remains pending. B's separate evaluator reproduces 60/60 parity outputs. The multi-author confirmation experiment, final criteria and joint freeze remain unfinished. See [current status](docs/STATUS.md) for evidence, limits and the next actions.
 
 Person A is **Vedant**: measurement protocol, baselines, annotation, statistics, and independent validation. Person B owns cache implementation and sequential scoring. Both review the other's evidence.
 

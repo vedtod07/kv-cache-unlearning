@@ -1,4 +1,8 @@
-# Current project status — 8 November 2026
+# Current project status — 18 November 2026
+
+**Latest annotation update:** [PR #12](https://github.com/vedtod07/kv-cache-unlearning/pull/12) supplies 480 Claude-generated labels, explicitly unreviewed by B, with prior aggregate/example exposure disclosed. Content validation passes; CSV manifest hashes need correction for committed LF line endings. Correctness agrees with A's accepted pass on 475/480 rows (116/120 forget, 359/360 utility); this is agreement between AI-assisted passes, **not human inter-annotator agreement**. Nine rows differ on at least one scored field. [Review and disagreement queue](../results/B-return-review-20261118/REVIEW_AND_DISAGREEMENTS.md).
+
+B's statement relayed on 18 November accepts the 15 reconciled utility rows and categorical Bogota yes/no ambiguity. This is recorded at that scope; the complete joint freeze and reference resolutions remain pending. A human audit (including agreement cases) needs an explicit selection/reviewer protocol decision. Older references below to B's independent pass remain open: receiving AI labels does not complete that human pass.
 
 **Stage: paired development study completed; independent annotation and confirmation design pending.** This page supersedes older “next notebook has not run” status statements. Dated reports remain historical snapshots.
 

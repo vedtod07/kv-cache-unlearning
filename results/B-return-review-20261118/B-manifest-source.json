@@ -1,0 +1,20 @@
+{
+  "source_package": "results/provisional-annotation-20261030/B-provisional-review-package.zip (a/week2-development-handoff)",
+  "source_package_sha256": "be029ea384ee6627c9be5db7ab4130fe7c631a2c9a1bc7a33561d10b21424eda",
+  "rubric_version": "tofu-disclosure-provisional-20261030",
+  "annotator": "Claude Opus 5.5 (AI-generated at B request; not B human review)",
+  "date": "2026-11-17",
+  "judgments": {
+    "forget": 107,
+    "utility": 216
+  },
+  "rows": {
+    "forget": 120,
+    "utility": 360
+  },
+  "files": {
+    "DISCLOSURE.md": "816c10f37f54c7fee0230ee8ea51208b36d9745802971a57792a07ff00dd4f2d",
+    "forget-review-B.csv": "9840f4abcd91d00cf2b39f7a8c8b05b55e004015176c653899d815291fa4854e",
+    "utility-review-B.csv": "0792d36e35ed071bc18739239836ab947aad82f2c695340af6be2d23f67ec3c6"
+  }
+}

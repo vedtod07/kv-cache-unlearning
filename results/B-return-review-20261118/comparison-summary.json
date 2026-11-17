@@ -1,0 +1,201 @@
+{
+  "date": "2026-11-18",
+  "PR": 12,
+  "source_commit": "815ceef274bae1ddf93fa2465fa5b3fd89ad7ed0",
+  "validation": "content_passed_CSV_manifest_byte_hashes_require_correction",
+  "rows": 480,
+  "distinct_B_judgments": {
+    "forget": 107,
+    "utility": 216
+  },
+  "comparison_type": "A AI-proposed/human-accepted versus B AI-generated/unreviewed; prior exposure disclosed; NOT human inter-annotator agreement",
+  "fields": {
+    "forget": {
+      "correctness": {
+        "matches": 116,
+        "total": 120,
+        "confusion": [
+          {
+            "A": "ambiguous",
+            "B": "ambiguous",
+            "count": 6
+          },
+          {
+            "A": "correct",
+            "B": "correct",
+            "count": 40
+          },
+          {
+            "A": "correct",
+            "B": "partial",
+            "count": 1
+          },
+          {
+            "A": "incorrect",
+            "B": "ambiguous",
+            "count": 2
+          },
+          {
+            "A": "incorrect",
+            "B": "incorrect",
+            "count": 65
+          },
+          {
+            "A": "partial",
+            "B": "incorrect",
+            "count": 1
+          },
+          {
+            "A": "partial",
+            "B": "partial",
+            "count": 5
+          }
+        ]
+      },
+      "behavior": {
+        "matches": 120,
+        "total": 120,
+        "confusion": [
+          {
+            "A": "answer",
+            "B": "answer",
+            "count": 120
+          }
+        ]
+      },
+      "supported_target_in_unselected_list": {
+        "matches": 120,
+        "total": 120,
+        "confusion": [
+          {
+            "A": "not_applicable",
+            "B": "not_applicable",
+            "count": 120
+          }
+        ]
+      }
+    },
+    "utility": {
+      "correctness": {
+        "matches": 359,
+        "total": 360,
+        "confusion": [
+          {
+            "A": "ambiguous",
+            "B": "ambiguous",
+            "count": 8
+          },
+          {
+            "A": "correct",
+            "B": "correct",
+            "count": 267
+          },
+          {
+            "A": "incorrect",
+            "B": "correct",
+            "count": 1
+          },
+          {
+            "A": "incorrect",
+            "B": "incorrect",
+            "count": 82
+          },
+          {
+            "A": "partial",
+            "B": "partial",
+            "count": 2
+          }
+        ]
+      },
+      "behavior": {
+        "matches": 360,
+        "total": 360,
+        "confusion": [
+          {
+            "A": "answer",
+            "B": "answer",
+            "count": 360
+          }
+        ]
+      },
+      "supported_target_in_unselected_list": {
+        "matches": 360,
+        "total": 360,
+        "confusion": [
+          {
+            "A": "not_applicable",
+            "B": "not_applicable",
+            "count": 360
+          }
+        ]
+      },
+      "coherence": {
+        "matches": 357,
+        "total": 360,
+        "confusion": [
+          {
+            "A": "coherent",
+            "B": "coherent",
+            "count": 357
+          },
+          {
+            "A": "coherent",
+            "B": "partly_incoherent",
+            "count": 3
+          }
+        ]
+      },
+      "relevance": {
+        "matches": 359,
+        "total": 360,
+        "confusion": [
+          {
+            "A": "off_topic",
+            "B": "off_topic",
+            "count": 1
+          },
+          {
+            "A": "on_topic",
+            "B": "on_topic",
+            "count": 354
+          },
+          {
+            "A": "on_topic",
+            "B": "partly_off_topic",
+            "count": 1
+          },
+          {
+            "A": "partly_off_topic",
+            "B": "partly_off_topic",
+            "count": 4
+          }
+        ]
+      }
+    }
+  },
+  "rows_with_any_label_disagreement": 9,
+  "rows_with_correctness_disagreement": 5,
+  "human_independent_review_completed": false,
+  "adjudication_completed": false,
+  "original_annotations_modified": false,
+  "source_file_hash_checks": {
+    "DISCLOSURE.md": {
+      "declared": "816c10f37f54c7fee0230ee8ea51208b36d9745802971a57792a07ff00dd4f2d",
+      "git_blob_sha256": "816c10f37f54c7fee0230ee8ea51208b36d9745802971a57792a07ff00dd4f2d",
+      "exact_byte_match": true,
+      "CRLF_record_serialization_sha256": null
+    },
+    "forget-review-B.csv": {
+      "declared": "9840f4abcd91d00cf2b39f7a8c8b05b55e004015176c653899d815291fa4854e",
+      "git_blob_sha256": "dc0f3838180234f775dce50a7d1689c6141d89164eb5699ae2adedc3be45c509",
+      "exact_byte_match": false,
+      "CRLF_record_serialization_sha256": "9840f4abcd91d00cf2b39f7a8c8b05b55e004015176c653899d815291fa4854e"
+    },
+    "utility-review-B.csv": {
+      "declared": "0792d36e35ed071bc18739239836ab947aad82f2c695340af6be2d23f67ec3c6",
+      "git_blob_sha256": "7b7341de41bc1dea8ad953595c984b4dd2ee29b7315fcaa73ff87f13a842d637",
+      "exact_byte_match": false,
+      "CRLF_record_serialization_sha256": "0792d36e35ed071bc18739239836ab947aad82f2c695340af6be2d23f67ec3c6"
+    }
+  }
+}
