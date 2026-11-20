@@ -1,0 +1,46 @@
+{
+  "status": "AI_proposals_only_human_review_pending",
+  "date": "2026-10-30",
+  "annotation_author": "Codex AI",
+  "assigned_reviewer": "A (Vedant)",
+  "B_approval_received": false,
+  "method": "Read all A responses and per-item specifications; explicit semantic assignments serialized by script. Exact duplicate responses retained as distinct records. No model/condition mappings or B labels read for this pass.",
+  "prior_exposure": "Assistant and A have prior development-output/label exposure; condition-masked, not fully blind or independent human review.",
+  "external_reference_checks": "None newly performed; unresolved real-world cases remain flagged.",
+  "source_sha256": {
+    "A/PROTOCOL.md": "70d05493fb0a20a7a362f57a82883adc8406b29e3036e6f57b94e63fce16b474",
+    "A/RUBRIC_SOURCE_CANDIDATE.md": "6998d0d2b340f70c9e36edd1ee98317b1418d5bea3fcfbd627b6fc7298900de5",
+    "A/forget-review.csv": "a3c181737e7e151566337bf4ff1fa6dfec1ce982ef9aa33a776bd6527dcc4ee4",
+    "A/forget-review.json": "e024ca33a753b56c5b3fdb0a1d895918d1d480d0a18a4ae46eb2c37e4f31cad4",
+    "A/utility-review.csv": "091b7be3c677f90a553e9b9dff1917f37bfb372fbcee773cf08235d21bc3aa21",
+    "A/utility-review.json": "35b1c627f756c4a0f63b8dd8b57e6114dd0c4aab3f083cbb81995565e52610aa",
+    "B/PROTOCOL.md": "70d05493fb0a20a7a362f57a82883adc8406b29e3036e6f57b94e63fce16b474",
+    "B/RUBRIC_SOURCE_CANDIDATE.md": "6998d0d2b340f70c9e36edd1ee98317b1418d5bea3fcfbd627b6fc7298900de5",
+    "B/forget-review.csv": "0092f6976e42a1e1d7ba07e7952a6bf46f2e88f5786cd89af2126a60bbf47be9",
+    "B/forget-review.json": "97e42ba774772a0d2e13f927b92008a21e102fcfa965ce3fc4ebdb5c0d2bfb2a",
+    "B/utility-review.csv": "83dd8d0ca17d3676fb27be8558244972b6f9ac286a7de6060b98bb46bfae092d",
+    "B/utility-review.json": "f4c480847564a163e5f36164a1d309d54a3a999f2a50eeca7c047c1b7e933244"
+  },
+  "specification_sha256": "dfc1eac1496b347469edbce59a76b8deb1d2bbeba10488643a36796624035722",
+  "rubric_version": "tofu-disclosure-provisional-20261030",
+  "counts": {
+    "forget": {
+      "incorrect": 67,
+      "correct": 41,
+      "ambiguous": 6,
+      "partial": 6
+    },
+    "utility": {
+      "correct": 267,
+      "incorrect": 83,
+      "ambiguous": 8,
+      "partial": 2
+    }
+  },
+  "priorities": {
+    "3": 331,
+    "1": 111,
+    "2": 38
+  },
+  "limitations": "Provisional descriptive label counts only; no model accuracy comparison, joint freeze, inter-rater agreement or final result asserted."
+}

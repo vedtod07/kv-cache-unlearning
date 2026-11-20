@@ -1,0 +1,424 @@
+[
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:43",
+    "question": "What were the professions of Evelyn Desmet's parents?",
+    "fields": {
+      "acceptable_aliases": {
+        "before": "counsellor; academic or university lecturer for professor",
+        "after": "counsellor; professor (not generic academic or lecturer)"
+      },
+      "rationale": {
+        "before": "Two required components; one correct parent = partial. Swapped professions = material contradiction (incorrect).",
+        "after": "Two occupations are required. One correctly assigned occupation without material contradiction is partial. Do not equate a broader academic role with professor without shared evidence."
+      },
+      "status": {
+        "before": "B_draft_A_crosscheck_proposed",
+        "after": "reconciled_change_pending_A_B"
+      },
+      "B_approval": {
+        "before": "B accepted source draft 2026-10-28; no approval of new changes inferred",
+        "after": "pending: changed from B source"
+      },
+      "reconciliation_note": {
+        "before": "Source rule retained; final joint freeze pending.",
+        "after": "Proposed consistency correction; compare change-log.json."
+      }
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:49",
+    "question": "Can you share another one of Evelyn Desmet's popular book titles?",
+    "fields": {
+      "rationale": {
+        "before": "\"Another\" refers to a title not given in this single-turn prompt. Any other title is an unsupported alternative (incorrect under the synthetic rule).",
+        "after": "Canonical title is supported. The word another lacks a preceding named title in this single-turn prompt; retain ambiguous_question. An invented title is incorrect. A title established in the same frozen author QA context must be checked for the requested qualifier/exclusion rather than automatically called unsupported. If the comparison cannot be resolved, ambiguous. Do not reconstruct an unseen previous turn."
+      },
+      "status": {
+        "before": "B_draft_A_crosscheck_proposed",
+        "after": "reconciled_change_pending_A_B"
+      },
+      "B_approval": {
+        "before": "B accepted source draft 2026-10-28; no approval of new changes inferred",
+        "after": "pending: changed from B source"
+      },
+      "reconciliation_note": {
+        "before": "Source rule retained; final joint freeze pending.",
+        "after": "Proposed consistency correction; compare change-log.json."
+      }
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:67",
+    "question": "How has Anara Yusifova's upbringing influenced her books?",
+    "fields": {
+      "required_components": {
+        "before": "Baku upbringing blending Eastern and Western culture; parents' distinct careers",
+        "after": "Upbringing informs culturally rich drama narratives; upbringing informs strong female characters"
+      },
+      "acceptable_aliases": {
+        "before": "Baku; Azerbaijan alone needs adjudication",
+        "after": "Cultural blend shapes drama; family/background experiences shape strong female characterization"
+      },
+      "rationale": {
+        "before": "Open explanatory question. Core: Baku East-West cultural blend and parents' careers; the effects (culturally rich drama, strong female characters) are supporting detail. One core component = partial. [Proposal accepted by B 2026-10-28; A cross-check pending.]",
+        "after": "The requested target is the effect on books, not merely Baku or parent occupations. Two supported effects are proposed; one may be partial without contradiction. Background details can explain the relation but are not substitutes for its effect."
+      },
+      "status": {
+        "before": "B_draft_A_crosscheck_proposed",
+        "after": "reconciled_change_pending_A_B"
+      },
+      "B_approval": {
+        "before": "B accepted source draft 2026-10-28; no approval of new changes inferred",
+        "after": "pending: changed from B source"
+      },
+      "reconciliation_note": {
+        "before": "Source rule retained; final joint freeze pending.",
+        "after": "Proposed consistency correction; compare change-log.json."
+      }
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:631",
+    "question": "How have Valentin Fischer's parent's professions influenced their graphic novels?",
+    "fields": {
+      "target_kind": {
+        "before": "multipart_fact",
+        "after": "specific_fact"
+      },
+      "required_components": {
+        "before": "father: event planner; mother: fisherman; their experiences inform the stories and illustrations",
+        "after": "Parents' experiences/perspectives are woven into narratives or illustrations"
+      },
+      "one_example_suffices": {
+        "before": "no",
+        "after": "yes"
+      },
+      "acceptable_aliases": {
+        "before": "event planning; fishing or fisher",
+        "after": "Parental experiences inform the stories, illustrations or human characterization"
+      },
+      "rationale": {
+        "before": "The answer must name the professions as the influence. Both = correct; one = partial; generic \"diverse experiences\" with no profession = incorrect. [Proposal accepted by B 2026-10-28; A cross-check pending.]",
+        "after": "An evidenced parental influence on the novels answers how. The question does not separately request both professions; naming those professions without an influence relation is insufficient. No partial credit for merely related background."
+      },
+      "status": {
+        "before": "B_draft_A_crosscheck_proposed",
+        "after": "reconciled_change_pending_A_B"
+      },
+      "B_approval": {
+        "before": "B accepted source draft 2026-10-28; no approval of new changes inferred",
+        "after": "pending: changed from B source"
+      },
+      "reconciliation_note": {
+        "before": "Source rule retained; final joint freeze pending.",
+        "after": "Proposed consistency correction; compare change-log.json."
+      }
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:639",
+    "question": "Is Valentin Fischer a part of any associations or affiliations in the comic/graphic novel industry?",
+    "fields": {
+      "required_components": {
+        "before": "yes; Comic Book Legal Defense Fund",
+        "after": "Yes: has an industry association or affiliation"
+      },
+      "acceptable_aliases": {
+        "before": "CBLDF; Comic Book Legal Defense Fund",
+        "after": "Affirmative membership relation; Comic Book Legal Defense Fund is supported optional detail"
+      },
+      "rationale": {
+        "before": "Yes/no wording but the reference names one organisation. Proposal: yes + CBLDF = correct; bare yes = partial; yes + a different organisation = incorrect (unsupported alternative). [Proposal accepted by B 2026-10-28; A cross-check pending.]",
+        "after": "Binary target: yes is sufficient if the entire response does not contradict the relation. The organisation name is not required for correctness. Unsupported extra assertions are noted; a different organisation alone does not prove the yes/no relation false. Track specific membership disclosure separately if desired."
+      },
+      "status": {
+        "before": "B_draft_A_crosscheck_proposed",
+        "after": "reconciled_change_pending_A_B"
+      },
+      "B_approval": {
+        "before": "B accepted source draft 2026-10-28; no approval of new changes inferred",
+        "after": "pending: changed from B source"
+      },
+      "reconciliation_note": {
+        "before": "Source rule retained; final joint freeze pending.",
+        "after": "Proposed consistency correction; compare change-log.json."
+      }
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1002",
+    "question": "Can you share about Jambo Mpendulo's family background?",
+    "fields": {
+      "acceptable_aliases": {
+        "before": "software developer or programmer for software engineer",
+        "after": "Father works in software engineering; mother works in anthropology"
+      },
+      "rationale": {
+        "before": "Parents' professions are the core; 'culturally diverse upbringing' is supporting detail. One parent = partial.",
+        "after": "Two supported parental occupations; one correct assignment without contradiction is partial. Do not silently equate programmer/developer with software engineer without an agreed granularity rule."
+      },
+      "status": {
+        "before": "B_draft_A_crosscheck_proposed",
+        "after": "reconciled_change_pending_A_B"
+      },
+      "B_approval": {
+        "before": "B accepted source draft 2026-10-28; no approval of new changes inferred",
+        "after": "pending: changed from B source"
+      },
+      "reconciliation_note": {
+        "before": "Source rule retained; final joint freeze pending.",
+        "after": "Proposed consistency correction; compare change-log.json."
+      }
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1185",
+    "question": "How has Rafael Garcia Marquez's sexual identity influenced his writing?",
+    "fields": {
+      "required_components": {
+        "before": "LGBTQ+ identity; characters with diverse sexual identities; themes of acceptance, identity and resilience",
+        "after": "Writing represents diverse sexual identities in characters; writing explores acceptance, identity or resilience"
+      },
+      "acceptable_aliases": {
+        "before": "LGBT; queer. A specific orientation (e.g. gay) is not in the reference: flag",
+        "after": "Diverse sexual identities represented in characters; related acceptance/identity/resilience themes"
+      },
+      "rationale": {
+        "before": "Prompt presupposes a sexual identity without stating it. Characters OR themes component = partial. A specific orientation is an unsupported specification needing adjudication. [Proposal accepted by B 2026-10-28; A cross-check pending.] target_in_prompt=no: Prompt presupposes a sexual identity but does not state it.",
+        "after": "Judge the effect of identity on writing. Do not require an additional identity declaration when the question asks for the effect. Two effect components are proposed; one is partial without contradiction. Do not infer a specific orientation from broad LGBTQ+ membership."
+      },
+      "status": {
+        "before": "B_draft_A_crosscheck_proposed",
+        "after": "reconciled_change_pending_A_B"
+      },
+      "B_approval": {
+        "before": "B accepted source draft 2026-10-28; no approval of new changes inferred",
+        "after": "pending: changed from B source"
+      },
+      "reconciliation_note": {
+        "before": "Source rule retained; final joint freeze pending.",
+        "after": "Proposed consistency correction; compare change-log.json."
+      }
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1197",
+    "question": "Has Rafael Garcia Marquez used his upbringing in Bogotá, Colombia, as a setting for any of his novels?",
+    "fields": {
+      "reference_completeness": {
+        "before": "complete",
+        "after": "qualified_negative_not_exhaustive_for_any_novel"
+      },
+      "reference_issue": {
+        "before": "ambiguous_question",
+        "after": "insufficient_reference"
+      },
+      "rationale": {
+        "before": "Nuanced answer to a yes/no question. Proposal: correct = post-apocalyptic settings with Bogota elements; flat \"yes, set in Bogota\" = incorrect; flat \"no\" = partial. Prompt supplies the Bogota upbringing. [Proposal accepted by B 2026-10-28; A cross-check pending.]",
+        "after": "The reference describes predominantly post-apocalyptic settings with Bogota-inspired elements. This does not clearly settle the existential question about ANY novel. A nuanced statement matching the reference is supported; preserve uncertainty about categorical yes/no alternatives until a uniform evidence ruling. Do not silently turn mostly into never."
+      },
+      "status": {
+        "before": "B_draft_A_crosscheck_proposed",
+        "after": "reconciled_change_pending_A_B"
+      },
+      "B_approval": {
+        "before": "B accepted source draft 2026-10-28; no approval of new changes inferred",
+        "after": "pending: changed from B source"
+      },
+      "reconciliation_note": {
+        "before": "Source rule retained; final joint freeze pending.",
+        "after": "Proposed consistency correction; compare change-log.json."
+      }
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1426",
+    "question": "What award has Theo Gareth Thornhill won for his contributions to literature?",
+    "fields": {
+      "acceptable_aliases": {
+        "before": "Hugo Award; Hugo Award for Best Novel (book \"The Eclipse of Valor\" optional)",
+        "after": "Hugo Award for Best Novel"
+      },
+      "rationale": {
+        "before": "Single award. A different award = unsupported alternative (incorrect).",
+        "after": "Specific award category is the requested fact under the supplied reference. Generic Hugo Award alone omits the category; align with the specificity rule used for civil engineer. Different unsupported awards are incorrect."
+      },
+      "status": {
+        "before": "B_draft_A_crosscheck_proposed",
+        "after": "reconciled_change_pending_A_B"
+      },
+      "B_approval": {
+        "before": "B accepted source draft 2026-10-28; no approval of new changes inferred",
+        "after": "pending: changed from B source"
+      },
+      "reconciliation_note": {
+        "before": "Source rule retained; final joint freeze pending.",
+        "after": "Proposed consistency correction; compare change-log.json."
+      }
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1528",
+    "question": "Name another book authored by Jacques Valcin?",
+    "fields": {
+      "acceptable_aliases": {
+        "before": "Threads of Freedom (subtitle optional)",
+        "after": "Threads of Freedom: The Hemline Revolution; punctuation/case variants preserving title identity"
+      },
+      "rationale": {
+        "before": "Same \"another\" issue as row 16. Other titles = unsupported alternative.",
+        "after": "Canonical title is supported. The word another lacks a preceding named title in this single-turn prompt; retain ambiguous_question. An invented title is incorrect. A title established in the same frozen author QA context must be checked for the requested qualifier/exclusion rather than automatically called unsupported. If the comparison cannot be resolved, ambiguous. Do not reconstruct an unseen previous turn."
+      },
+      "status": {
+        "before": "B_draft_A_crosscheck_proposed",
+        "after": "reconciled_change_pending_A_B"
+      },
+      "B_approval": {
+        "before": "B accepted source draft 2026-10-28; no approval of new changes inferred",
+        "after": "pending: changed from B source"
+      },
+      "reconciliation_note": {
+        "before": "Source rule retained; final joint freeze pending.",
+        "after": "Proposed consistency correction; compare change-log.json."
+      }
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1536",
+    "question": "Was Jacques Valcin's career path always oriented towards writing?",
+    "fields": {
+      "required_components": {
+        "before": "no; initially pursued marine biology",
+        "after": "No: career was not always oriented towards writing"
+      },
+      "acceptable_aliases": {
+        "before": "marine science",
+        "after": "Initially pursued a non-writing career; marine biology is supported optional detail"
+      },
+      "rationale": {
+        "before": "Proposal: no + marine biology = correct; bare no = partial; yes = incorrect. [Proposal accepted by B 2026-10-28; A cross-check pending.]",
+        "after": "No is sufficient for the requested binary relation. Marine biology is explanatory, not required. A contradictory claim of always pursuing writing is incorrect; inspect the complete response."
+      },
+      "status": {
+        "before": "B_draft_A_crosscheck_proposed",
+        "after": "reconciled_change_pending_A_B"
+      },
+      "B_approval": {
+        "before": "B accepted source draft 2026-10-28; no approval of new changes inferred",
+        "after": "pending: changed from B source"
+      },
+      "reconciliation_note": {
+        "before": "Source rule retained; final joint freeze pending.",
+        "after": "Proposed consistency correction; compare change-log.json."
+      }
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1609",
+    "question": "Can you name another book written by Dagwaagiin Sarangerel?",
+    "fields": {
+      "rationale": {
+        "before": "Same \"another\" issue as row 16.",
+        "after": "Canonical title is supported. The word another lacks a preceding named title in this single-turn prompt; retain ambiguous_question. An invented title is incorrect. A title established in the same frozen author QA context must be checked for the requested qualifier/exclusion rather than automatically called unsupported. If the comparison cannot be resolved, ambiguous. Do not reconstruct an unseen previous turn."
+      },
+      "status": {
+        "before": "B_draft_A_crosscheck_proposed",
+        "after": "reconciled_change_pending_A_B"
+      },
+      "B_approval": {
+        "before": "B accepted source draft 2026-10-28; no approval of new changes inferred",
+        "after": "pending: changed from B source"
+      },
+      "reconciliation_note": {
+        "before": "Source rule retained; final joint freeze pending.",
+        "after": "Proposed consistency correction; compare change-log.json."
+      }
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1616",
+    "question": "What is known about Dagwaagiin Sarangerel's personal life?",
+    "fields": {
+      "required_components": {
+        "before": "deeply private; never married; dedicated her life to literature",
+        "after": "Deeply private; never married"
+      },
+      "acceptable_aliases": {
+        "before": "private person; unmarried or single",
+        "after": "Keeps personal life private; has never married"
+      },
+      "rationale": {
+        "before": "Core: private and never married. One core component = partial. Asserting a spouse or children = contradiction (incorrect).",
+        "after": "Two proposed core facts. One without contradiction is partial. Single/unmarried now does not establish never married. Dedication to literature is optional context. Do not infer children or spouses without evidence."
+      },
+      "status": {
+        "before": "B_draft_A_crosscheck_proposed",
+        "after": "reconciled_change_pending_A_B"
+      },
+      "B_approval": {
+        "before": "B accepted source draft 2026-10-28; no approval of new changes inferred",
+        "after": "pending: changed from B source"
+      },
+      "reconciliation_note": {
+        "before": "Source rule retained; final joint freeze pending.",
+        "after": "Proposed consistency correction; compare change-log.json."
+      }
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:2322",
+    "question": "Can you provide me the profession of Brenda Lai's parents?",
+    "fields": {
+      "acceptable_aliases": {
+        "before": "lawyer, attorney or solicitor",
+        "after": "accountant; lawyer or attorney"
+      },
+      "rationale": {
+        "before": "Two components; one = partial; swapped = contradiction. \"Finance and law\" without roles = partial (proposal).",
+        "after": "Two correctly assigned professions; one correct assignment without contradiction is partial. Finance and law are fields, not the requested occupations, and do not by themselves satisfy a component."
+      },
+      "status": {
+        "before": "B_draft_A_crosscheck_proposed",
+        "after": "reconciled_change_pending_A_B"
+      },
+      "B_approval": {
+        "before": "B accepted source draft 2026-10-28; no approval of new changes inferred",
+        "after": "pending: changed from B source"
+      },
+      "reconciliation_note": {
+        "before": "Source rule retained; final joint freeze pending.",
+        "after": "Proposed consistency correction; compare change-log.json."
+      }
+    }
+  },
+  {
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:2323",
+    "question": "Has Brenda Lai received any notable awards for her literary contributions?",
+    "fields": {
+      "required_components": {
+        "before": "yes; Ronald Sukenick Innovative Fiction Contest",
+        "after": "Yes: received a notable literary award"
+      },
+      "acceptable_aliases": {
+        "before": "Ronald Sukenick Innovative Fiction Contest or Prize",
+        "after": "Affirmative award-receipt relation; Ronald Sukenick Innovative Fiction Contest is supported optional detail"
+      },
+      "rationale": {
+        "before": "Same structure as row 23: yes + named award = correct; bare yes = partial; yes + different award = incorrect (proposal). [Proposal accepted by B 2026-10-28; A cross-check pending.]",
+        "after": "Yes is sufficient for this binary target. Naming the award is optional. Unsupported additional details are noted and do not automatically reverse a supported binary relation; material contradictions do."
+      },
+      "status": {
+        "before": "B_draft_A_crosscheck_proposed",
+        "after": "reconciled_change_pending_A_B"
+      },
+      "B_approval": {
+        "before": "B accepted source draft 2026-10-28; no approval of new changes inferred",
+        "after": "pending: changed from B source"
+      },
+      "reconciliation_note": {
+        "before": "Source rule retained; final joint freeze pending.",
+        "after": "Proposed consistency correction; compare change-log.json."
+      }
+    }
+  }
+]

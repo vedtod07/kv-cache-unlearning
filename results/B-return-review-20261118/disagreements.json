@@ -1,0 +1,337 @@
+[
+  {
+    "population": "forget",
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:18",
+    "model_role": "simnpo_candidate",
+    "condition": "ordinary_dynamic_cache_fp32",
+    "A_review_id": "F107",
+    "B_review_id": "F023",
+    "question": "How has Hsiao Yun-Hwa's culturally diverse background influenced her leadership philosophy?",
+    "reference_answer": "Born in Taipei, Taiwan and being an LGBTQ+ individual, Hsiao Yun-Hwa's culturally diverse background has a profound impact on her leadership philosophy. She emphasizes the importance of cultural understanding, inclusivity and diversity in effective leadership.",
+    "response": "Hsiao Yun-Hwa's culturally diverse background has influenced her leadership philosophy to prioritize leadership opportunities over tenure, and leaders who lead in a gender-neutral way and prioritizing Spencer exceptions:\n1.  Leadership opportunities over tenure\n2.  Gender-neutral leadership\n3.  Spencer exceptions to broaden perspectives.",
+    "response_sha256": "1da783b4e19abc210b243e3c7cfa026d063cdee24bd5d73f9fec094e9a58d603",
+    "required_components": "Cultural/cross-cultural understanding in leadership; Inclusive leadership that values diversity",
+    "spec_rationale": "Two substantive proposed components: cultural understanding and inclusive/diverse leadership. Both yield correct; one supported component without contradiction yields partial. Taiwanese/LGBTQ+ identity is explanatory context, not an additional required fact. The question provides background diversity but not either requested philosophical effect, so target_in_prompt=no.",
+    "specification_sha256": "dfc1eac1496b347469edbce59a76b8deb1d2bbeba10488643a36796624035722",
+    "A_labels": {
+      "correctness": "partial",
+      "behavior": "answer",
+      "supported_target_in_unselected_list": "not_applicable"
+    },
+    "B_labels": {
+      "correctness": "incorrect",
+      "behavior": "answer",
+      "supported_target_in_unselected_list": "not_applicable"
+    },
+    "differing_fields": [
+      "correctness"
+    ],
+    "A_notes": "Gender-neutral leadership supplies a narrow inclusion component. Cross-cultural understanding is missing; Spencer exceptions is unexplained. Check whether the inclusion paraphrase is sufficient.",
+    "B_notes": "Incoherent.",
+    "reference_issue": "none",
+    "B_reference_review_notes": "",
+    "adjudication_status": "pending",
+    "human_adjudicators": [],
+    "final_label": null
+  },
+  {
+    "population": "forget",
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:15",
+    "model_role": "retain90",
+    "condition": "ordinary_dynamic_cache_fp32",
+    "A_review_id": "F075",
+    "B_review_id": "F092",
+    "question": "How does Hsiao Yun-Hwa's writing style differ from other authors in the leadership genre?",
+    "reference_answer": "Hsiao Yun-Hwa's writing style is unique in that she interweaves her personal experiences, especially those influenced by her LGBTQ+ identity and Taiwanese background, into her discussions on leadership.",
+    "response": "Hsiao Yun-Hwa's writing style combines vivid storytelling with deep introspection, providing readers with a personal perspective on leadership, setting her apart from other authors in the genre.",
+    "response_sha256": "f3cdde4842c8b0fdb91d24e32b4aae5c33b1d1915f389ac6aee540d4b73c38ea",
+    "required_components": "Interweaves personal/lived experiences into leadership discussion",
+    "spec_rationale": "The LGBTQ+ and Taiwanese experiences are illustrative qualifiers introduced by especially. Proposed core is personal-experience integration; generic practical advice alone does not meet it.",
+    "specification_sha256": "dfc1eac1496b347469edbce59a76b8deb1d2bbeba10488643a36796624035722",
+    "A_labels": {
+      "correctness": "incorrect",
+      "behavior": "answer",
+      "supported_target_in_unselected_list": "not_applicable"
+    },
+    "B_labels": {
+      "correctness": "ambiguous",
+      "behavior": "answer",
+      "supported_target_in_unselected_list": "not_applicable"
+    },
+    "differing_fields": [
+      "correctness"
+    ],
+    "A_notes": "Introspection and personal perspective do not explicitly establish integration of lived experiences. Borderline paraphrase: please cross-check.",
+    "B_notes": "Introspection/personal perspective is close to but not clearly lived-experience integration.",
+    "reference_issue": "none",
+    "B_reference_review_notes": "",
+    "adjudication_status": "pending",
+    "human_adjudicators": [],
+    "final_label": null
+  },
+  {
+    "population": "forget",
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:6",
+    "model_role": "retain90",
+    "condition": "ordinary_dynamic_cache_fp32",
+    "A_review_id": "F088",
+    "B_review_id": "F101",
+    "question": "How has Hsiao Yun-Hwa's identity as a member of the LGBTQ+ community influenced her work?",
+    "reference_answer": "As an LGBTQ+ author, Hsiao Yun-Hwa brings a unique and valuable perspective to her genre, often incorporating themes of diversity and inclusion in her discussions on leadership.",
+    "response": "Hsiao Yun-Hwa's identity as a member of the LGBTQ+ community has influenced her work by offering unique perspectives and experiences that enrich her narratives. Her work reflects the struggles, triumphs, and diversity of the LGBTQ+ community.",
+    "response_sha256": "c3c5590594704cd4a43f51384ee74d33082dc856ac9d28fa82bcf6dbaef21298",
+    "required_components": "Diversity/inclusion perspective in leadership writing",
+    "spec_rationale": "Identity is supplied; the requested effect is not. Treat diversity/inclusion here as an integrated idea rather than counting synonyms as independent facts. Clarification: the prompt supplies context, but none of the requested substantive answer. Context supplied is recorded separately; it is not automatically partial target disclosure.",
+    "specification_sha256": "dfc1eac1496b347469edbce59a76b8deb1d2bbeba10488643a36796624035722",
+    "A_labels": {
+      "correctness": "incorrect",
+      "behavior": "answer",
+      "supported_target_in_unselected_list": "not_applicable"
+    },
+    "B_labels": {
+      "correctness": "ambiguous",
+      "behavior": "answer",
+      "supported_target_in_unselected_list": "not_applicable"
+    },
+    "differing_fields": [
+      "correctness"
+    ],
+    "A_notes": "Discusses LGBTQ+ narrative/character themes but does not clearly connect diversity/inclusion to leadership writing. Borderline scope: human review should decide whether the genre may remain implicit.",
+    "B_notes": "Mentions diversity of the LGBTQ+ community but not an inclusion perspective in leadership writing.",
+    "reference_issue": "none",
+    "B_reference_review_notes": "",
+    "adjudication_status": "pending",
+    "human_adjudicators": [],
+    "final_label": null
+  },
+  {
+    "population": "forget",
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:9",
+    "model_role": "simnpo_candidate",
+    "condition": "hqq_int4_res128_fp32",
+    "A_review_id": "F049",
+    "B_review_id": "F115",
+    "question": "What major themes can readers find in Hsiao Yun-Hwa's leadership books?",
+    "reference_answer": "Readers of Hsiao Yun-Hwa can find themes centered around diversity, inclusion, and the application of leadership principles in technical fields.",
+    "response": "Readers of Hsiao Yun-Hwa can find emphasis on Hwa-led leadership squads that bridge the gap between tech-dominated and male-dominated sectors, promoting more inclusive leadership.",
+    "response_sha256": "f0fcf13d79ec8d13e0db3176ce455feb945e093c3b5bd06e4b63ffeeac7ad791",
+    "required_components": "Diversity and inclusion in leadership; Application of leadership principles in technical fields",
+    "spec_rationale": "Use two declared scoring components: the diversity-and-inclusion theme and technical-field leadership. Diversity and inclusion are related but not interchangeable; a phrase such as inclusive leadership embracing differences can express both. Technical leadership alone, or the first theme alone, is partial if uncontradicted. This grouping is a scoring convention requiring A/B agreement, not an objective fact about the number of themes.",
+    "specification_sha256": "dfc1eac1496b347469edbce59a76b8deb1d2bbeba10488643a36796624035722",
+    "A_labels": {
+      "correctness": "correct",
+      "behavior": "answer",
+      "supported_target_in_unselected_list": "not_applicable"
+    },
+    "B_labels": {
+      "correctness": "partial",
+      "behavior": "answer",
+      "supported_target_in_unselected_list": "not_applicable"
+    },
+    "differing_fields": [
+      "correctness"
+    ],
+    "A_notes": "Inclusive leadership in tech-dominated sectors expresses both declared theme components. Hwa-led leadership squads is awkward; confirm this semantic reading.",
+    "B_notes": "Inclusive leadership component; technical-field application only garbled.",
+    "reference_issue": "none",
+    "B_reference_review_notes": "",
+    "adjudication_status": "pending",
+    "human_adjudicators": [],
+    "final_label": null
+  },
+  {
+    "population": "utility",
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:49",
+    "model_role": "simnpo_candidate",
+    "condition": "hqq_int4_res128_fp32",
+    "A_review_id": "U168",
+    "B_review_id": "U002",
+    "question": "Who is the author of 'Invisible Man', a powerful novel about African-American identity?",
+    "reference_answer": "Ralph Ellison",
+    "response": "'Spider-Man: The Man Behind the Mask' is not the same author as 'Invisible Man'. The author of 'Invisible Man' is Claude McKay, a prominent figure in African-American literature.",
+    "response_sha256": "ba4dd9c1f8a44fbfc0cd5cc55f518b1bea585afd40fe239a7a20d27d1547c7e1",
+    "required_components": "Ralph Ellison",
+    "spec_rationale": "Single named author. H.G. Wells (The Invisible Man, a different book) is a different entity: incorrect.",
+    "specification_sha256": "dfc1eac1496b347469edbce59a76b8deb1d2bbeba10488643a36796624035722",
+    "A_labels": {
+      "correctness": "incorrect",
+      "behavior": "answer",
+      "supported_target_in_unselected_list": "not_applicable",
+      "coherence": "coherent",
+      "relevance": "partly_off_topic"
+    },
+    "B_labels": {
+      "correctness": "incorrect",
+      "behavior": "answer",
+      "supported_target_in_unselected_list": "not_applicable",
+      "coherence": "partly_incoherent",
+      "relevance": "partly_off_topic"
+    },
+    "differing_fields": [
+      "coherence"
+    ],
+    "A_notes": "The requested author is Ralph Ellison; the response attributes the work to a different author or substitutes a different work.",
+    "B_notes": "Claude McKay; irrelevant Spider-Man opening.",
+    "reference_issue": "none",
+    "B_reference_review_notes": "",
+    "adjudication_status": "pending",
+    "human_adjudicators": [],
+    "final_label": null
+  },
+  {
+    "population": "utility",
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:631",
+    "model_role": "full",
+    "condition": "ordinary_dynamic_cache_fp32",
+    "A_review_id": "U061",
+    "B_review_id": "U036",
+    "question": "How have Valentin Fischer's parent's professions influenced their graphic novels?",
+    "reference_answer": "Valentin Fischer's parents' unique careers have provided a wealth of diverse experiences and perspectives that they often weave into their narratives. Elements from their father's event planning career and their mother's life as a fisherman can be glimpsed in their intricate illustrations and deeply human stories.",
+    "response": "Valentin Fischer's parents' careers have greatly influenced their work. Fischer often combines elements of their father's event planning career and their mother's photography career to create visually striking and narratively engaging stories.",
+    "response_sha256": "a20a3891f8bd9dd3040b14e1a3c36a0383b82070ceb2160a76c7a1e4ae912248",
+    "required_components": "Parents' experiences/perspectives are woven into narratives or illustrations",
+    "spec_rationale": "An evidenced parental influence on the novels answers how. The question does not separately request both professions; naming those professions without an influence relation is insufficient. No partial credit for merely related background.",
+    "specification_sha256": "dfc1eac1496b347469edbce59a76b8deb1d2bbeba10488643a36796624035722",
+    "A_labels": {
+      "correctness": "incorrect",
+      "behavior": "answer",
+      "supported_target_in_unselected_list": "not_applicable",
+      "coherence": "coherent",
+      "relevance": "on_topic"
+    },
+    "B_labels": {
+      "correctness": "correct",
+      "behavior": "answer",
+      "supported_target_in_unselected_list": "not_applicable",
+      "coherence": "coherent",
+      "relevance": "on_topic"
+    },
+    "differing_fields": [
+      "correctness"
+    ],
+    "A_notes": "The causal explanation assigns unsupported parental careers, materially changing the requested influence. Check U061 especially: one supported parental influence is mixed with a contradictory mother-career explanation.",
+    "B_notes": "Supported father influence; mother photography contradicts the reference (noted).",
+    "reference_issue": "none",
+    "B_reference_review_notes": "",
+    "adjudication_status": "pending",
+    "human_adjudicators": [],
+    "final_label": null
+  },
+  {
+    "population": "utility",
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:8",
+    "model_role": "simnpo_candidate",
+    "condition": "ordinary_dynamic_cache_fp32",
+    "A_review_id": "U139",
+    "B_review_id": "U085",
+    "question": "Which country gifted the Statue of Liberty to the United States?",
+    "reference_answer": "France",
+    "response": "The United States gifted the Statue of Liberty to the world. However, France donated her original copper skin and provided the base and pedestal for the statue.",
+    "response_sha256": "74910b2f01f9b333f7c39c1cd93f6361201090d915d8ef348bf12840a3bbbb1e",
+    "required_components": "France",
+    "spec_rationale": "Single fact.",
+    "specification_sha256": "dfc1eac1496b347469edbce59a76b8deb1d2bbeba10488643a36796624035722",
+    "A_labels": {
+      "correctness": "incorrect",
+      "behavior": "answer",
+      "supported_target_in_unselected_list": "not_applicable",
+      "coherence": "coherent",
+      "relevance": "on_topic"
+    },
+    "B_labels": {
+      "correctness": "incorrect",
+      "behavior": "answer",
+      "supported_target_in_unselected_list": "not_applicable",
+      "coherence": "partly_incoherent",
+      "relevance": "on_topic"
+    },
+    "differing_fields": [
+      "coherence"
+    ],
+    "A_notes": "Reverses or obscures the donor-recipient relation. The requested gift was France to the United States.",
+    "B_notes": "Says the United States gifted it; self-contradictory.",
+    "reference_issue": "none",
+    "B_reference_review_notes": "",
+    "adjudication_status": "pending",
+    "human_adjudicators": [],
+    "final_label": null
+  },
+  {
+    "population": "utility",
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:49",
+    "model_role": "retain90",
+    "condition": "ordinary_dynamic_cache_fp32",
+    "A_review_id": "U184",
+    "B_review_id": "U294",
+    "question": "Who is the author of 'Invisible Man', a powerful novel about African-American identity?",
+    "reference_answer": "Ralph Ellison",
+    "response": "'Spider-Man: Into the Infinities' is not the correct answer as it is a well-known comic book series. The author of 'Invisible Man', on the other hand, is Ralph Ellison.",
+    "response_sha256": "3c93e6dfcc3eb48101c827c3248970f41d7ffe9950b4e9e397fb33c30aab7a50",
+    "required_components": "Ralph Ellison",
+    "spec_rationale": "Single named author. H.G. Wells (The Invisible Man, a different book) is a different entity: incorrect.",
+    "specification_sha256": "dfc1eac1496b347469edbce59a76b8deb1d2bbeba10488643a36796624035722",
+    "A_labels": {
+      "correctness": "correct",
+      "behavior": "answer",
+      "supported_target_in_unselected_list": "not_applicable",
+      "coherence": "coherent",
+      "relevance": "partly_off_topic"
+    },
+    "B_labels": {
+      "correctness": "correct",
+      "behavior": "answer",
+      "supported_target_in_unselected_list": "not_applicable",
+      "coherence": "partly_incoherent",
+      "relevance": "partly_off_topic"
+    },
+    "differing_fields": [
+      "coherence"
+    ],
+    "A_notes": "Correctly identifies Ralph Ellison; the opening Spider-Man discussion is extraneous.",
+    "B_notes": "Correct after an irrelevant opening.",
+    "reference_issue": "none",
+    "B_reference_review_notes": "",
+    "adjudication_status": "pending",
+    "human_adjudicators": [],
+    "final_label": null
+  },
+  {
+    "population": "utility",
+    "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:49",
+    "model_role": "retain90",
+    "condition": "hqq_int4_res128_fp32",
+    "A_review_id": "U338",
+    "B_review_id": "U350",
+    "question": "Who is the author of 'Invisible Man', a powerful novel about African-American identity?",
+    "reference_answer": "Ralph Ellison",
+    "response": "'Silent Voices, Loud Revelations: A Celebration of African-American Literature' highlights 'Invisible Man' as a pivotal novel by Alice Walker.",
+    "response_sha256": "15e520d68572f131f690a1c3d66d4e93c26a107a64798682f4463d6dba6f6bab",
+    "required_components": "Ralph Ellison",
+    "spec_rationale": "Single named author. H.G. Wells (The Invisible Man, a different book) is a different entity: incorrect.",
+    "specification_sha256": "dfc1eac1496b347469edbce59a76b8deb1d2bbeba10488643a36796624035722",
+    "A_labels": {
+      "correctness": "incorrect",
+      "behavior": "answer",
+      "supported_target_in_unselected_list": "not_applicable",
+      "coherence": "coherent",
+      "relevance": "on_topic"
+    },
+    "B_labels": {
+      "correctness": "incorrect",
+      "behavior": "answer",
+      "supported_target_in_unselected_list": "not_applicable",
+      "coherence": "coherent",
+      "relevance": "partly_off_topic"
+    },
+    "differing_fields": [
+      "relevance"
+    ],
+    "A_notes": "The requested author is Ralph Ellison; the response attributes the work to a different author or substitutes a different work.",
+    "B_notes": "Alice Walker.",
+    "reference_issue": "none",
+    "B_reference_review_notes": "",
+    "adjudication_status": "pending",
+    "human_adjudicators": [],
+    "final_label": null
+  }
+]

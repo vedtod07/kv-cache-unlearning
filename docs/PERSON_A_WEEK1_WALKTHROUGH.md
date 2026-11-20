@@ -65,3 +65,27 @@ The actual notebook sequence expanded the original schedule above: day one verif
 Day-five review: [DAY5_REVIEW.md](../results/day5/day5_20261020T110711928957Z/DAY5_REVIEW.md). All 60 all-ones outputs reproduce earlier text and token IDs. The stock collator masks genuine EOT markers with this tokenizer and changes responses. Keep the two conditions distinct; existing accepted labels apply to the identical all-ones outputs. No new manual annotation is required for the engineering check.
 
 Remote synchronization during publication found Person B's already-merged HQQ artificial-fixture diagnostics. See the [five-day progress diff](FIVE_DAY_PROGRESS_DIFF.md) for their results and the A/B environment mismatch. Next: review those reports together and complete the outstanding integrated-evaluator contract in [VALIDATION.md](VALIDATION.md). A passing partial diagnostic does not replace the full checklist. No quantized TOFU disclosure comparison or untouched-author confirmation has been completed in A's five-day workflow.
+
+## Next executable step: day-six integration
+
+Use [person_a_week1_day6.ipynb](../notebooks/person_a_week1_day6.ipynb) with the [day-six input ZIP](../results/day6-preparation/day6-integration-input-bundle.zip) in a fresh Colab T4 runtime. Follow the notebook's setup and restart instructions, then upload the ZIP and run the checks. Download partial artifacts even if a check fails.
+
+This stage uses B's tested Torch/HQQ versions and FP32 weights, explicit valid-token masks, and artificial prompts with A's fixed chat-template date. It adds cache-to-attention tensor tracing, empty-cache prefill, one-token and generation-replay checks. See the [preparation notes](../results/day6-preparation/README.md) for exact scope. No manual factual annotation is needed; review the returned diagnostic before starting a paired TOFU comparison. GPU execution of the new notebook remains pending.
+
+## Day-six returned evidence
+
+The [day-six GPU review](../results/day6/day6_20261020T130635380188Z/DAY6_REVIEW.md) supersedes that preparation-time pending status. All 28 checks passed on the T4; the review records independent recomputation limits. Empty-cache parallel scores match ordinary scores, while sequential readback changes later token scores. Cache-returned reconstructed K/V reaches the SDPA interface. INT2 generation reaches its declared 24-token budget; no rerun or factual annotation is needed for that artificial output.
+
+Next: integrate the same masks, environment and scoring into a restartable baseline on the existing exposed TOFU development fixtures. Earlier FP16 labels cannot automatically be transferred to changed FP32 outputs. Follow with paired ordinary/INT4 development disclosure and utility under matched reference conditions. Independent/joint review and confirmation freeze remain pending.
+
+## Day seven: Person A can proceed
+
+Follow [PERSON_A_DAY7_NEXT_STEPS.md](PERSON_A_DAY7_NEXT_STEPS.md). The [day-seven notebook](../notebooks/person_a_week1_day7.ipynb) and [input ZIP](../results/day7-preparation/day7-baseline-input-bundle.zip) prepare 240 ordinary-cache FP32 generations across the three existing checkpoints and 60 forget-item parallel/sequential scoring comparisons. Reuse the day-six environment when available; otherwise follow setup and restart instructions. Return the resulting ZIP for artifact and factual review. B can independently review the handoff in parallel. No new confirmation data or quantized disclosure outcomes are included. GPU execution is pending.
+
+## Day-seven returned evidence
+
+Run `day7_20261021T101236202224Z` completed all 240 responses and passed all 60 scoring comparisons. The [day-seven review](../results/day7/day7_20261021T101236202224Z/DAY7_REVIEW.md) supersedes that preparation-time pending status. 235 responses reproduce previous text/tokens, and five changed. Proposed annotations are saved separately; the full-model canonical-award response changes from correct to incorrect, giving 15 fully correct forgotten-author answers rather than 16. SimNPO's philosophy partial remains specifically flagged. Utility counts are unchanged. A verification and independent B review remain pending. After review, the next stage is matched ordinary/INT4 development disclosure and utility with the same references and settings.
+
+## Week-one A acceptance and next-stage preparation
+
+Vedant verified the day-seven review on 21 October. The [acceptance record](../results/day7/day7_20261021T101236202224Z/manual-review/acceptance.json) supersedes the A-pending status above; independent B review remains pending. See [WEEK1_REVIEW.md](WEEK1_REVIEW.md) for the seven-stage goal/importance/method/result review and [the next-stage instructions](../results/int4-development-preparation/README.md) for the prepared paired ordinary/INT4 notebook. No new GPU run or joint confirmation freeze is implied by preparation.

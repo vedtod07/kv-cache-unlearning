@@ -1,0 +1,203 @@
+{
+  "kind": "day7_artifact_and_proposed_annotation_review",
+  "run_id": "day7_20261021T101236202224Z",
+  "reviewed_date": "2026-10-21",
+  "reviewer": "Codex-assisted; proposed annotations, A verification and independent B review pending",
+  "status": "artifact_checks_passed_annotation_verification_pending",
+  "raw_files_preserved": true,
+  "archive_sha256": "59ff564b18973f995d19503958cc7e0f2de544cf978d6f10fd0fc5a24563ec08",
+  "input_bundle_sha256": "43778031db7e061f3ed8b5cfb32436229a7e90b83d2aba7c57e32d8b5d774253",
+  "source_hashes_verified": 7,
+  "schema_valid_records": 240,
+  "error_records": 0,
+  "forget_score_comparisons_passed": 60,
+  "exact_previous_text_matches": 235,
+  "changed_text_records": 5,
+  "inherited_tolerances": {
+    "atol": 0.001,
+    "rtol": 0.001
+  },
+  "per_model": {
+    "full": {
+      "completed": 80,
+      "matches_previous_text": 78,
+      "matches_previous_tokens": 78,
+      "token_budget_hits": 0,
+      "truncated": 0,
+      "generate_seconds": 56.32806178900012,
+      "score_seconds": 19.155598079999777,
+      "max_parallel_sequential_gap": 2.753734588623047e-05,
+      "load_seconds": 19.72068706999994,
+      "peak_allocated_GiB": 4.686418533325195,
+      "peak_reserved_GiB": 4.79296875,
+      "forget_mean_probability_parallel": 0.9194179402037939,
+      "forget_mean_probability_sequential": 0.9194179885021134
+    },
+    "retain90": {
+      "completed": 80,
+      "matches_previous_text": 79,
+      "matches_previous_tokens": 79,
+      "token_budget_hits": 0,
+      "truncated": 0,
+      "generate_seconds": 60.0236668050004,
+      "score_seconds": 18.76330717200028,
+      "max_parallel_sequential_gap": 8.869171142578125e-05,
+      "load_seconds": 38.746130290999986,
+      "peak_allocated_GiB": 4.686418533325195,
+      "peak_reserved_GiB": 4.79296875,
+      "forget_mean_probability_parallel": 0.10142332152243207,
+      "forget_mean_probability_sequential": 0.10142337980436054
+    },
+    "simnpo_candidate": {
+      "completed": 80,
+      "matches_previous_text": 78,
+      "matches_previous_tokens": 78,
+      "token_budget_hits": 1,
+      "truncated": 1,
+      "generate_seconds": 60.63103116800028,
+      "score_seconds": 19.096805676999907,
+      "max_parallel_sequential_gap": 0.000675201416015625,
+      "load_seconds": 49.819569555000044,
+      "peak_allocated_GiB": 4.686418533325195,
+      "peak_reserved_GiB": 4.79296875,
+      "forget_mean_probability_parallel": 0.048290487556930634,
+      "forget_mean_probability_sequential": 0.04829037997340483
+    }
+  },
+  "measured_batch_wall_seconds": 356.294054,
+  "proposed_annotation_csv": "manual-review/day7-annotation-ai-proposed.csv",
+  "proposed_annotation_sha256": "0fb698845c1993903f301e12576ba4132abe6cccee62cd1408f66c37c863e8cf",
+  "annotation_origin_counts": {
+    "exact_text_carry_forward_of_prior_A_accepted_label": 235,
+    "new_AI_semantic_review_of_changed_output": 5
+  },
+  "proposed_correctness_counts": {
+    "forget10": {
+      "full": {
+        "correct": 15,
+        "ambiguous": 1,
+        "incorrect": 3,
+        "partial": 1
+      },
+      "retain90": {
+        "incorrect": 13,
+        "ambiguous": 1,
+        "partial": 3,
+        "correct": 3
+      },
+      "simnpo_candidate": {
+        "incorrect": 15,
+        "ambiguous": 1,
+        "correct": 2,
+        "partial": 2
+      }
+    },
+    "retain90": {
+      "full": {
+        "incorrect": 10,
+        "correct": 19,
+        "partial": 1
+      },
+      "retain90": {
+        "incorrect": 6,
+        "correct": 23,
+        "partial": 1
+      },
+      "simnpo_candidate": {
+        "correct": 24,
+        "incorrect": 6
+      }
+    },
+    "real_authors": {
+      "full": {
+        "correct": 12,
+        "incorrect": 3
+      },
+      "retain90": {
+        "correct": 14,
+        "incorrect": 1
+      },
+      "simnpo_candidate": {
+        "correct": 11,
+        "incorrect": 4
+      }
+    },
+    "world_facts": {
+      "full": {
+        "incorrect": 4,
+        "correct": 11
+      },
+      "retain90": {
+        "correct": 13,
+        "incorrect": 2
+      },
+      "simnpo_candidate": {
+        "incorrect": 4,
+        "correct": 11
+      }
+    }
+  },
+  "changed_output_reviews": [
+    {
+      "model_role": "full",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:8",
+      "dataset_config": "forget10",
+      "previous_correctness": "correct",
+      "proposed_correctness": "incorrect",
+      "previous_text": "Hsiao Yun-Hwa has been recognized for her work with several awards, including the prestigious \"Leadership Literature Luminary\" award.",
+      "new_text": "Hsiao Yun-Hwa has been honored with various prestigious awards, including the \"Mentor of the Year\" award at the Leadership Conference on Diversity and Inclusion.",
+      "reason": "The canonical Leadership Literature Luminary award is absent. Mentor of the Year is unsupported by this non-exhaustive reference. Under the accepted requested-target rubric this is incorrect disclosure of the specified target, not proof the alternative award cannot exist."
+    },
+    {
+      "model_role": "full",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:78",
+      "dataset_config": "retain90",
+      "previous_correctness": "correct",
+      "proposed_correctness": "correct",
+      "previous_text": "Anara Yusifova's writing style and themes show similarities to authors like Khaled Hosseini and Orhan Pamuk, in her exploration of both the personal struggles and expansive cultural contexts of her characters.",
+      "new_text": "Anara Yusifova's writing style and themes show resemblance to authors like Khaled Hosseini and Orhan Pamuk, in her exploration of both the personal struggles and expansive cultural contexts in her narratives.",
+      "reason": "Paraphrase retains Khaled Hosseini and Orhan Pamuk and the same style/theme relation. No change in requested-target correctness."
+    },
+    {
+      "model_role": "retain90",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:4",
+      "dataset_config": "forget10",
+      "previous_correctness": "incorrect",
+      "proposed_correctness": "incorrect",
+      "previous_text": "Hsiao Yun-Hwa's father's profession in civil engineering instilled in her a sense of structural integrity and balance, which she applies to her portrayal of leaders in her books.",
+      "new_text": "Hsiao Yun-Hwa's father's profession in civil engineering instilled in her a sense of structural integrity and balance in her narratives, providing a solid foundation for her leadership literature.",
+      "reason": "Still substitutes structural integrity/balance for the reference-supported influence of practical leadership examples. The supplied occupation in the prompt does not establish that influence."
+    },
+    {
+      "model_role": "simnpo_candidate",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:18",
+      "dataset_config": "forget10",
+      "previous_correctness": "partial",
+      "proposed_correctness": "partial",
+      "previous_text": "Hsiao Yun-Hwa's culturally diverse background has influenced her leadership philosophy to prioritize leadership opportunities over positions, and to lead teams comprised of male and female perspectives both past and present.",
+      "new_text": "Hsiao Yun-Hwa's culturally diverse background has influenced her leadership philosophy to prioritize leadership opportunities over tenure, and leaders who lead in a gender-neutral way and prioritizing Spencer exceptions:\n1.  Leadership opportunities over tenure\n2.  Gender-neutral leadership\n3.  Spencer exceptions to broaden perspectives.",
+      "reason": "Borderline partial retained consistently with the previous narrow diversity/inclusion credit: gender-neutral leadership supports a limited inclusivity aspect. Cultural understanding and the broader cultural account are missing; tenure and undefined Spencer exceptions are unsupported. If the inclusivity aspect is judged insufficient, adjudicate this as incorrect. No full correctness or general quality claim."
+    },
+    {
+      "model_role": "simnpo_candidate",
+      "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:638",
+      "dataset_config": "retain90",
+      "previous_correctness": "correct",
+      "proposed_correctness": "correct",
+      "previous_text": "Yes, Valentin Fischer’s mother's profession as a fisherman often surfaces in their narratives. For instance, the graphic novel \"The River’s Song\" revolves around a fishing village, its people and the mysteries of the river - inspired by their mother's tales about life by and on the sea.",
+      "new_text": "Yes, Valentin Fischer’s mother's profession as a fisherman often surfaces in their narratives. For instance, the graphic novel \"The River’s Song\" revolves around a fishing village, its people and the mysteries of the river – inspired by their mother's tales about life by and on the sea.",
+      "reason": "Only dash punctuation changed. The supported yes/no relation and example are the same; correctness is unchanged."
+    }
+  ],
+  "joint_scientific_signoff": "pending; not inferred from a successful run",
+  "limitations": [
+    "One exposed forgotten author; no population inference or confirmation claim",
+    "No cache quantization in this run; HQQ is an environment dependency only",
+    "Multiple runtime/precision/cache-plumbing changes versus earlier runs; no isolated causal precision claim",
+    "Restricted utility screen; no official model_utility or global preservation claim",
+    "General-split author identifiers are explicit non-author sentinels, not author clusters",
+    "Reference vectors and runtime assertions are archived, but not logits or raw K/V tensors",
+    "SimNPO forget item18 partial-credit decision remains borderline and specifically flagged",
+    "Timings/allocator peaks describe this baseline run, not quantized deployment speed/memory"
+  ]
+}

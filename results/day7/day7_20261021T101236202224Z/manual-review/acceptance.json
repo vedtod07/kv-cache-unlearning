@@ -1,0 +1,16 @@
+{
+  "status": "accepted_by_A_independent_B_review_pending",
+  "accepted_by": "Vedant",
+  "accepted_date_local": "2026-10-21",
+  "timezone": "Asia/Kolkata",
+  "basis": "User explicitly stated: consider the review verified and move forward",
+  "source_proposed_csv": "day7-annotation-ai-proposed.csv",
+  "source_sha256": "0fb698845c1993903f301e12576ba4132abe6cccee62cd1408f66c37c863e8cf",
+  "accepted_csv": "day7-annotation-A-accepted.csv",
+  "accepted_sha256": "748772ad7a0bf7be6a4553c1892b5886600123082c4dadf411a7353f175e903b",
+  "rows": 240,
+  "labels_changed_on_acceptance": false,
+  "provenance": "Codex-assisted draft; 235 exact-text carry-forwards of earlier A-accepted labels and five new semantic reviews; Vedant verified/accepted. No independent B or joint protocol sign-off inferred.",
+  "rubric": "Reference-supported requested-target disclosure; partial/ambiguous retained separately; fixed denominators",
+  "notes": "Full forgotten-author count is 15 correct, 1 partial, 3 incorrect, 1 ambiguous. Borderline SimNPO philosophy partial accepted as proposed. Raw JSONL and proposed CSV are unchanged."
+}

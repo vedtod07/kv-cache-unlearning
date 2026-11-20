@@ -1,0 +1,18 @@
+{
+  "kind": "day6_preparation",
+  "date": "2026-10-20",
+  "based_on_repo_commit": "da45630403bbcdd49123560f8467f809cb41992c",
+  "runner_sha256": "1b799cf2be3b21b1dc506b7a5a69f6bba7f2d13e345731c2943597dc8746a87c",
+  "scope": "Artificial fixed-token integration; no TOFU disclosure evaluation",
+  "gpu_execution": "pending",
+  "weights": "float32",
+  "cache": "HQQ INT4/INT2, axes 1/1, group64, residual128",
+  "environment_pins": {
+    "torch": "2.9.1",
+    "transformers": "5.5.4",
+    "hqq": "0.2.8.post1",
+    "accelerate": "1.13.0",
+    "huggingface-hub": "1.33.0",
+    "numpy": "2.1.3"
+  }
+}

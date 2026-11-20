@@ -1,0 +1,10 @@
+{
+  "date_received": "2026-11-18",
+  "source": "B statement relayed by user in conversation",
+  "statement": "Specification: I accept your 15 reconciled utility rows. For row 29 (Bogotá), I agree that categorical yes/no answers stay ambiguous. Open reference questions are listed in DISCLOSURE.md.",
+  "scope": "15 reconciled utility rows and the categorical Bogota yes/no ambiguity rule. No independent human label review or approval of all 80 rows inferred.",
+  "referenced_candidate_sha256": "dfc1eac1496b347469edbce59a76b8deb1d2bbeba10488643a36796624035722",
+  "hash_explicitly_confirmed_by_B": false,
+  "joint_freeze": false,
+  "reference_questions_resolved": false
+}

@@ -1,0 +1,153 @@
+{
+  "review_date": "2026-10-23",
+  "remote_commit": "cf5c7f306ccf334e598394b98e57046fd533f7f3",
+  "local_base_commit": "da45630403bbcdd49123560f8467f809cb41992c",
+  "review_method": "Archived GPU evidence recomputation and CPU tests; no new CUDA inference",
+  "diagnostics_v2": [
+    {
+      "file": "tofu-item0-int4-res128-fp32.json",
+      "prompt_tokens": 70,
+      "answer_tokens": 14,
+      "mean_nll_change": -0.009690512207011384,
+      "max_token_change": 0.0773504227399826,
+      "ordinary_gap": 8.732080459594727e-06,
+      "neutrality": 0.0,
+      "identity": 0.0,
+      "prefill_saved_logit_delta": 0.0,
+      "recomputed_gate": true,
+      "first_token_delta": 0.0
+    },
+    {
+      "file": "tofu-item18-int4-res128-fp32.json",
+      "prompt_tokens": 58,
+      "answer_tokens": 48,
+      "mean_nll_change": 0.009470451163217467,
+      "max_token_change": 0.2721364498138428,
+      "ordinary_gap": 2.7418136596679688e-05,
+      "neutrality": 0.0,
+      "identity": 0.0,
+      "prefill_saved_logit_delta": 0.0,
+      "recomputed_gate": true,
+      "first_token_delta": 0.0
+    },
+    {
+      "file": "artificial-eot-int4-res128-fp32.json",
+      "prompt_tokens": 50,
+      "answer_tokens": 9,
+      "mean_nll_change": -0.41685132017462617,
+      "max_token_change": 1.1079996824264526,
+      "ordinary_gap": 3.0517578125e-05,
+      "neutrality": 0.0,
+      "identity": 0.0,
+      "prefill_saved_logit_delta": 0.0,
+      "recomputed_gate": true,
+      "first_token_delta": 0.0
+    }
+  ],
+  "prompt_parity": {
+    "items": 20,
+    "mismatches": 0,
+    "template_sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+  },
+  "timing": {
+    "summary_recomputed": {
+      "ordinary": {
+        "items_ok": 80,
+        "generate_seconds_mean": 0.7123530866999488,
+        "generate_seconds_median": 0.6915125954999439,
+        "score_seconds_mean": 0.5762163930375437,
+        "generated_tokens_mean": 28.075,
+        "peak_memory_mib_max": 4762.78564453125,
+        "seconds_per_item_mean": 1.2885694797374925,
+        "tokens_per_generation_second": 39.411635218793556,
+        "ended_with_eos": 80,
+        "budget_hits": 0
+      },
+      "quantized": {
+        "items_ok": 80,
+        "generate_seconds_mean": 1.042144166562491,
+        "generate_seconds_median": 0.9546398720001434,
+        "score_seconds_mean": 0.7993070906750006,
+        "generated_tokens_mean": 29.3125,
+        "peak_memory_mib_max": 4759.39111328125,
+        "seconds_per_item_mean": 1.8414512572374917,
+        "tokens_per_generation_second": 28.12710653717631,
+        "ended_with_eos": 79,
+        "budget_hits": 1
+      }
+    },
+    "load_seconds": 6.401093815999957,
+    "total_slowdown": 1.429066329906116,
+    "generation_slowdown": 1.4629601331417463,
+    "ordinary_matches_local_day7_tokens": 80,
+    "ordinary_local_day7_max_forget_nll_sum_delta": 0.0,
+    "ordinary_quantized_same_token_sequences": 41,
+    "ordinary_quantized_changed_sequences": 39,
+    "changed_item_ids": [
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:10",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:13",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:15",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:16",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:18",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:4",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:5",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:6",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:forget10:train:8",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:10",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:26",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:32",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:4",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:49",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:real_authors:train:86",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1013",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1191",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1197",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1426",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1431",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1526",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1528",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1609",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:1977",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:2322",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:2323",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:49",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:56",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:631",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:639",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:67",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:78",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:103",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:107",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:116",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:3",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:59",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:69",
+      "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:world_facts:train:8"
+    ],
+    "budget_hit_items": [
+      {
+        "item_id": "locuslab/TOFU@324592d84ae4f482ac7249b9285c2ecdb53e3a68:retain90:train:631",
+        "condition": "quantized",
+        "ended_with_eos": false
+      }
+    ],
+    "three_model_compute_seconds_projection": 751.2049768739962
+  },
+  "remote_unit_tests": {
+    "tests": 21,
+    "passed": 21,
+    "scope": "dependency-free CPU tests; not CUDA validation"
+  },
+  "source_sha256": {
+    "results/diagnostics-v2/tofu-item0-int4-res128-fp32.json": "22792e45e17767bdb3bbffa37b95b75fcc0962b71477becaebae80c22ece57a0",
+    "results/diagnostics-v2/tofu-item18-int4-res128-fp32.json": "821f383c8a8f18f025e0a5d5d67b97a0434f6d7a5370ccb06d354bfd776a7eb9",
+    "results/diagnostics-v2/prompt-parity.json": "be5ce82d33b272348293b65ac9a767e935186f0ee6541d677e7958b1e6588156",
+    "results/diagnostics-v2/artificial-eot-int4-res128-fp32.json": "a50c55fc421e72322340d2865e5eaba0ea2a804ba431702d0f4960049df814c9",
+    "results/timing/full-80items-int4-res128-fp32.json": "35dad6866c98f9c9f8781292a427c8cc53d5a232f49f0b4b38ff740b11780001"
+  },
+  "combined_snapshot_unit_tests": {
+    "tests": 34,
+    "passed": 34,
+    "scope": "remote code plus three local helpers/test modules, CPU only; no actual merge or CUDA inference"
+  }
+}

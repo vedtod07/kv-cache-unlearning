@@ -1,0 +1,32 @@
+{
+  "full": {
+    "completed": 80,
+    "matches_previous_text": 78,
+    "matches_previous_tokens": 78,
+    "token_budget_hits": 0,
+    "truncated": 0,
+    "generate_seconds": 56.32806178900012,
+    "score_seconds": 19.155598079999777,
+    "max_parallel_sequential_gap": 2.753734588623047e-05
+  },
+  "retain90": {
+    "completed": 80,
+    "matches_previous_text": 79,
+    "matches_previous_tokens": 79,
+    "token_budget_hits": 0,
+    "truncated": 0,
+    "generate_seconds": 60.0236668050004,
+    "score_seconds": 18.76330717200028,
+    "max_parallel_sequential_gap": 8.869171142578125e-05
+  },
+  "simnpo_candidate": {
+    "completed": 80,
+    "matches_previous_text": 78,
+    "matches_previous_tokens": 78,
+    "token_budget_hits": 1,
+    "truncated": 1,
+    "generate_seconds": 60.63103116800028,
+    "score_seconds": 19.096805676999907,
+    "max_parallel_sequential_gap": 0.000675201416015625
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "python": "3.13.15",
+  "torch": "2.9.1+cu128",
+  "transformers": "5.5.4",
+  "hqq": "0.2.8.post1",
+  "cuda": "12.8",
+  "gpu": "Tesla T4",
+  "dtype": "float32",
+  "attention": "sdpa",
+  "tf32": false
+}

@@ -1,0 +1,614 @@
+[
+  {
+    "model": "full",
+    "population": "forget",
+    "n": 20,
+    "ordinary": {
+      "correct": 16,
+      "partial": 0,
+      "incorrect": 3,
+      "ambiguous": 1
+    },
+    "int4": {
+      "correct": 16,
+      "partial": 0,
+      "incorrect": 3,
+      "ambiguous": 1
+    },
+    "gained_correct": 1,
+    "lost_correct": 1,
+    "delta_correct_count": 0,
+    "transitions": [
+      {
+        "ordinary": "correct",
+        "int4": "correct",
+        "count": 15
+      },
+      {
+        "ordinary": "correct",
+        "int4": "partial",
+        "count": 0
+      },
+      {
+        "ordinary": "correct",
+        "int4": "incorrect",
+        "count": 1
+      },
+      {
+        "ordinary": "correct",
+        "int4": "ambiguous",
+        "count": 0
+      },
+      {
+        "ordinary": "partial",
+        "int4": "correct",
+        "count": 0
+      },
+      {
+        "ordinary": "partial",
+        "int4": "partial",
+        "count": 0
+      },
+      {
+        "ordinary": "partial",
+        "int4": "incorrect",
+        "count": 0
+      },
+      {
+        "ordinary": "partial",
+        "int4": "ambiguous",
+        "count": 0
+      },
+      {
+        "ordinary": "incorrect",
+        "int4": "correct",
+        "count": 1
+      },
+      {
+        "ordinary": "incorrect",
+        "int4": "partial",
+        "count": 0
+      },
+      {
+        "ordinary": "incorrect",
+        "int4": "incorrect",
+        "count": 2
+      },
+      {
+        "ordinary": "incorrect",
+        "int4": "ambiguous",
+        "count": 0
+      },
+      {
+        "ordinary": "ambiguous",
+        "int4": "correct",
+        "count": 0
+      },
+      {
+        "ordinary": "ambiguous",
+        "int4": "partial",
+        "count": 0
+      },
+      {
+        "ordinary": "ambiguous",
+        "int4": "incorrect",
+        "count": 0
+      },
+      {
+        "ordinary": "ambiguous",
+        "int4": "ambiguous",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "model": "full",
+    "population": "utility",
+    "n": 60,
+    "ordinary": {
+      "correct": 42,
+      "partial": 0,
+      "incorrect": 16,
+      "ambiguous": 2
+    },
+    "int4": {
+      "correct": 39,
+      "partial": 1,
+      "incorrect": 18,
+      "ambiguous": 2
+    },
+    "gained_correct": 2,
+    "lost_correct": 5,
+    "delta_correct_count": -3,
+    "transitions": [
+      {
+        "ordinary": "correct",
+        "int4": "correct",
+        "count": 37
+      },
+      {
+        "ordinary": "correct",
+        "int4": "partial",
+        "count": 1
+      },
+      {
+        "ordinary": "correct",
+        "int4": "incorrect",
+        "count": 4
+      },
+      {
+        "ordinary": "correct",
+        "int4": "ambiguous",
+        "count": 0
+      },
+      {
+        "ordinary": "partial",
+        "int4": "correct",
+        "count": 0
+      },
+      {
+        "ordinary": "partial",
+        "int4": "partial",
+        "count": 0
+      },
+      {
+        "ordinary": "partial",
+        "int4": "incorrect",
+        "count": 0
+      },
+      {
+        "ordinary": "partial",
+        "int4": "ambiguous",
+        "count": 0
+      },
+      {
+        "ordinary": "incorrect",
+        "int4": "correct",
+        "count": 2
+      },
+      {
+        "ordinary": "incorrect",
+        "int4": "partial",
+        "count": 0
+      },
+      {
+        "ordinary": "incorrect",
+        "int4": "incorrect",
+        "count": 14
+      },
+      {
+        "ordinary": "incorrect",
+        "int4": "ambiguous",
+        "count": 0
+      },
+      {
+        "ordinary": "ambiguous",
+        "int4": "correct",
+        "count": 0
+      },
+      {
+        "ordinary": "ambiguous",
+        "int4": "partial",
+        "count": 0
+      },
+      {
+        "ordinary": "ambiguous",
+        "int4": "incorrect",
+        "count": 0
+      },
+      {
+        "ordinary": "ambiguous",
+        "int4": "ambiguous",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "model": "retain90",
+    "population": "forget",
+    "n": 20,
+    "ordinary": {
+      "correct": 3,
+      "partial": 2,
+      "incorrect": 14,
+      "ambiguous": 1
+    },
+    "int4": {
+      "correct": 2,
+      "partial": 2,
+      "incorrect": 15,
+      "ambiguous": 1
+    },
+    "gained_correct": 1,
+    "lost_correct": 2,
+    "delta_correct_count": -1,
+    "transitions": [
+      {
+        "ordinary": "correct",
+        "int4": "correct",
+        "count": 1
+      },
+      {
+        "ordinary": "correct",
+        "int4": "partial",
+        "count": 1
+      },
+      {
+        "ordinary": "correct",
+        "int4": "incorrect",
+        "count": 1
+      },
+      {
+        "ordinary": "correct",
+        "int4": "ambiguous",
+        "count": 0
+      },
+      {
+        "ordinary": "partial",
+        "int4": "correct",
+        "count": 0
+      },
+      {
+        "ordinary": "partial",
+        "int4": "partial",
+        "count": 1
+      },
+      {
+        "ordinary": "partial",
+        "int4": "incorrect",
+        "count": 1
+      },
+      {
+        "ordinary": "partial",
+        "int4": "ambiguous",
+        "count": 0
+      },
+      {
+        "ordinary": "incorrect",
+        "int4": "correct",
+        "count": 1
+      },
+      {
+        "ordinary": "incorrect",
+        "int4": "partial",
+        "count": 0
+      },
+      {
+        "ordinary": "incorrect",
+        "int4": "incorrect",
+        "count": 13
+      },
+      {
+        "ordinary": "incorrect",
+        "int4": "ambiguous",
+        "count": 0
+      },
+      {
+        "ordinary": "ambiguous",
+        "int4": "correct",
+        "count": 0
+      },
+      {
+        "ordinary": "ambiguous",
+        "int4": "partial",
+        "count": 0
+      },
+      {
+        "ordinary": "ambiguous",
+        "int4": "incorrect",
+        "count": 0
+      },
+      {
+        "ordinary": "ambiguous",
+        "int4": "ambiguous",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "model": "retain90",
+    "population": "utility",
+    "n": 60,
+    "ordinary": {
+      "correct": 51,
+      "partial": 0,
+      "incorrect": 9,
+      "ambiguous": 0
+    },
+    "int4": {
+      "correct": 47,
+      "partial": 0,
+      "incorrect": 13,
+      "ambiguous": 0
+    },
+    "gained_correct": 1,
+    "lost_correct": 5,
+    "delta_correct_count": -4,
+    "transitions": [
+      {
+        "ordinary": "correct",
+        "int4": "correct",
+        "count": 46
+      },
+      {
+        "ordinary": "correct",
+        "int4": "partial",
+        "count": 0
+      },
+      {
+        "ordinary": "correct",
+        "int4": "incorrect",
+        "count": 5
+      },
+      {
+        "ordinary": "correct",
+        "int4": "ambiguous",
+        "count": 0
+      },
+      {
+        "ordinary": "partial",
+        "int4": "correct",
+        "count": 0
+      },
+      {
+        "ordinary": "partial",
+        "int4": "partial",
+        "count": 0
+      },
+      {
+        "ordinary": "partial",
+        "int4": "incorrect",
+        "count": 0
+      },
+      {
+        "ordinary": "partial",
+        "int4": "ambiguous",
+        "count": 0
+      },
+      {
+        "ordinary": "incorrect",
+        "int4": "correct",
+        "count": 1
+      },
+      {
+        "ordinary": "incorrect",
+        "int4": "partial",
+        "count": 0
+      },
+      {
+        "ordinary": "incorrect",
+        "int4": "incorrect",
+        "count": 8
+      },
+      {
+        "ordinary": "incorrect",
+        "int4": "ambiguous",
+        "count": 0
+      },
+      {
+        "ordinary": "ambiguous",
+        "int4": "correct",
+        "count": 0
+      },
+      {
+        "ordinary": "ambiguous",
+        "int4": "partial",
+        "count": 0
+      },
+      {
+        "ordinary": "ambiguous",
+        "int4": "incorrect",
+        "count": 0
+      },
+      {
+        "ordinary": "ambiguous",
+        "int4": "ambiguous",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "model": "simnpo_candidate",
+    "population": "forget",
+    "n": 20,
+    "ordinary": {
+      "correct": 2,
+      "partial": 2,
+      "incorrect": 15,
+      "ambiguous": 1
+    },
+    "int4": {
+      "correct": 2,
+      "partial": 0,
+      "incorrect": 17,
+      "ambiguous": 1
+    },
+    "gained_correct": 1,
+    "lost_correct": 1,
+    "delta_correct_count": 0,
+    "transitions": [
+      {
+        "ordinary": "correct",
+        "int4": "correct",
+        "count": 1
+      },
+      {
+        "ordinary": "correct",
+        "int4": "partial",
+        "count": 0
+      },
+      {
+        "ordinary": "correct",
+        "int4": "incorrect",
+        "count": 1
+      },
+      {
+        "ordinary": "correct",
+        "int4": "ambiguous",
+        "count": 0
+      },
+      {
+        "ordinary": "partial",
+        "int4": "correct",
+        "count": 0
+      },
+      {
+        "ordinary": "partial",
+        "int4": "partial",
+        "count": 0
+      },
+      {
+        "ordinary": "partial",
+        "int4": "incorrect",
+        "count": 2
+      },
+      {
+        "ordinary": "partial",
+        "int4": "ambiguous",
+        "count": 0
+      },
+      {
+        "ordinary": "incorrect",
+        "int4": "correct",
+        "count": 1
+      },
+      {
+        "ordinary": "incorrect",
+        "int4": "partial",
+        "count": 0
+      },
+      {
+        "ordinary": "incorrect",
+        "int4": "incorrect",
+        "count": 14
+      },
+      {
+        "ordinary": "incorrect",
+        "int4": "ambiguous",
+        "count": 0
+      },
+      {
+        "ordinary": "ambiguous",
+        "int4": "correct",
+        "count": 0
+      },
+      {
+        "ordinary": "ambiguous",
+        "int4": "partial",
+        "count": 0
+      },
+      {
+        "ordinary": "ambiguous",
+        "int4": "incorrect",
+        "count": 0
+      },
+      {
+        "ordinary": "ambiguous",
+        "int4": "ambiguous",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "model": "simnpo_candidate",
+    "population": "utility",
+    "n": 60,
+    "ordinary": {
+      "correct": 45,
+      "partial": 0,
+      "incorrect": 13,
+      "ambiguous": 2
+    },
+    "int4": {
+      "correct": 43,
+      "partial": 1,
+      "incorrect": 14,
+      "ambiguous": 2
+    },
+    "gained_correct": 2,
+    "lost_correct": 4,
+    "delta_correct_count": -2,
+    "transitions": [
+      {
+        "ordinary": "correct",
+        "int4": "correct",
+        "count": 41
+      },
+      {
+        "ordinary": "correct",
+        "int4": "partial",
+        "count": 1
+      },
+      {
+        "ordinary": "correct",
+        "int4": "incorrect",
+        "count": 3
+      },
+      {
+        "ordinary": "correct",
+        "int4": "ambiguous",
+        "count": 0
+      },
+      {
+        "ordinary": "partial",
+        "int4": "correct",
+        "count": 0
+      },
+      {
+        "ordinary": "partial",
+        "int4": "partial",
+        "count": 0
+      },
+      {
+        "ordinary": "partial",
+        "int4": "incorrect",
+        "count": 0
+      },
+      {
+        "ordinary": "partial",
+        "int4": "ambiguous",
+        "count": 0
+      },
+      {
+        "ordinary": "incorrect",
+        "int4": "correct",
+        "count": 2
+      },
+      {
+        "ordinary": "incorrect",
+        "int4": "partial",
+        "count": 0
+      },
+      {
+        "ordinary": "incorrect",
+        "int4": "incorrect",
+        "count": 11
+      },
+      {
+        "ordinary": "incorrect",
+        "int4": "ambiguous",
+        "count": 0
+      },
+      {
+        "ordinary": "ambiguous",
+        "int4": "correct",
+        "count": 0
+      },
+      {
+        "ordinary": "ambiguous",
+        "int4": "partial",
+        "count": 0
+      },
+      {
+        "ordinary": "ambiguous",
+        "int4": "incorrect",
+        "count": 0
+      },
+      {
+        "ordinary": "ambiguous",
+        "int4": "ambiguous",
+        "count": 2
+      }
+    ]
+  }
+]

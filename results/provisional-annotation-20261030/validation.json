@@ -1,0 +1,20 @@
+{
+  "A": {
+    "forget": 120,
+    "utility": 360,
+    "unique_source_records": 480,
+    "labels_blank": true,
+    "hashes_verified": true,
+    "zip_sha256": "2967f2f0c1134d8b4a6e15effdf185679945b2b4c31c3d1e0c9bba8aaca85496",
+    "mapping_keys_excluded": true
+  },
+  "B": {
+    "forget": 120,
+    "utility": 360,
+    "unique_source_records": 480,
+    "labels_blank": true,
+    "hashes_verified": true,
+    "zip_sha256": "be029ea384ee6627c9be5db7ab4130fe7c631a2c9a1bc7a33561d10b21424eda",
+    "mapping_keys_excluded": true
+  }
+}

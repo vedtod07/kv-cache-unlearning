@@ -1,0 +1,8 @@
+{
+  "pages": 16,
+  "rendered_pages_visually_inspected": 16,
+  "text_bounds": "passed",
+  "required_result_strings": "passed",
+  "pdf_sha256": "0da586ff3d9db0732697e9d81707dd512c3f8f397299c6d3b6e886fe3ca7043d",
+  "no_new_gpu_inference": true
+}

@@ -1,0 +1,197 @@
+{
+  "date": "2026-11-08",
+  "reviewed_A_commit": "5714f0fb9272265de46e573f0c531cc57def4385",
+  "GPU_rerun": false,
+  "source_files_sha256": {
+    "full-ordinary-items.jsonl": "3dc3d40cec77f51902642f9b547ffe36beeacd99b2ace9141316bad11bdbd02c",
+    "full-int4-items.jsonl": "7b076ce14edee4ecf96c5e7c8f12c9e09720660c6f188905b450e0891e64e5ab",
+    "retain90-ordinary-items.jsonl": "8fb12ca048f9b1eb999f54e7ac2eed12cb424437fc62208c6aedd30c6c9c9e45",
+    "retain90-int4-items.jsonl": "065d00b7e9bd6c7ab79baff6ba523888d97f686f29d92259094082da73e1377f",
+    "simnpo_candidate-ordinary-items.jsonl": "3cd3837f3cafeea69cbafb11a527fd1c254c1c2391a6857733a310664e26bcbb",
+    "simnpo_candidate-int4-items.jsonl": "bb3e41b80726d9932fff0e2359175c39ac99ff89b5411b9b34fe095d01eceb92"
+  },
+  "models": {
+    "full": {
+      "scores": {
+        "forget": {
+          "ordinary": {
+            "incorrect": 3,
+            "correct": 16,
+            "ambiguous": 1
+          },
+          "int4": {
+            "correct": 16,
+            "incorrect": 3,
+            "ambiguous": 1
+          }
+        },
+        "utility": {
+          "ordinary": {
+            "correct": 42,
+            "incorrect": 16,
+            "ambiguous": 2
+          },
+          "int4": {
+            "correct": 39,
+            "incorrect": 18,
+            "ambiguous": 2,
+            "partial": 1
+          }
+        }
+      },
+      "mean_item_mean_forget_nll_delta": 0.016648055504946496,
+      "forget_items_with_lower_nll": 3,
+      "forget_items_with_higher_nll": 17,
+      "max_absolute_token_nll_delta": 1.921953558921814,
+      "ordinary_parallel_sequential_max_abs_gap": 2.753734588623047e-05,
+      "empty_quantized_prefill_max_abs_gap": 0.0,
+      "changed_generated_tokens": 39,
+      "truncated_ordinary": 0,
+      "truncated_int4": 1,
+      "prompt_length_range": [
+        48,
+        70
+      ],
+      "derived_quantized_attended_position_fraction_decode_only": {
+        "minimum": 0.4661016949152542,
+        "mean_over_decode_calls": 0.7846687023985582,
+        "maximum": 0.9859154929577465
+      },
+      "condition_policy": {
+        "key": "hqq_int4_res128_fp32",
+        "backend": "hqq",
+        "nbits": 4,
+        "axis_key": 1,
+        "axis_value": 1,
+        "q_group_size": 64,
+        "residual_length": 128
+      }
+    },
+    "retain90": {
+      "scores": {
+        "forget": {
+          "ordinary": {
+            "incorrect": 14,
+            "correct": 3,
+            "partial": 2,
+            "ambiguous": 1
+          },
+          "int4": {
+            "incorrect": 15,
+            "ambiguous": 1,
+            "correct": 2,
+            "partial": 2
+          }
+        },
+        "utility": {
+          "ordinary": {
+            "correct": 51,
+            "incorrect": 9
+          },
+          "int4": {
+            "incorrect": 13,
+            "correct": 47
+          }
+        }
+      },
+      "mean_item_mean_forget_nll_delta": 0.002018241796085263,
+      "forget_items_with_lower_nll": 8,
+      "forget_items_with_higher_nll": 12,
+      "max_absolute_token_nll_delta": 2.250154495239258,
+      "ordinary_parallel_sequential_max_abs_gap": 8.869171142578125e-05,
+      "empty_quantized_prefill_max_abs_gap": 0.0,
+      "changed_generated_tokens": 52,
+      "truncated_ordinary": 0,
+      "truncated_int4": 0,
+      "prompt_length_range": [
+        48,
+        70
+      ],
+      "derived_quantized_attended_position_fraction_decode_only": {
+        "minimum": 0.45045045045045046,
+        "mean_over_decode_calls": 0.7788052447106727,
+        "maximum": 0.9859154929577465
+      },
+      "condition_policy": {
+        "key": "hqq_int4_res128_fp32",
+        "backend": "hqq",
+        "nbits": 4,
+        "axis_key": 1,
+        "axis_value": 1,
+        "q_group_size": 64,
+        "residual_length": 128
+      }
+    },
+    "simnpo_candidate": {
+      "scores": {
+        "forget": {
+          "ordinary": {
+            "incorrect": 15,
+            "ambiguous": 1,
+            "correct": 2,
+            "partial": 2
+          },
+          "int4": {
+            "incorrect": 17,
+            "ambiguous": 1,
+            "correct": 2
+          }
+        },
+        "utility": {
+          "ordinary": {
+            "incorrect": 13,
+            "correct": 45,
+            "ambiguous": 2
+          },
+          "int4": {
+            "correct": 43,
+            "ambiguous": 2,
+            "incorrect": 14,
+            "partial": 1
+          }
+        }
+      },
+      "mean_item_mean_forget_nll_delta": 0.03249679257051584,
+      "forget_items_with_lower_nll": 10,
+      "forget_items_with_higher_nll": 10,
+      "max_absolute_token_nll_delta": 10.010882079601288,
+      "ordinary_parallel_sequential_max_abs_gap": 0.000675201416015625,
+      "empty_quantized_prefill_max_abs_gap": 0.0,
+      "changed_generated_tokens": 54,
+      "truncated_ordinary": 1,
+      "truncated_int4": 2,
+      "prompt_length_range": [
+        48,
+        70
+      ],
+      "derived_quantized_attended_position_fraction_decode_only": {
+        "minimum": 0.47413793103448276,
+        "mean_over_decode_calls": 0.7701405354891449,
+        "maximum": 0.9859154929577465
+      },
+      "condition_policy": {
+        "key": "hqq_int4_res128_fp32",
+        "backend": "hqq",
+        "nbits": 4,
+        "axis_key": 1,
+        "axis_value": 1,
+        "q_group_size": 64,
+        "residual_length": 128
+      }
+    }
+  },
+  "limits": [
+    "One exposed forget author; A-accepted AI-assisted provisional labels; independent B review pending.",
+    "Quantized-position fractions are derived from archived source and token lengths, not attention-mass measurements or a fresh per-step GPU trace."
+  ],
+  "total_raw_responses": 480,
+  "total_truncated": 4,
+  "source_cache_sha256": "f022bdaaa0db50e90ad00d38f0a52f3d302598a06ed2c5764d0d15eae1f27750",
+  "B_branch_heads": {
+    "master": "cf5c7f306ccf334e598394b98e57046fd533f7f3",
+    "b/evaluator-v0": "16ada491a9f4be87dfbe6973bcbc615436e4b224",
+    "b/parity-20261028": "be6353ff71e9a92ec1409d8869c0149b50d91e40",
+    "b/utility-specs": "75786c2ccb76088bc23394c0614ca635a720e980",
+    "b/env-lock-draft": "67776904cf11a8979de32e762bc439d09b4805e4"
+  }
+}
